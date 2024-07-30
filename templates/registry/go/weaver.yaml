@@ -1,0 +1,24 @@
+text_maps:
+  stabilities:
+    stable: StabilityStable
+    experimental: StabilityExperimental
+
+whitespace_control:
+  trim_blocks: true
+  lstrip_blocks: true
+  keep_trailing_newline: true
+
+templates:
+  - pattern: "attribute_deprecated.j2"
+    filter: '[.groups.[].attributes] | add | map(select(has("deprecated"))) | unique_by(.name)'
+    application_mode: single
+  # TODO: support template (map?) types
+  - pattern: "attribute_type.j2"
+    filter: '[.groups.[].attributes] | add | map(select(.type | type=="string")) | map(select((.type | startswith("string")) or (.type | startswith("int")) or (.type | startswith("double")) or (.type | startswith("boolean")))) | unique_by(.name)'
+    application_mode: single
+  - pattern: "attribute_enum.j2"
+    filter: '[.groups.[].attributes] | add | map(select(.type | type=="object")) | map(select(.type.allow_custom_values==false)) | unique_by(.name)'
+    application_mode: single
+  - pattern: "metric_deprecated.j2"
+    filter: '.groups | map(select(.type=="metric")) | map(select(has("deprecated")))'
+    application_mode: single
