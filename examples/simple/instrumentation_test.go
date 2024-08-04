@@ -5,6 +5,7 @@ import (
 	"testing"
 
 	// "github.com/ymtdzzz/otel-lint/pkg/assert"
+	// "github.com/ymtdzzz/otel-lint/pkg/linter"
 	"go.opentelemetry.io/otel"
 	"go.opentelemetry.io/otel/sdk/trace"
 	"go.opentelemetry.io/otel/sdk/trace/tracetest"
@@ -19,7 +20,7 @@ func TestDoTrace(t *testing.T) {
 
 	/*
 		for _, s := range sr.Ended() {
-			assert.NoSemConvErrorSpan(t, s)
+			assert.NoSemConvErrorSpan(t, s, linter.WithoutRules([]string{"deprecated.http.user_agent"}))
 		}
 	*/
 }

@@ -25,10 +25,12 @@ const (
 	lintResultKeySpan     = "Span"
 )
 
-func NoSemConvErrorSpan(t TestingT, span trace.ReadOnlySpan) bool {
+func NoSemConvErrorSpan(t TestingT, span trace.ReadOnlySpan, opts ...linter.Option) bool {
 	if h, ok := t.(tHelper); ok {
 		h.Helper()
 	}
+
+	l := linter.NewLinter(opts...)
 
 	res := map[string][]*linter.LintResult{}
 
@@ -36,7 +38,7 @@ func NoSemConvErrorSpan(t TestingT, span trace.ReadOnlySpan) bool {
 	resource := span.Resource()
 	rattrMap, rerr := attributesToMap(resource.Attributes())
 	if rerr == nil {
-		r := linter.OtelLinter.RunLintAttribute(resource.SchemaURL(), rattrMap)
+		r := l.RunLintAttribute(resource.SchemaURL(), rattrMap)
 		if len(r) > 0 {
 			res[lintResultKeyResource] = r
 		}
@@ -53,7 +55,7 @@ func NoSemConvErrorSpan(t TestingT, span trace.ReadOnlySpan) bool {
 	// lint span
 	sattrMap, serr := attributesToMap(span.Attributes())
 	if serr == nil {
-		r := linter.OtelLinter.RunLintAttribute(span.InstrumentationScope().SchemaURL, sattrMap)
+		r := l.RunLintAttribute(span.InstrumentationScope().SchemaURL, sattrMap)
 		if len(r) > 0 {
 			res[lintResultKeySpan] = r
 		}

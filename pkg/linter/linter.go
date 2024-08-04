@@ -10,12 +10,8 @@ import (
 	"github.com/ymtdzzz/otel-lint/pkg/ruleset"
 )
 
-var OtelLinter *Linter
-
-func init() {
-	OtelLinter = &Linter{
-		ruleset: ruleset.RuleMap,
-	}
+var DefaultLinter = Linter{
+	ruleset: ruleset.DefaultRuleMap(),
 }
 
 type LintResult struct {
@@ -30,7 +26,17 @@ func (r *LintResult) String() string {
 }
 
 type Linter struct {
-	ruleset map[string]*ruleset.RuleSet
+	ruleset ruleset.RuleSetVersions
+}
+
+func NewLinter(options ...Option) *Linter {
+	l := DefaultLinter
+
+	for _, opt := range options {
+		opt(&l)
+	}
+
+	return &l
 }
 
 func parseSchemaURL(rawURL string) (*semver.Version, error) {
