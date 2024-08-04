@@ -22,7 +22,7 @@ func TestRunTrace(t *testing.T) {
 				},
 			},
 		}
-		res, err := l.RunTrace(&pt)
+		res, err := l.RunTrace(pt)
 		assert.Nil(t, err)
 
 		// Resource 1: Invalid schema
@@ -54,7 +54,7 @@ func TestRunTrace(t *testing.T) {
 				},
 			},
 		}
-		res, err := l.RunTrace(&pt)
+		res, err := l.RunTrace(pt)
 		assert.Nil(t, err)
 
 		// Resource 1: Multiple rules

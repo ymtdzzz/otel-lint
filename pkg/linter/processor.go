@@ -9,7 +9,7 @@ import (
 	"go.opentelemetry.io/collector/pdata/ptrace"
 )
 
-func (l *Linter) RunTrace(pt *ptrace.Traces) (*ptrace.Traces, error) {
+func (l *Linter) RunTrace(pt ptrace.Traces) (ptrace.Traces, error) {
 	rss := pt.ResourceSpans()
 	for rsi := 0; rsi < rss.Len(); rsi++ {
 		rs := rss.At(rsi)
@@ -34,7 +34,7 @@ func (l *Linter) RunTrace(pt *ptrace.Traces) (*ptrace.Traces, error) {
 	return pt, nil
 }
 
-func (l *Linter) RunMetric(pm *pmetric.Metrics) (*pmetric.Metrics, error) {
+func (l *Linter) RunMetric(pm pmetric.Metrics) (pmetric.Metrics, error) {
 	rms := pm.ResourceMetrics()
 	for rmi := 0; rmi < rms.Len(); rmi++ {
 		rm := rms.At(rmi)
@@ -58,7 +58,7 @@ func (l *Linter) RunMetric(pm *pmetric.Metrics) (*pmetric.Metrics, error) {
 	return pm, nil
 }
 
-func (l *Linter) RunLog(pl *plog.Logs) (*plog.Logs, error) {
+func (l *Linter) RunLog(pl plog.Logs) (plog.Logs, error) {
 	rls := pl.ResourceLogs()
 	for rli := 0; rli < rls.Len(); rli++ {
 		rl := rls.At(rli)
