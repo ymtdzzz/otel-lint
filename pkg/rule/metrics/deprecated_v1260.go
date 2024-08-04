@@ -20,117 +20,90 @@ var RulesDeprecatedv1260 = []*rule.MetricRule{
 var ruleDeprecatedDbClientConnectionsUsagev1260 = &rule.MetricRule{
 	Name:         "deprecated.db.client.connections.usage",
 	Title:        "Deprecated, use `db.client.connection.count` instead.",
-	Check:        checkDeprecatedDbClientConnectionsUsagev1260,
+	Check:        func(m *rule.Metrics) bool { return metricNameNot(m, "db.client.connections.usage") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkDeprecatedDbClientConnectionsUsagev1260(m *rule.Metrics) bool {
-  return m.Name() != "db.client.connections.usage"
+  Version:      "v1.26.0",
 }
 
 var ruleDeprecatedDbClientConnectionsIdleMaxv1260 = &rule.MetricRule{
 	Name:         "deprecated.db.client.connections.idle.max",
 	Title:        "Deprecated, use `db.client.connection.idle.max` instead.",
-	Check:        checkDeprecatedDbClientConnectionsIdleMaxv1260,
+	Check:        func(m *rule.Metrics) bool { return metricNameNot(m, "db.client.connections.idle.max") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkDeprecatedDbClientConnectionsIdleMaxv1260(m *rule.Metrics) bool {
-  return m.Name() != "db.client.connections.idle.max"
+  Version:      "v1.26.0",
 }
 
 var ruleDeprecatedDbClientConnectionsIdleMinv1260 = &rule.MetricRule{
 	Name:         "deprecated.db.client.connections.idle.min",
 	Title:        "Deprecated, use `db.client.connection.idle.min` instead.",
-	Check:        checkDeprecatedDbClientConnectionsIdleMinv1260,
+	Check:        func(m *rule.Metrics) bool { return metricNameNot(m, "db.client.connections.idle.min") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkDeprecatedDbClientConnectionsIdleMinv1260(m *rule.Metrics) bool {
-  return m.Name() != "db.client.connections.idle.min"
+  Version:      "v1.26.0",
 }
 
 var ruleDeprecatedDbClientConnectionsMaxv1260 = &rule.MetricRule{
 	Name:         "deprecated.db.client.connections.max",
 	Title:        "Deprecated, use `db.client.connection.max` instead.",
-	Check:        checkDeprecatedDbClientConnectionsMaxv1260,
+	Check:        func(m *rule.Metrics) bool { return metricNameNot(m, "db.client.connections.max") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkDeprecatedDbClientConnectionsMaxv1260(m *rule.Metrics) bool {
-  return m.Name() != "db.client.connections.max"
+  Version:      "v1.26.0",
 }
 
 var ruleDeprecatedDbClientConnectionsPendingRequestsv1260 = &rule.MetricRule{
 	Name:         "deprecated.db.client.connections.pending_requests",
 	Title:        "Deprecated, use `db.client.connection.pending_requests` instead.",
-	Check:        checkDeprecatedDbClientConnectionsPendingRequestsv1260,
+	Check:        func(m *rule.Metrics) bool { return metricNameNot(m, "db.client.connections.pending_requests") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkDeprecatedDbClientConnectionsPendingRequestsv1260(m *rule.Metrics) bool {
-  return m.Name() != "db.client.connections.pending_requests"
+  Version:      "v1.26.0",
 }
 
 var ruleDeprecatedDbClientConnectionsTimeoutsv1260 = &rule.MetricRule{
 	Name:         "deprecated.db.client.connections.timeouts",
 	Title:        "Deprecated, use `db.client.connection.timeouts` instead.",
-	Check:        checkDeprecatedDbClientConnectionsTimeoutsv1260,
+	Check:        func(m *rule.Metrics) bool { return metricNameNot(m, "db.client.connections.timeouts") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkDeprecatedDbClientConnectionsTimeoutsv1260(m *rule.Metrics) bool {
-  return m.Name() != "db.client.connections.timeouts"
+  Version:      "v1.26.0",
 }
 
 var ruleDeprecatedDbClientConnectionsCreateTimev1260 = &rule.MetricRule{
 	Name:         "deprecated.db.client.connections.create_time",
 	Title:        "Deprecated, use `db.client.connection.create_time` instead. Note: the unit also changed from `ms` to `s`.",
-	Check:        checkDeprecatedDbClientConnectionsCreateTimev1260,
+	Check:        func(m *rule.Metrics) bool { return metricNameNot(m, "db.client.connections.create_time") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkDeprecatedDbClientConnectionsCreateTimev1260(m *rule.Metrics) bool {
-  return m.Name() != "db.client.connections.create_time"
+  Version:      "v1.26.0",
 }
 
 var ruleDeprecatedDbClientConnectionsWaitTimev1260 = &rule.MetricRule{
 	Name:         "deprecated.db.client.connections.wait_time",
 	Title:        "Deprecated, use `db.client.connection.wait_time` instead. Note: the unit also changed from `ms` to `s`.",
-	Check:        checkDeprecatedDbClientConnectionsWaitTimev1260,
+	Check:        func(m *rule.Metrics) bool { return metricNameNot(m, "db.client.connections.wait_time") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkDeprecatedDbClientConnectionsWaitTimev1260(m *rule.Metrics) bool {
-  return m.Name() != "db.client.connections.wait_time"
+  Version:      "v1.26.0",
 }
 
 var ruleDeprecatedDbClientConnectionsUseTimev1260 = &rule.MetricRule{
 	Name:         "deprecated.db.client.connections.use_time",
 	Title:        "Deprecated, use `db.client.connection.use_time` instead. Note: the unit also changed from `ms` to `s`.",
-	Check:        checkDeprecatedDbClientConnectionsUseTimev1260,
+	Check:        func(m *rule.Metrics) bool { return metricNameNot(m, "db.client.connections.use_time") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkDeprecatedDbClientConnectionsUseTimev1260(m *rule.Metrics) bool {
-  return m.Name() != "db.client.connections.use_time"
+  Version:      "v1.26.0",
 }
 

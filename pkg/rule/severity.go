@@ -8,7 +8,7 @@ const (
 	SeverityInfo
 )
 
-func SeverityString(s Severity) string {
+func (s Severity) String() string {
 	switch s {
 	case SeverityError:
 		return "error"

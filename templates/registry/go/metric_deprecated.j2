@@ -18,14 +18,11 @@ var RulesDeprecated{{ version }} = []*rule.MetricRule{
 var ruleDeprecated{{ metric_name }}{{ version }} = &rule.MetricRule{
 	Name:         "deprecated.{{metric.metric_name}}",
 	Title:        "{{ metric.brief | trim | replace("\"", "") }}",
-	Check:        checkDeprecated{{ metric_name }}{{ version }},
+	Check:        func(m *rule.Metrics) bool { return metricNameNot(m, "{{ metric.metric_name }}") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.{{ metric.stability | map_text("stabilities", "StabilityExperimental") }},
 	Source:       "",
-}
-
-func checkDeprecated{{ metric_name }}{{ version }}(m *rule.Metrics) bool {
-  return m.Name() != "{{ metric.metric_name }}"
+  Version:      "{{ params.version }}",
 }
 
 {% endfor %}

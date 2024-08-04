@@ -42,403 +42,310 @@ var RulesDeprecatedv1250 = []*rule.AttributeRule{
 var ruleDeprecatedContainerLabelsv1250 = &rule.AttributeRule{
 	Name:         "deprecated.container.labels",
 	Title:        "Deprecated, use `container.label` instead.",
-	Check:        checkDeprecatedContainerLabelsv1250,
+	Check:        func(sa *rule.SignalAttributes) bool { return keyNotExists(sa, "container.labels") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkDeprecatedContainerLabelsv1250(a *rule.SignalAttributes) bool {
-	return !a.KeyExists("container.labels")
+  Version:      "v1.25.0",
 }
 
 var ruleDeprecatedDbConnectionStringv1250 = &rule.AttributeRule{
 	Name:         "deprecated.db.connection_string",
 	Title:        "Deprecated, use `server.address`, `server.port` attributes instead.",
-	Check:        checkDeprecatedDbConnectionStringv1250,
+	Check:        func(sa *rule.SignalAttributes) bool { return keyNotExists(sa, "db.connection_string") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkDeprecatedDbConnectionStringv1250(a *rule.SignalAttributes) bool {
-	return !a.KeyExists("db.connection_string")
+  Version:      "v1.25.0",
 }
 
 var ruleDeprecatedDbElasticsearchNodeNamev1250 = &rule.AttributeRule{
 	Name:         "deprecated.db.elasticsearch.node.name",
 	Title:        "Deprecated, use `db.instance.id` instead.",
-	Check:        checkDeprecatedDbElasticsearchNodeNamev1250,
+	Check:        func(sa *rule.SignalAttributes) bool { return keyNotExists(sa, "db.elasticsearch.node.name") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkDeprecatedDbElasticsearchNodeNamev1250(a *rule.SignalAttributes) bool {
-	return !a.KeyExists("db.elasticsearch.node.name")
+  Version:      "v1.25.0",
 }
 
 var ruleDeprecatedDbJdbcDriverClassnamev1250 = &rule.AttributeRule{
 	Name:         "deprecated.db.jdbc.driver_classname",
 	Title:        "Removed, no replacement at this time.",
-	Check:        checkDeprecatedDbJdbcDriverClassnamev1250,
+	Check:        func(sa *rule.SignalAttributes) bool { return keyNotExists(sa, "db.jdbc.driver_classname") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkDeprecatedDbJdbcDriverClassnamev1250(a *rule.SignalAttributes) bool {
-	return !a.KeyExists("db.jdbc.driver_classname")
+  Version:      "v1.25.0",
 }
 
 var ruleDeprecatedHttpFlavorv1250 = &rule.AttributeRule{
 	Name:         "deprecated.http.flavor",
 	Title:        "Deprecated, use `network.protocol.name` instead.",
-	Check:        checkDeprecatedHttpFlavorv1250,
+	Check:        func(sa *rule.SignalAttributes) bool { return keyNotExists(sa, "http.flavor") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkDeprecatedHttpFlavorv1250(a *rule.SignalAttributes) bool {
-	return !a.KeyExists("http.flavor")
+  Version:      "v1.25.0",
 }
 
 var ruleDeprecatedHttpMethodv1250 = &rule.AttributeRule{
 	Name:         "deprecated.http.method",
 	Title:        "Deprecated, use `http.request.method` instead.",
-	Check:        checkDeprecatedHttpMethodv1250,
+	Check:        func(sa *rule.SignalAttributes) bool { return keyNotExists(sa, "http.method") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkDeprecatedHttpMethodv1250(a *rule.SignalAttributes) bool {
-	return !a.KeyExists("http.method")
+  Version:      "v1.25.0",
 }
 
 var ruleDeprecatedHttpRequestContentLengthv1250 = &rule.AttributeRule{
 	Name:         "deprecated.http.request_content_length",
 	Title:        "Deprecated, use `http.request.header.content-length` instead.",
-	Check:        checkDeprecatedHttpRequestContentLengthv1250,
+	Check:        func(sa *rule.SignalAttributes) bool { return keyNotExists(sa, "http.request_content_length") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkDeprecatedHttpRequestContentLengthv1250(a *rule.SignalAttributes) bool {
-	return !a.KeyExists("http.request_content_length")
+  Version:      "v1.25.0",
 }
 
 var ruleDeprecatedHttpResponseContentLengthv1250 = &rule.AttributeRule{
 	Name:         "deprecated.http.response_content_length",
 	Title:        "Deprecated, use `http.response.header.content-length` instead.",
-	Check:        checkDeprecatedHttpResponseContentLengthv1250,
+	Check:        func(sa *rule.SignalAttributes) bool { return keyNotExists(sa, "http.response_content_length") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkDeprecatedHttpResponseContentLengthv1250(a *rule.SignalAttributes) bool {
-	return !a.KeyExists("http.response_content_length")
+  Version:      "v1.25.0",
 }
 
 var ruleDeprecatedHttpSchemev1250 = &rule.AttributeRule{
 	Name:         "deprecated.http.scheme",
 	Title:        "Deprecated, use `url.scheme` instead.",
-	Check:        checkDeprecatedHttpSchemev1250,
+	Check:        func(sa *rule.SignalAttributes) bool { return keyNotExists(sa, "http.scheme") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkDeprecatedHttpSchemev1250(a *rule.SignalAttributes) bool {
-	return !a.KeyExists("http.scheme")
+  Version:      "v1.25.0",
 }
 
 var ruleDeprecatedHttpStatusCodev1250 = &rule.AttributeRule{
 	Name:         "deprecated.http.status_code",
 	Title:        "Deprecated, use `http.response.status_code` instead.",
-	Check:        checkDeprecatedHttpStatusCodev1250,
+	Check:        func(sa *rule.SignalAttributes) bool { return keyNotExists(sa, "http.status_code") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkDeprecatedHttpStatusCodev1250(a *rule.SignalAttributes) bool {
-	return !a.KeyExists("http.status_code")
+  Version:      "v1.25.0",
 }
 
 var ruleDeprecatedHttpTargetv1250 = &rule.AttributeRule{
 	Name:         "deprecated.http.target",
 	Title:        "Deprecated, use `url.path` and `url.query` instead.",
-	Check:        checkDeprecatedHttpTargetv1250,
+	Check:        func(sa *rule.SignalAttributes) bool { return keyNotExists(sa, "http.target") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkDeprecatedHttpTargetv1250(a *rule.SignalAttributes) bool {
-	return !a.KeyExists("http.target")
+  Version:      "v1.25.0",
 }
 
 var ruleDeprecatedHttpUrlv1250 = &rule.AttributeRule{
 	Name:         "deprecated.http.url",
 	Title:        "Deprecated, use `url.full` instead.",
-	Check:        checkDeprecatedHttpUrlv1250,
+	Check:        func(sa *rule.SignalAttributes) bool { return keyNotExists(sa, "http.url") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkDeprecatedHttpUrlv1250(a *rule.SignalAttributes) bool {
-	return !a.KeyExists("http.url")
+  Version:      "v1.25.0",
 }
 
 var ruleDeprecatedHttpUserAgentv1250 = &rule.AttributeRule{
 	Name:         "deprecated.http.user_agent",
 	Title:        "Deprecated, use `user_agent.original` instead.",
-	Check:        checkDeprecatedHttpUserAgentv1250,
+	Check:        func(sa *rule.SignalAttributes) bool { return keyNotExists(sa, "http.user_agent") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkDeprecatedHttpUserAgentv1250(a *rule.SignalAttributes) bool {
-	return !a.KeyExists("http.user_agent")
+  Version:      "v1.25.0",
 }
 
 var ruleDeprecatedK8SPodLabelsv1250 = &rule.AttributeRule{
 	Name:         "deprecated.k8s.pod.labels",
 	Title:        "Deprecated, use `k8s.pod.label` instead.",
-	Check:        checkDeprecatedK8SPodLabelsv1250,
+	Check:        func(sa *rule.SignalAttributes) bool { return keyNotExists(sa, "k8s.pod.labels") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkDeprecatedK8SPodLabelsv1250(a *rule.SignalAttributes) bool {
-	return !a.KeyExists("k8s.pod.labels")
+  Version:      "v1.25.0",
 }
 
 var ruleDeprecatedMessagingKafkaDestinationPartitionv1250 = &rule.AttributeRule{
 	Name:         "deprecated.messaging.kafka.destination.partition",
 	Title:        "Deprecated, use `messaging.destination.partition.id` instead.",
-	Check:        checkDeprecatedMessagingKafkaDestinationPartitionv1250,
+	Check:        func(sa *rule.SignalAttributes) bool { return keyNotExists(sa, "messaging.kafka.destination.partition") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkDeprecatedMessagingKafkaDestinationPartitionv1250(a *rule.SignalAttributes) bool {
-	return !a.KeyExists("messaging.kafka.destination.partition")
+  Version:      "v1.25.0",
 }
 
 var ruleDeprecatedNetHostNamev1250 = &rule.AttributeRule{
 	Name:         "deprecated.net.host.name",
 	Title:        "Deprecated, use `server.address`.",
-	Check:        checkDeprecatedNetHostNamev1250,
+	Check:        func(sa *rule.SignalAttributes) bool { return keyNotExists(sa, "net.host.name") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkDeprecatedNetHostNamev1250(a *rule.SignalAttributes) bool {
-	return !a.KeyExists("net.host.name")
+  Version:      "v1.25.0",
 }
 
 var ruleDeprecatedNetHostPortv1250 = &rule.AttributeRule{
 	Name:         "deprecated.net.host.port",
 	Title:        "Deprecated, use `server.port`.",
-	Check:        checkDeprecatedNetHostPortv1250,
+	Check:        func(sa *rule.SignalAttributes) bool { return keyNotExists(sa, "net.host.port") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkDeprecatedNetHostPortv1250(a *rule.SignalAttributes) bool {
-	return !a.KeyExists("net.host.port")
+  Version:      "v1.25.0",
 }
 
 var ruleDeprecatedNetPeerNamev1250 = &rule.AttributeRule{
 	Name:         "deprecated.net.peer.name",
 	Title:        "Deprecated, use `server.address` on client spans and `client.address` on server spans.",
-	Check:        checkDeprecatedNetPeerNamev1250,
+	Check:        func(sa *rule.SignalAttributes) bool { return keyNotExists(sa, "net.peer.name") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkDeprecatedNetPeerNamev1250(a *rule.SignalAttributes) bool {
-	return !a.KeyExists("net.peer.name")
+  Version:      "v1.25.0",
 }
 
 var ruleDeprecatedNetPeerPortv1250 = &rule.AttributeRule{
 	Name:         "deprecated.net.peer.port",
 	Title:        "Deprecated, use `server.port` on client spans and `client.port` on server spans.",
-	Check:        checkDeprecatedNetPeerPortv1250,
+	Check:        func(sa *rule.SignalAttributes) bool { return keyNotExists(sa, "net.peer.port") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkDeprecatedNetPeerPortv1250(a *rule.SignalAttributes) bool {
-	return !a.KeyExists("net.peer.port")
+  Version:      "v1.25.0",
 }
 
 var ruleDeprecatedNetProtocolNamev1250 = &rule.AttributeRule{
 	Name:         "deprecated.net.protocol.name",
 	Title:        "Deprecated, use `network.protocol.name`.",
-	Check:        checkDeprecatedNetProtocolNamev1250,
+	Check:        func(sa *rule.SignalAttributes) bool { return keyNotExists(sa, "net.protocol.name") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkDeprecatedNetProtocolNamev1250(a *rule.SignalAttributes) bool {
-	return !a.KeyExists("net.protocol.name")
+  Version:      "v1.25.0",
 }
 
 var ruleDeprecatedNetProtocolVersionv1250 = &rule.AttributeRule{
 	Name:         "deprecated.net.protocol.version",
 	Title:        "Deprecated, use `network.protocol.version`.",
-	Check:        checkDeprecatedNetProtocolVersionv1250,
+	Check:        func(sa *rule.SignalAttributes) bool { return keyNotExists(sa, "net.protocol.version") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkDeprecatedNetProtocolVersionv1250(a *rule.SignalAttributes) bool {
-	return !a.KeyExists("net.protocol.version")
+  Version:      "v1.25.0",
 }
 
 var ruleDeprecatedNetSockFamilyv1250 = &rule.AttributeRule{
 	Name:         "deprecated.net.sock.family",
 	Title:        "Deprecated, use `network.transport` and `network.type`.",
-	Check:        checkDeprecatedNetSockFamilyv1250,
+	Check:        func(sa *rule.SignalAttributes) bool { return keyNotExists(sa, "net.sock.family") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkDeprecatedNetSockFamilyv1250(a *rule.SignalAttributes) bool {
-	return !a.KeyExists("net.sock.family")
+  Version:      "v1.25.0",
 }
 
 var ruleDeprecatedNetSockHostAddrv1250 = &rule.AttributeRule{
 	Name:         "deprecated.net.sock.host.addr",
 	Title:        "Deprecated, use `network.local.address`.",
-	Check:        checkDeprecatedNetSockHostAddrv1250,
+	Check:        func(sa *rule.SignalAttributes) bool { return keyNotExists(sa, "net.sock.host.addr") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkDeprecatedNetSockHostAddrv1250(a *rule.SignalAttributes) bool {
-	return !a.KeyExists("net.sock.host.addr")
+  Version:      "v1.25.0",
 }
 
 var ruleDeprecatedNetSockHostPortv1250 = &rule.AttributeRule{
 	Name:         "deprecated.net.sock.host.port",
 	Title:        "Deprecated, use `network.local.port`.",
-	Check:        checkDeprecatedNetSockHostPortv1250,
+	Check:        func(sa *rule.SignalAttributes) bool { return keyNotExists(sa, "net.sock.host.port") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkDeprecatedNetSockHostPortv1250(a *rule.SignalAttributes) bool {
-	return !a.KeyExists("net.sock.host.port")
+  Version:      "v1.25.0",
 }
 
 var ruleDeprecatedNetSockPeerAddrv1250 = &rule.AttributeRule{
 	Name:         "deprecated.net.sock.peer.addr",
 	Title:        "Deprecated, use `network.peer.address`.",
-	Check:        checkDeprecatedNetSockPeerAddrv1250,
+	Check:        func(sa *rule.SignalAttributes) bool { return keyNotExists(sa, "net.sock.peer.addr") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkDeprecatedNetSockPeerAddrv1250(a *rule.SignalAttributes) bool {
-	return !a.KeyExists("net.sock.peer.addr")
+  Version:      "v1.25.0",
 }
 
 var ruleDeprecatedNetSockPeerNamev1250 = &rule.AttributeRule{
 	Name:         "deprecated.net.sock.peer.name",
 	Title:        "Deprecated, no replacement at this time.",
-	Check:        checkDeprecatedNetSockPeerNamev1250,
+	Check:        func(sa *rule.SignalAttributes) bool { return keyNotExists(sa, "net.sock.peer.name") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkDeprecatedNetSockPeerNamev1250(a *rule.SignalAttributes) bool {
-	return !a.KeyExists("net.sock.peer.name")
+  Version:      "v1.25.0",
 }
 
 var ruleDeprecatedNetSockPeerPortv1250 = &rule.AttributeRule{
 	Name:         "deprecated.net.sock.peer.port",
 	Title:        "Deprecated, use `network.peer.port`.",
-	Check:        checkDeprecatedNetSockPeerPortv1250,
+	Check:        func(sa *rule.SignalAttributes) bool { return keyNotExists(sa, "net.sock.peer.port") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkDeprecatedNetSockPeerPortv1250(a *rule.SignalAttributes) bool {
-	return !a.KeyExists("net.sock.peer.port")
+  Version:      "v1.25.0",
 }
 
 var ruleDeprecatedNetTransportv1250 = &rule.AttributeRule{
 	Name:         "deprecated.net.transport",
 	Title:        "Deprecated, use `network.transport`.",
-	Check:        checkDeprecatedNetTransportv1250,
+	Check:        func(sa *rule.SignalAttributes) bool { return keyNotExists(sa, "net.transport") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkDeprecatedNetTransportv1250(a *rule.SignalAttributes) bool {
-	return !a.KeyExists("net.transport")
+  Version:      "v1.25.0",
 }
 
 var ruleDeprecatedOtelLibraryNamev1250 = &rule.AttributeRule{
 	Name:         "deprecated.otel.library.name",
 	Title:        "",
-	Check:        checkDeprecatedOtelLibraryNamev1250,
+	Check:        func(sa *rule.SignalAttributes) bool { return keyNotExists(sa, "otel.library.name") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkDeprecatedOtelLibraryNamev1250(a *rule.SignalAttributes) bool {
-	return !a.KeyExists("otel.library.name")
+  Version:      "v1.25.0",
 }
 
 var ruleDeprecatedOtelLibraryVersionv1250 = &rule.AttributeRule{
 	Name:         "deprecated.otel.library.version",
 	Title:        "",
-	Check:        checkDeprecatedOtelLibraryVersionv1250,
+	Check:        func(sa *rule.SignalAttributes) bool { return keyNotExists(sa, "otel.library.version") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkDeprecatedOtelLibraryVersionv1250(a *rule.SignalAttributes) bool {
-	return !a.KeyExists("otel.library.version")
+  Version:      "v1.25.0",
 }
 
 var ruleDeprecatedSystemProcessesStatusv1250 = &rule.AttributeRule{
 	Name:         "deprecated.system.processes.status",
 	Title:        "Deprecated, use `system.process.status` instead.",
-	Check:        checkDeprecatedSystemProcessesStatusv1250,
+	Check:        func(sa *rule.SignalAttributes) bool { return keyNotExists(sa, "system.processes.status") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkDeprecatedSystemProcessesStatusv1250(a *rule.SignalAttributes) bool {
-	return !a.KeyExists("system.processes.status")
+  Version:      "v1.25.0",
 }
 

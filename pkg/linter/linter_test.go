@@ -26,12 +26,12 @@ func TestRunTrace(t *testing.T) {
 		assert.Nil(t, err)
 
 		// Resource 1: Invalid schema
-		val, ok := res.ResourceSpans().At(0).Resource().Attributes().Get("lint.warn")
+		val, ok := res.ResourceSpans().At(0).Resource().Attributes().Get("lint.warn.schema_url")
 		assert.True(t, ok)
 		assert.Equal(t, "SchemaURL is not set or invalid format. Checks for this span has been skipped.", val.AsString())
 
 		// Resource 2: Invalid schema version
-		val, ok = res.ResourceSpans().At(1).Resource().Attributes().Get("lint.warn")
+		val, ok = res.ResourceSpans().At(1).Resource().Attributes().Get("lint.warn.schema_version")
 		assert.True(t, ok)
 		assert.Equal(t, "Unsupported schema version. Checks for this span has been skipped.", val.AsString())
 

@@ -18,14 +18,11 @@ var RulesDeprecated{{ version }} = []*rule.AttributeRule{
 var ruleDeprecated{{ attr_name }}{{ version }} = &rule.AttributeRule{
 	Name:         "deprecated.{{attr.name}}",
 	Title:        "{{ attr.brief | trim | replace("\"", "") }}",
-	Check:        checkDeprecated{{ attr_name }}{{ version }},
+	Check:        func(sa *rule.SignalAttributes) bool { return keyNotExists(sa, "{{ attr.name }}") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.{{ attr.stability | map_text("stabilities", "StabilityExperimental") }},
 	Source:       "",
-}
-
-func checkDeprecated{{ attr_name }}{{ version }}(a *rule.SignalAttributes) bool {
-	return !a.KeyExists("{{ attr.name }}")
+  Version:      "{{ params.version }}",
 }
 
 {% endfor %}

@@ -3,7 +3,6 @@ package attributes
 
 import (
 	"github.com/ymtdzzz/otel-lint/pkg/rule"
-	"go.opentelemetry.io/collector/pdata/pcommon"
 )
 
 var RulesTypev1260 = []*rule.AttributeRule{
@@ -419,7121 +418,4081 @@ var RulesTypev1260 = []*rule.AttributeRule{
 
 var ruleTypeAndroidOsApiLevelv1260 = &rule.AttributeRule{
 	Name:         "type.android.os.api_level",
-	Title:        "The type of `android.os.api_level` is string",
-	Check:        checkTypeAndroidOsApiLevelv1260,
+	Title:        "The type of `android.os.api_level` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "android.os.api_level") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeAndroidOsApiLevelv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("android.os.api_level")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeAspnetcoreDiagnosticsHandlerTypev1260 = &rule.AttributeRule{
 	Name:         "type.aspnetcore.diagnostics.handler.type",
-	Title:        "The type of `aspnetcore.diagnostics.handler.type` is string",
-	Check:        checkTypeAspnetcoreDiagnosticsHandlerTypev1260,
+	Title:        "The type of `aspnetcore.diagnostics.handler.type` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "aspnetcore.diagnostics.handler.type") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityStable,
 	Source:       "",
-}
-
-func checkTypeAspnetcoreDiagnosticsHandlerTypev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("aspnetcore.diagnostics.handler.type")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeAspnetcoreRateLimitingPolicyv1260 = &rule.AttributeRule{
 	Name:         "type.aspnetcore.rate_limiting.policy",
-	Title:        "The type of `aspnetcore.rate_limiting.policy` is string",
-	Check:        checkTypeAspnetcoreRateLimitingPolicyv1260,
+	Title:        "The type of `aspnetcore.rate_limiting.policy` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "aspnetcore.rate_limiting.policy") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityStable,
 	Source:       "",
-}
-
-func checkTypeAspnetcoreRateLimitingPolicyv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("aspnetcore.rate_limiting.policy")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeAspnetcoreRequestIsUnhandledv1260 = &rule.AttributeRule{
 	Name:         "type.aspnetcore.request.is_unhandled",
-	Title:        "The type of `aspnetcore.request.is_unhandled` is boolean",
-	Check:        checkTypeAspnetcoreRequestIsUnhandledv1260,
+	Title:        "The type of `aspnetcore.request.is_unhandled` should be boolean",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeBool(sa, "aspnetcore.request.is_unhandled") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityStable,
 	Source:       "",
-}
-
-func checkTypeAspnetcoreRequestIsUnhandledv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("aspnetcore.request.is_unhandled")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeBool
+  Version:      "v1.26.0",
 }
 
 var ruleTypeAspnetcoreRoutingIsFallbackv1260 = &rule.AttributeRule{
 	Name:         "type.aspnetcore.routing.is_fallback",
-	Title:        "The type of `aspnetcore.routing.is_fallback` is boolean",
-	Check:        checkTypeAspnetcoreRoutingIsFallbackv1260,
+	Title:        "The type of `aspnetcore.routing.is_fallback` should be boolean",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeBool(sa, "aspnetcore.routing.is_fallback") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityStable,
 	Source:       "",
-}
-
-func checkTypeAspnetcoreRoutingIsFallbackv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("aspnetcore.routing.is_fallback")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeBool
+  Version:      "v1.26.0",
 }
 
 var ruleTypeAwsDynamodbAttributeDefinitionsv1260 = &rule.AttributeRule{
 	Name:         "type.aws.dynamodb.attribute_definitions",
-	Title:        "The type of `aws.dynamodb.attribute_definitions` is string[]",
-	Check:        checkTypeAwsDynamodbAttributeDefinitionsv1260,
+	Title:        "The type of `aws.dynamodb.attribute_definitions` should be string[]",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStrSlice(sa, "aws.dynamodb.attribute_definitions") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeAwsDynamodbAttributeDefinitionsv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("aws.dynamodb.attribute_definitions")
-  if !ok {
-    return true
-  }
-  if val.Type() != pcommon.ValueTypeSlice {
-    return false
-  }
-  for _, v := range val.Slice().AsRaw() {
-    if _, ok := v.(string); !ok {
-      return false
-    }
-  }
-  return true
+  Version:      "v1.26.0",
 }
 
 var ruleTypeAwsDynamodbAttributesToGetv1260 = &rule.AttributeRule{
 	Name:         "type.aws.dynamodb.attributes_to_get",
-	Title:        "The type of `aws.dynamodb.attributes_to_get` is string[]",
-	Check:        checkTypeAwsDynamodbAttributesToGetv1260,
+	Title:        "The type of `aws.dynamodb.attributes_to_get` should be string[]",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStrSlice(sa, "aws.dynamodb.attributes_to_get") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeAwsDynamodbAttributesToGetv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("aws.dynamodb.attributes_to_get")
-  if !ok {
-    return true
-  }
-  if val.Type() != pcommon.ValueTypeSlice {
-    return false
-  }
-  for _, v := range val.Slice().AsRaw() {
-    if _, ok := v.(string); !ok {
-      return false
-    }
-  }
-  return true
+  Version:      "v1.26.0",
 }
 
 var ruleTypeAwsDynamodbConsistentReadv1260 = &rule.AttributeRule{
 	Name:         "type.aws.dynamodb.consistent_read",
-	Title:        "The type of `aws.dynamodb.consistent_read` is boolean",
-	Check:        checkTypeAwsDynamodbConsistentReadv1260,
+	Title:        "The type of `aws.dynamodb.consistent_read` should be boolean",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeBool(sa, "aws.dynamodb.consistent_read") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeAwsDynamodbConsistentReadv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("aws.dynamodb.consistent_read")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeBool
+  Version:      "v1.26.0",
 }
 
 var ruleTypeAwsDynamodbConsumedCapacityv1260 = &rule.AttributeRule{
 	Name:         "type.aws.dynamodb.consumed_capacity",
-	Title:        "The type of `aws.dynamodb.consumed_capacity` is string[]",
-	Check:        checkTypeAwsDynamodbConsumedCapacityv1260,
+	Title:        "The type of `aws.dynamodb.consumed_capacity` should be string[]",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStrSlice(sa, "aws.dynamodb.consumed_capacity") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeAwsDynamodbConsumedCapacityv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("aws.dynamodb.consumed_capacity")
-  if !ok {
-    return true
-  }
-  if val.Type() != pcommon.ValueTypeSlice {
-    return false
-  }
-  for _, v := range val.Slice().AsRaw() {
-    if _, ok := v.(string); !ok {
-      return false
-    }
-  }
-  return true
+  Version:      "v1.26.0",
 }
 
 var ruleTypeAwsDynamodbCountv1260 = &rule.AttributeRule{
 	Name:         "type.aws.dynamodb.count",
-	Title:        "The type of `aws.dynamodb.count` is int",
-	Check:        checkTypeAwsDynamodbCountv1260,
+	Title:        "The type of `aws.dynamodb.count` should be int",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeInt(sa, "aws.dynamodb.count") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeAwsDynamodbCountv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("aws.dynamodb.count")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeInt
+  Version:      "v1.26.0",
 }
 
 var ruleTypeAwsDynamodbExclusiveStartTablev1260 = &rule.AttributeRule{
 	Name:         "type.aws.dynamodb.exclusive_start_table",
-	Title:        "The type of `aws.dynamodb.exclusive_start_table` is string",
-	Check:        checkTypeAwsDynamodbExclusiveStartTablev1260,
+	Title:        "The type of `aws.dynamodb.exclusive_start_table` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "aws.dynamodb.exclusive_start_table") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeAwsDynamodbExclusiveStartTablev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("aws.dynamodb.exclusive_start_table")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeAwsDynamodbGlobalSecondaryIndexUpdatesv1260 = &rule.AttributeRule{
 	Name:         "type.aws.dynamodb.global_secondary_index_updates",
-	Title:        "The type of `aws.dynamodb.global_secondary_index_updates` is string[]",
-	Check:        checkTypeAwsDynamodbGlobalSecondaryIndexUpdatesv1260,
+	Title:        "The type of `aws.dynamodb.global_secondary_index_updates` should be string[]",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStrSlice(sa, "aws.dynamodb.global_secondary_index_updates") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeAwsDynamodbGlobalSecondaryIndexUpdatesv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("aws.dynamodb.global_secondary_index_updates")
-  if !ok {
-    return true
-  }
-  if val.Type() != pcommon.ValueTypeSlice {
-    return false
-  }
-  for _, v := range val.Slice().AsRaw() {
-    if _, ok := v.(string); !ok {
-      return false
-    }
-  }
-  return true
+  Version:      "v1.26.0",
 }
 
 var ruleTypeAwsDynamodbGlobalSecondaryIndexesv1260 = &rule.AttributeRule{
 	Name:         "type.aws.dynamodb.global_secondary_indexes",
-	Title:        "The type of `aws.dynamodb.global_secondary_indexes` is string[]",
-	Check:        checkTypeAwsDynamodbGlobalSecondaryIndexesv1260,
+	Title:        "The type of `aws.dynamodb.global_secondary_indexes` should be string[]",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStrSlice(sa, "aws.dynamodb.global_secondary_indexes") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeAwsDynamodbGlobalSecondaryIndexesv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("aws.dynamodb.global_secondary_indexes")
-  if !ok {
-    return true
-  }
-  if val.Type() != pcommon.ValueTypeSlice {
-    return false
-  }
-  for _, v := range val.Slice().AsRaw() {
-    if _, ok := v.(string); !ok {
-      return false
-    }
-  }
-  return true
+  Version:      "v1.26.0",
 }
 
 var ruleTypeAwsDynamodbIndexNamev1260 = &rule.AttributeRule{
 	Name:         "type.aws.dynamodb.index_name",
-	Title:        "The type of `aws.dynamodb.index_name` is string",
-	Check:        checkTypeAwsDynamodbIndexNamev1260,
+	Title:        "The type of `aws.dynamodb.index_name` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "aws.dynamodb.index_name") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeAwsDynamodbIndexNamev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("aws.dynamodb.index_name")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeAwsDynamodbItemCollectionMetricsv1260 = &rule.AttributeRule{
 	Name:         "type.aws.dynamodb.item_collection_metrics",
-	Title:        "The type of `aws.dynamodb.item_collection_metrics` is string",
-	Check:        checkTypeAwsDynamodbItemCollectionMetricsv1260,
+	Title:        "The type of `aws.dynamodb.item_collection_metrics` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "aws.dynamodb.item_collection_metrics") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeAwsDynamodbItemCollectionMetricsv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("aws.dynamodb.item_collection_metrics")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeAwsDynamodbLimitv1260 = &rule.AttributeRule{
 	Name:         "type.aws.dynamodb.limit",
-	Title:        "The type of `aws.dynamodb.limit` is int",
-	Check:        checkTypeAwsDynamodbLimitv1260,
+	Title:        "The type of `aws.dynamodb.limit` should be int",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeInt(sa, "aws.dynamodb.limit") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeAwsDynamodbLimitv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("aws.dynamodb.limit")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeInt
+  Version:      "v1.26.0",
 }
 
 var ruleTypeAwsDynamodbLocalSecondaryIndexesv1260 = &rule.AttributeRule{
 	Name:         "type.aws.dynamodb.local_secondary_indexes",
-	Title:        "The type of `aws.dynamodb.local_secondary_indexes` is string[]",
-	Check:        checkTypeAwsDynamodbLocalSecondaryIndexesv1260,
+	Title:        "The type of `aws.dynamodb.local_secondary_indexes` should be string[]",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStrSlice(sa, "aws.dynamodb.local_secondary_indexes") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeAwsDynamodbLocalSecondaryIndexesv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("aws.dynamodb.local_secondary_indexes")
-  if !ok {
-    return true
-  }
-  if val.Type() != pcommon.ValueTypeSlice {
-    return false
-  }
-  for _, v := range val.Slice().AsRaw() {
-    if _, ok := v.(string); !ok {
-      return false
-    }
-  }
-  return true
+  Version:      "v1.26.0",
 }
 
 var ruleTypeAwsDynamodbProjectionv1260 = &rule.AttributeRule{
 	Name:         "type.aws.dynamodb.projection",
-	Title:        "The type of `aws.dynamodb.projection` is string",
-	Check:        checkTypeAwsDynamodbProjectionv1260,
+	Title:        "The type of `aws.dynamodb.projection` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "aws.dynamodb.projection") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeAwsDynamodbProjectionv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("aws.dynamodb.projection")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeAwsDynamodbProvisionedReadCapacityv1260 = &rule.AttributeRule{
 	Name:         "type.aws.dynamodb.provisioned_read_capacity",
-	Title:        "The type of `aws.dynamodb.provisioned_read_capacity` is double",
-	Check:        checkTypeAwsDynamodbProvisionedReadCapacityv1260,
+	Title:        "The type of `aws.dynamodb.provisioned_read_capacity` should be double",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeDouble(sa, "aws.dynamodb.provisioned_read_capacity") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeAwsDynamodbProvisionedReadCapacityv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("aws.dynamodb.provisioned_read_capacity")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeDouble
+  Version:      "v1.26.0",
 }
 
 var ruleTypeAwsDynamodbProvisionedWriteCapacityv1260 = &rule.AttributeRule{
 	Name:         "type.aws.dynamodb.provisioned_write_capacity",
-	Title:        "The type of `aws.dynamodb.provisioned_write_capacity` is double",
-	Check:        checkTypeAwsDynamodbProvisionedWriteCapacityv1260,
+	Title:        "The type of `aws.dynamodb.provisioned_write_capacity` should be double",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeDouble(sa, "aws.dynamodb.provisioned_write_capacity") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeAwsDynamodbProvisionedWriteCapacityv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("aws.dynamodb.provisioned_write_capacity")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeDouble
+  Version:      "v1.26.0",
 }
 
 var ruleTypeAwsDynamodbScanForwardv1260 = &rule.AttributeRule{
 	Name:         "type.aws.dynamodb.scan_forward",
-	Title:        "The type of `aws.dynamodb.scan_forward` is boolean",
-	Check:        checkTypeAwsDynamodbScanForwardv1260,
+	Title:        "The type of `aws.dynamodb.scan_forward` should be boolean",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeBool(sa, "aws.dynamodb.scan_forward") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeAwsDynamodbScanForwardv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("aws.dynamodb.scan_forward")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeBool
+  Version:      "v1.26.0",
 }
 
 var ruleTypeAwsDynamodbScannedCountv1260 = &rule.AttributeRule{
 	Name:         "type.aws.dynamodb.scanned_count",
-	Title:        "The type of `aws.dynamodb.scanned_count` is int",
-	Check:        checkTypeAwsDynamodbScannedCountv1260,
+	Title:        "The type of `aws.dynamodb.scanned_count` should be int",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeInt(sa, "aws.dynamodb.scanned_count") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeAwsDynamodbScannedCountv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("aws.dynamodb.scanned_count")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeInt
+  Version:      "v1.26.0",
 }
 
 var ruleTypeAwsDynamodbSegmentv1260 = &rule.AttributeRule{
 	Name:         "type.aws.dynamodb.segment",
-	Title:        "The type of `aws.dynamodb.segment` is int",
-	Check:        checkTypeAwsDynamodbSegmentv1260,
+	Title:        "The type of `aws.dynamodb.segment` should be int",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeInt(sa, "aws.dynamodb.segment") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeAwsDynamodbSegmentv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("aws.dynamodb.segment")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeInt
+  Version:      "v1.26.0",
 }
 
 var ruleTypeAwsDynamodbSelectv1260 = &rule.AttributeRule{
 	Name:         "type.aws.dynamodb.select",
-	Title:        "The type of `aws.dynamodb.select` is string",
-	Check:        checkTypeAwsDynamodbSelectv1260,
+	Title:        "The type of `aws.dynamodb.select` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "aws.dynamodb.select") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeAwsDynamodbSelectv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("aws.dynamodb.select")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeAwsDynamodbTableCountv1260 = &rule.AttributeRule{
 	Name:         "type.aws.dynamodb.table_count",
-	Title:        "The type of `aws.dynamodb.table_count` is int",
-	Check:        checkTypeAwsDynamodbTableCountv1260,
+	Title:        "The type of `aws.dynamodb.table_count` should be int",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeInt(sa, "aws.dynamodb.table_count") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeAwsDynamodbTableCountv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("aws.dynamodb.table_count")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeInt
+  Version:      "v1.26.0",
 }
 
 var ruleTypeAwsDynamodbTableNamesv1260 = &rule.AttributeRule{
 	Name:         "type.aws.dynamodb.table_names",
-	Title:        "The type of `aws.dynamodb.table_names` is string[]",
-	Check:        checkTypeAwsDynamodbTableNamesv1260,
+	Title:        "The type of `aws.dynamodb.table_names` should be string[]",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStrSlice(sa, "aws.dynamodb.table_names") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeAwsDynamodbTableNamesv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("aws.dynamodb.table_names")
-  if !ok {
-    return true
-  }
-  if val.Type() != pcommon.ValueTypeSlice {
-    return false
-  }
-  for _, v := range val.Slice().AsRaw() {
-    if _, ok := v.(string); !ok {
-      return false
-    }
-  }
-  return true
+  Version:      "v1.26.0",
 }
 
 var ruleTypeAwsDynamodbTotalSegmentsv1260 = &rule.AttributeRule{
 	Name:         "type.aws.dynamodb.total_segments",
-	Title:        "The type of `aws.dynamodb.total_segments` is int",
-	Check:        checkTypeAwsDynamodbTotalSegmentsv1260,
+	Title:        "The type of `aws.dynamodb.total_segments` should be int",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeInt(sa, "aws.dynamodb.total_segments") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeAwsDynamodbTotalSegmentsv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("aws.dynamodb.total_segments")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeInt
+  Version:      "v1.26.0",
 }
 
 var ruleTypeAwsEcsClusterArnv1260 = &rule.AttributeRule{
 	Name:         "type.aws.ecs.cluster.arn",
-	Title:        "The type of `aws.ecs.cluster.arn` is string",
-	Check:        checkTypeAwsEcsClusterArnv1260,
+	Title:        "The type of `aws.ecs.cluster.arn` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "aws.ecs.cluster.arn") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeAwsEcsClusterArnv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("aws.ecs.cluster.arn")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeAwsEcsContainerArnv1260 = &rule.AttributeRule{
 	Name:         "type.aws.ecs.container.arn",
-	Title:        "The type of `aws.ecs.container.arn` is string",
-	Check:        checkTypeAwsEcsContainerArnv1260,
+	Title:        "The type of `aws.ecs.container.arn` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "aws.ecs.container.arn") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeAwsEcsContainerArnv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("aws.ecs.container.arn")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeAwsEcsTaskArnv1260 = &rule.AttributeRule{
 	Name:         "type.aws.ecs.task.arn",
-	Title:        "The type of `aws.ecs.task.arn` is string",
-	Check:        checkTypeAwsEcsTaskArnv1260,
+	Title:        "The type of `aws.ecs.task.arn` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "aws.ecs.task.arn") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeAwsEcsTaskArnv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("aws.ecs.task.arn")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeAwsEcsTaskFamilyv1260 = &rule.AttributeRule{
 	Name:         "type.aws.ecs.task.family",
-	Title:        "The type of `aws.ecs.task.family` is string",
-	Check:        checkTypeAwsEcsTaskFamilyv1260,
+	Title:        "The type of `aws.ecs.task.family` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "aws.ecs.task.family") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeAwsEcsTaskFamilyv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("aws.ecs.task.family")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeAwsEcsTaskIdv1260 = &rule.AttributeRule{
 	Name:         "type.aws.ecs.task.id",
-	Title:        "The type of `aws.ecs.task.id` is string",
-	Check:        checkTypeAwsEcsTaskIdv1260,
+	Title:        "The type of `aws.ecs.task.id` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "aws.ecs.task.id") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeAwsEcsTaskIdv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("aws.ecs.task.id")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeAwsEcsTaskRevisionv1260 = &rule.AttributeRule{
 	Name:         "type.aws.ecs.task.revision",
-	Title:        "The type of `aws.ecs.task.revision` is string",
-	Check:        checkTypeAwsEcsTaskRevisionv1260,
+	Title:        "The type of `aws.ecs.task.revision` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "aws.ecs.task.revision") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeAwsEcsTaskRevisionv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("aws.ecs.task.revision")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeAwsEksClusterArnv1260 = &rule.AttributeRule{
 	Name:         "type.aws.eks.cluster.arn",
-	Title:        "The type of `aws.eks.cluster.arn` is string",
-	Check:        checkTypeAwsEksClusterArnv1260,
+	Title:        "The type of `aws.eks.cluster.arn` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "aws.eks.cluster.arn") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeAwsEksClusterArnv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("aws.eks.cluster.arn")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeAwsLambdaInvokedArnv1260 = &rule.AttributeRule{
 	Name:         "type.aws.lambda.invoked_arn",
-	Title:        "The type of `aws.lambda.invoked_arn` is string",
-	Check:        checkTypeAwsLambdaInvokedArnv1260,
+	Title:        "The type of `aws.lambda.invoked_arn` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "aws.lambda.invoked_arn") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeAwsLambdaInvokedArnv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("aws.lambda.invoked_arn")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeAwsLogGroupArnsv1260 = &rule.AttributeRule{
 	Name:         "type.aws.log.group.arns",
-	Title:        "The type of `aws.log.group.arns` is string[]",
-	Check:        checkTypeAwsLogGroupArnsv1260,
+	Title:        "The type of `aws.log.group.arns` should be string[]",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStrSlice(sa, "aws.log.group.arns") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeAwsLogGroupArnsv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("aws.log.group.arns")
-  if !ok {
-    return true
-  }
-  if val.Type() != pcommon.ValueTypeSlice {
-    return false
-  }
-  for _, v := range val.Slice().AsRaw() {
-    if _, ok := v.(string); !ok {
-      return false
-    }
-  }
-  return true
+  Version:      "v1.26.0",
 }
 
 var ruleTypeAwsLogGroupNamesv1260 = &rule.AttributeRule{
 	Name:         "type.aws.log.group.names",
-	Title:        "The type of `aws.log.group.names` is string[]",
-	Check:        checkTypeAwsLogGroupNamesv1260,
+	Title:        "The type of `aws.log.group.names` should be string[]",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStrSlice(sa, "aws.log.group.names") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeAwsLogGroupNamesv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("aws.log.group.names")
-  if !ok {
-    return true
-  }
-  if val.Type() != pcommon.ValueTypeSlice {
-    return false
-  }
-  for _, v := range val.Slice().AsRaw() {
-    if _, ok := v.(string); !ok {
-      return false
-    }
-  }
-  return true
+  Version:      "v1.26.0",
 }
 
 var ruleTypeAwsLogStreamArnsv1260 = &rule.AttributeRule{
 	Name:         "type.aws.log.stream.arns",
-	Title:        "The type of `aws.log.stream.arns` is string[]",
-	Check:        checkTypeAwsLogStreamArnsv1260,
+	Title:        "The type of `aws.log.stream.arns` should be string[]",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStrSlice(sa, "aws.log.stream.arns") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeAwsLogStreamArnsv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("aws.log.stream.arns")
-  if !ok {
-    return true
-  }
-  if val.Type() != pcommon.ValueTypeSlice {
-    return false
-  }
-  for _, v := range val.Slice().AsRaw() {
-    if _, ok := v.(string); !ok {
-      return false
-    }
-  }
-  return true
+  Version:      "v1.26.0",
 }
 
 var ruleTypeAwsLogStreamNamesv1260 = &rule.AttributeRule{
 	Name:         "type.aws.log.stream.names",
-	Title:        "The type of `aws.log.stream.names` is string[]",
-	Check:        checkTypeAwsLogStreamNamesv1260,
+	Title:        "The type of `aws.log.stream.names` should be string[]",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStrSlice(sa, "aws.log.stream.names") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeAwsLogStreamNamesv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("aws.log.stream.names")
-  if !ok {
-    return true
-  }
-  if val.Type() != pcommon.ValueTypeSlice {
-    return false
-  }
-  for _, v := range val.Slice().AsRaw() {
-    if _, ok := v.(string); !ok {
-      return false
-    }
-  }
-  return true
+  Version:      "v1.26.0",
 }
 
 var ruleTypeAwsRequestIdv1260 = &rule.AttributeRule{
 	Name:         "type.aws.request_id",
-	Title:        "The type of `aws.request_id` is string",
-	Check:        checkTypeAwsRequestIdv1260,
+	Title:        "The type of `aws.request_id` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "aws.request_id") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeAwsRequestIdv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("aws.request_id")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeAwsS3Bucketv1260 = &rule.AttributeRule{
 	Name:         "type.aws.s3.bucket",
-	Title:        "The type of `aws.s3.bucket` is string",
-	Check:        checkTypeAwsS3Bucketv1260,
+	Title:        "The type of `aws.s3.bucket` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "aws.s3.bucket") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeAwsS3Bucketv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("aws.s3.bucket")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeAwsS3CopySourcev1260 = &rule.AttributeRule{
 	Name:         "type.aws.s3.copy_source",
-	Title:        "The type of `aws.s3.copy_source` is string",
-	Check:        checkTypeAwsS3CopySourcev1260,
+	Title:        "The type of `aws.s3.copy_source` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "aws.s3.copy_source") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeAwsS3CopySourcev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("aws.s3.copy_source")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeAwsS3Deletev1260 = &rule.AttributeRule{
 	Name:         "type.aws.s3.delete",
-	Title:        "The type of `aws.s3.delete` is string",
-	Check:        checkTypeAwsS3Deletev1260,
+	Title:        "The type of `aws.s3.delete` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "aws.s3.delete") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeAwsS3Deletev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("aws.s3.delete")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeAwsS3Keyv1260 = &rule.AttributeRule{
 	Name:         "type.aws.s3.key",
-	Title:        "The type of `aws.s3.key` is string",
-	Check:        checkTypeAwsS3Keyv1260,
+	Title:        "The type of `aws.s3.key` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "aws.s3.key") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeAwsS3Keyv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("aws.s3.key")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeAwsS3PartNumberv1260 = &rule.AttributeRule{
 	Name:         "type.aws.s3.part_number",
-	Title:        "The type of `aws.s3.part_number` is int",
-	Check:        checkTypeAwsS3PartNumberv1260,
+	Title:        "The type of `aws.s3.part_number` should be int",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeInt(sa, "aws.s3.part_number") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeAwsS3PartNumberv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("aws.s3.part_number")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeInt
+  Version:      "v1.26.0",
 }
 
 var ruleTypeAwsS3UploadIdv1260 = &rule.AttributeRule{
 	Name:         "type.aws.s3.upload_id",
-	Title:        "The type of `aws.s3.upload_id` is string",
-	Check:        checkTypeAwsS3UploadIdv1260,
+	Title:        "The type of `aws.s3.upload_id` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "aws.s3.upload_id") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeAwsS3UploadIdv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("aws.s3.upload_id")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeBrowserBrandsv1260 = &rule.AttributeRule{
 	Name:         "type.browser.brands",
-	Title:        "The type of `browser.brands` is string[]",
-	Check:        checkTypeBrowserBrandsv1260,
+	Title:        "The type of `browser.brands` should be string[]",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStrSlice(sa, "browser.brands") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeBrowserBrandsv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("browser.brands")
-  if !ok {
-    return true
-  }
-  if val.Type() != pcommon.ValueTypeSlice {
-    return false
-  }
-  for _, v := range val.Slice().AsRaw() {
-    if _, ok := v.(string); !ok {
-      return false
-    }
-  }
-  return true
+  Version:      "v1.26.0",
 }
 
 var ruleTypeBrowserLanguagev1260 = &rule.AttributeRule{
 	Name:         "type.browser.language",
-	Title:        "The type of `browser.language` is string",
-	Check:        checkTypeBrowserLanguagev1260,
+	Title:        "The type of `browser.language` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "browser.language") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeBrowserLanguagev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("browser.language")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeBrowserMobilev1260 = &rule.AttributeRule{
 	Name:         "type.browser.mobile",
-	Title:        "The type of `browser.mobile` is boolean",
-	Check:        checkTypeBrowserMobilev1260,
+	Title:        "The type of `browser.mobile` should be boolean",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeBool(sa, "browser.mobile") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeBrowserMobilev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("browser.mobile")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeBool
+  Version:      "v1.26.0",
 }
 
 var ruleTypeBrowserPlatformv1260 = &rule.AttributeRule{
 	Name:         "type.browser.platform",
-	Title:        "The type of `browser.platform` is string",
-	Check:        checkTypeBrowserPlatformv1260,
+	Title:        "The type of `browser.platform` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "browser.platform") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeBrowserPlatformv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("browser.platform")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeClientAddressv1260 = &rule.AttributeRule{
 	Name:         "type.client.address",
-	Title:        "The type of `client.address` is string",
-	Check:        checkTypeClientAddressv1260,
+	Title:        "The type of `client.address` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "client.address") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityStable,
 	Source:       "",
-}
-
-func checkTypeClientAddressv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("client.address")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeClientPortv1260 = &rule.AttributeRule{
 	Name:         "type.client.port",
-	Title:        "The type of `client.port` is int",
-	Check:        checkTypeClientPortv1260,
+	Title:        "The type of `client.port` should be int",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeInt(sa, "client.port") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityStable,
 	Source:       "",
-}
-
-func checkTypeClientPortv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("client.port")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeInt
+  Version:      "v1.26.0",
 }
 
 var ruleTypeCloudAccountIdv1260 = &rule.AttributeRule{
 	Name:         "type.cloud.account.id",
-	Title:        "The type of `cloud.account.id` is string",
-	Check:        checkTypeCloudAccountIdv1260,
+	Title:        "The type of `cloud.account.id` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "cloud.account.id") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeCloudAccountIdv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("cloud.account.id")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeCloudAvailabilityZonev1260 = &rule.AttributeRule{
 	Name:         "type.cloud.availability_zone",
-	Title:        "The type of `cloud.availability_zone` is string",
-	Check:        checkTypeCloudAvailabilityZonev1260,
+	Title:        "The type of `cloud.availability_zone` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "cloud.availability_zone") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeCloudAvailabilityZonev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("cloud.availability_zone")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeCloudRegionv1260 = &rule.AttributeRule{
 	Name:         "type.cloud.region",
-	Title:        "The type of `cloud.region` is string",
-	Check:        checkTypeCloudRegionv1260,
+	Title:        "The type of `cloud.region` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "cloud.region") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeCloudRegionv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("cloud.region")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeCloudResourceIdv1260 = &rule.AttributeRule{
 	Name:         "type.cloud.resource_id",
-	Title:        "The type of `cloud.resource_id` is string",
-	Check:        checkTypeCloudResourceIdv1260,
+	Title:        "The type of `cloud.resource_id` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "cloud.resource_id") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeCloudResourceIdv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("cloud.resource_id")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeCloudeventsEventIdv1260 = &rule.AttributeRule{
 	Name:         "type.cloudevents.event_id",
-	Title:        "The type of `cloudevents.event_id` is string",
-	Check:        checkTypeCloudeventsEventIdv1260,
+	Title:        "The type of `cloudevents.event_id` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "cloudevents.event_id") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeCloudeventsEventIdv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("cloudevents.event_id")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeCloudeventsEventSourcev1260 = &rule.AttributeRule{
 	Name:         "type.cloudevents.event_source",
-	Title:        "The type of `cloudevents.event_source` is string",
-	Check:        checkTypeCloudeventsEventSourcev1260,
+	Title:        "The type of `cloudevents.event_source` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "cloudevents.event_source") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeCloudeventsEventSourcev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("cloudevents.event_source")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeCloudeventsEventSpecVersionv1260 = &rule.AttributeRule{
 	Name:         "type.cloudevents.event_spec_version",
-	Title:        "The type of `cloudevents.event_spec_version` is string",
-	Check:        checkTypeCloudeventsEventSpecVersionv1260,
+	Title:        "The type of `cloudevents.event_spec_version` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "cloudevents.event_spec_version") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeCloudeventsEventSpecVersionv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("cloudevents.event_spec_version")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeCloudeventsEventSubjectv1260 = &rule.AttributeRule{
 	Name:         "type.cloudevents.event_subject",
-	Title:        "The type of `cloudevents.event_subject` is string",
-	Check:        checkTypeCloudeventsEventSubjectv1260,
+	Title:        "The type of `cloudevents.event_subject` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "cloudevents.event_subject") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeCloudeventsEventSubjectv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("cloudevents.event_subject")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeCloudeventsEventTypev1260 = &rule.AttributeRule{
 	Name:         "type.cloudevents.event_type",
-	Title:        "The type of `cloudevents.event_type` is string",
-	Check:        checkTypeCloudeventsEventTypev1260,
+	Title:        "The type of `cloudevents.event_type` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "cloudevents.event_type") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeCloudeventsEventTypev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("cloudevents.event_type")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeCodeColumnv1260 = &rule.AttributeRule{
 	Name:         "type.code.column",
-	Title:        "The type of `code.column` is int",
-	Check:        checkTypeCodeColumnv1260,
+	Title:        "The type of `code.column` should be int",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeInt(sa, "code.column") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeCodeColumnv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("code.column")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeInt
+  Version:      "v1.26.0",
 }
 
 var ruleTypeCodeFilepathv1260 = &rule.AttributeRule{
 	Name:         "type.code.filepath",
-	Title:        "The type of `code.filepath` is string",
-	Check:        checkTypeCodeFilepathv1260,
+	Title:        "The type of `code.filepath` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "code.filepath") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeCodeFilepathv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("code.filepath")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeCodeFunctionv1260 = &rule.AttributeRule{
 	Name:         "type.code.function",
-	Title:        "The type of `code.function` is string",
-	Check:        checkTypeCodeFunctionv1260,
+	Title:        "The type of `code.function` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "code.function") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeCodeFunctionv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("code.function")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeCodeLinenov1260 = &rule.AttributeRule{
 	Name:         "type.code.lineno",
-	Title:        "The type of `code.lineno` is int",
-	Check:        checkTypeCodeLinenov1260,
+	Title:        "The type of `code.lineno` should be int",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeInt(sa, "code.lineno") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeCodeLinenov1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("code.lineno")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeInt
+  Version:      "v1.26.0",
 }
 
 var ruleTypeCodeNamespacev1260 = &rule.AttributeRule{
 	Name:         "type.code.namespace",
-	Title:        "The type of `code.namespace` is string",
-	Check:        checkTypeCodeNamespacev1260,
+	Title:        "The type of `code.namespace` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "code.namespace") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeCodeNamespacev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("code.namespace")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeCodeStacktracev1260 = &rule.AttributeRule{
 	Name:         "type.code.stacktrace",
-	Title:        "The type of `code.stacktrace` is string",
-	Check:        checkTypeCodeStacktracev1260,
+	Title:        "The type of `code.stacktrace` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "code.stacktrace") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeCodeStacktracev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("code.stacktrace")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeContainerCommandv1260 = &rule.AttributeRule{
 	Name:         "type.container.command",
-	Title:        "The type of `container.command` is string",
-	Check:        checkTypeContainerCommandv1260,
+	Title:        "The type of `container.command` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "container.command") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeContainerCommandv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("container.command")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeContainerCommandArgsv1260 = &rule.AttributeRule{
 	Name:         "type.container.command_args",
-	Title:        "The type of `container.command_args` is string[]",
-	Check:        checkTypeContainerCommandArgsv1260,
+	Title:        "The type of `container.command_args` should be string[]",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStrSlice(sa, "container.command_args") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeContainerCommandArgsv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("container.command_args")
-  if !ok {
-    return true
-  }
-  if val.Type() != pcommon.ValueTypeSlice {
-    return false
-  }
-  for _, v := range val.Slice().AsRaw() {
-    if _, ok := v.(string); !ok {
-      return false
-    }
-  }
-  return true
+  Version:      "v1.26.0",
 }
 
 var ruleTypeContainerCommandLinev1260 = &rule.AttributeRule{
 	Name:         "type.container.command_line",
-	Title:        "The type of `container.command_line` is string",
-	Check:        checkTypeContainerCommandLinev1260,
+	Title:        "The type of `container.command_line` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "container.command_line") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeContainerCommandLinev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("container.command_line")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeContainerIdv1260 = &rule.AttributeRule{
 	Name:         "type.container.id",
-	Title:        "The type of `container.id` is string",
-	Check:        checkTypeContainerIdv1260,
+	Title:        "The type of `container.id` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "container.id") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeContainerIdv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("container.id")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeContainerImageIdv1260 = &rule.AttributeRule{
 	Name:         "type.container.image.id",
-	Title:        "The type of `container.image.id` is string",
-	Check:        checkTypeContainerImageIdv1260,
+	Title:        "The type of `container.image.id` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "container.image.id") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeContainerImageIdv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("container.image.id")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeContainerImageNamev1260 = &rule.AttributeRule{
 	Name:         "type.container.image.name",
-	Title:        "The type of `container.image.name` is string",
-	Check:        checkTypeContainerImageNamev1260,
+	Title:        "The type of `container.image.name` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "container.image.name") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeContainerImageNamev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("container.image.name")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeContainerImageRepoDigestsv1260 = &rule.AttributeRule{
 	Name:         "type.container.image.repo_digests",
-	Title:        "The type of `container.image.repo_digests` is string[]",
-	Check:        checkTypeContainerImageRepoDigestsv1260,
+	Title:        "The type of `container.image.repo_digests` should be string[]",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStrSlice(sa, "container.image.repo_digests") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeContainerImageRepoDigestsv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("container.image.repo_digests")
-  if !ok {
-    return true
-  }
-  if val.Type() != pcommon.ValueTypeSlice {
-    return false
-  }
-  for _, v := range val.Slice().AsRaw() {
-    if _, ok := v.(string); !ok {
-      return false
-    }
-  }
-  return true
+  Version:      "v1.26.0",
 }
 
 var ruleTypeContainerImageTagsv1260 = &rule.AttributeRule{
 	Name:         "type.container.image.tags",
-	Title:        "The type of `container.image.tags` is string[]",
-	Check:        checkTypeContainerImageTagsv1260,
+	Title:        "The type of `container.image.tags` should be string[]",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStrSlice(sa, "container.image.tags") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeContainerImageTagsv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("container.image.tags")
-  if !ok {
-    return true
-  }
-  if val.Type() != pcommon.ValueTypeSlice {
-    return false
-  }
-  for _, v := range val.Slice().AsRaw() {
-    if _, ok := v.(string); !ok {
-      return false
-    }
-  }
-  return true
+  Version:      "v1.26.0",
 }
 
 var ruleTypeContainerNamev1260 = &rule.AttributeRule{
 	Name:         "type.container.name",
-	Title:        "The type of `container.name` is string",
-	Check:        checkTypeContainerNamev1260,
+	Title:        "The type of `container.name` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "container.name") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeContainerNamev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("container.name")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeContainerRuntimev1260 = &rule.AttributeRule{
 	Name:         "type.container.runtime",
-	Title:        "The type of `container.runtime` is string",
-	Check:        checkTypeContainerRuntimev1260,
+	Title:        "The type of `container.runtime` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "container.runtime") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeContainerRuntimev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("container.runtime")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeDbCassandraCoordinatorDcv1260 = &rule.AttributeRule{
 	Name:         "type.db.cassandra.coordinator.dc",
-	Title:        "The type of `db.cassandra.coordinator.dc` is string",
-	Check:        checkTypeDbCassandraCoordinatorDcv1260,
+	Title:        "The type of `db.cassandra.coordinator.dc` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "db.cassandra.coordinator.dc") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeDbCassandraCoordinatorDcv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("db.cassandra.coordinator.dc")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeDbCassandraCoordinatorIdv1260 = &rule.AttributeRule{
 	Name:         "type.db.cassandra.coordinator.id",
-	Title:        "The type of `db.cassandra.coordinator.id` is string",
-	Check:        checkTypeDbCassandraCoordinatorIdv1260,
+	Title:        "The type of `db.cassandra.coordinator.id` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "db.cassandra.coordinator.id") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeDbCassandraCoordinatorIdv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("db.cassandra.coordinator.id")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeDbCassandraIdempotencev1260 = &rule.AttributeRule{
 	Name:         "type.db.cassandra.idempotence",
-	Title:        "The type of `db.cassandra.idempotence` is boolean",
-	Check:        checkTypeDbCassandraIdempotencev1260,
+	Title:        "The type of `db.cassandra.idempotence` should be boolean",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeBool(sa, "db.cassandra.idempotence") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeDbCassandraIdempotencev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("db.cassandra.idempotence")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeBool
+  Version:      "v1.26.0",
 }
 
 var ruleTypeDbCassandraPageSizev1260 = &rule.AttributeRule{
 	Name:         "type.db.cassandra.page_size",
-	Title:        "The type of `db.cassandra.page_size` is int",
-	Check:        checkTypeDbCassandraPageSizev1260,
+	Title:        "The type of `db.cassandra.page_size` should be int",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeInt(sa, "db.cassandra.page_size") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeDbCassandraPageSizev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("db.cassandra.page_size")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeInt
+  Version:      "v1.26.0",
 }
 
 var ruleTypeDbCassandraSpeculativeExecutionCountv1260 = &rule.AttributeRule{
 	Name:         "type.db.cassandra.speculative_execution_count",
-	Title:        "The type of `db.cassandra.speculative_execution_count` is int",
-	Check:        checkTypeDbCassandraSpeculativeExecutionCountv1260,
+	Title:        "The type of `db.cassandra.speculative_execution_count` should be int",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeInt(sa, "db.cassandra.speculative_execution_count") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeDbCassandraSpeculativeExecutionCountv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("db.cassandra.speculative_execution_count")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeInt
+  Version:      "v1.26.0",
 }
 
 var ruleTypeDbCassandraTablev1260 = &rule.AttributeRule{
 	Name:         "type.db.cassandra.table",
-	Title:        "The type of `db.cassandra.table` is string",
-	Check:        checkTypeDbCassandraTablev1260,
+	Title:        "The type of `db.cassandra.table` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "db.cassandra.table") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeDbCassandraTablev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("db.cassandra.table")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeDbClientConnectionsPoolNamev1260 = &rule.AttributeRule{
 	Name:         "type.db.client.connections.pool.name",
-	Title:        "The type of `db.client.connections.pool.name` is string",
-	Check:        checkTypeDbClientConnectionsPoolNamev1260,
+	Title:        "The type of `db.client.connections.pool.name` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "db.client.connections.pool.name") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeDbClientConnectionsPoolNamev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("db.client.connections.pool.name")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeDbCollectionNamev1260 = &rule.AttributeRule{
 	Name:         "type.db.collection.name",
-	Title:        "The type of `db.collection.name` is string",
-	Check:        checkTypeDbCollectionNamev1260,
+	Title:        "The type of `db.collection.name` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "db.collection.name") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeDbCollectionNamev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("db.collection.name")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeDbConnectionStringv1260 = &rule.AttributeRule{
 	Name:         "type.db.connection_string",
-	Title:        "The type of `db.connection_string` is string",
-	Check:        checkTypeDbConnectionStringv1260,
+	Title:        "The type of `db.connection_string` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "db.connection_string") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeDbConnectionStringv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("db.connection_string")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeDbCosmosdbClientIdv1260 = &rule.AttributeRule{
 	Name:         "type.db.cosmosdb.client_id",
-	Title:        "The type of `db.cosmosdb.client_id` is string",
-	Check:        checkTypeDbCosmosdbClientIdv1260,
+	Title:        "The type of `db.cosmosdb.client_id` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "db.cosmosdb.client_id") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeDbCosmosdbClientIdv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("db.cosmosdb.client_id")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeDbCosmosdbContainerv1260 = &rule.AttributeRule{
 	Name:         "type.db.cosmosdb.container",
-	Title:        "The type of `db.cosmosdb.container` is string",
-	Check:        checkTypeDbCosmosdbContainerv1260,
+	Title:        "The type of `db.cosmosdb.container` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "db.cosmosdb.container") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeDbCosmosdbContainerv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("db.cosmosdb.container")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeDbCosmosdbRequestChargev1260 = &rule.AttributeRule{
 	Name:         "type.db.cosmosdb.request_charge",
-	Title:        "The type of `db.cosmosdb.request_charge` is double",
-	Check:        checkTypeDbCosmosdbRequestChargev1260,
+	Title:        "The type of `db.cosmosdb.request_charge` should be double",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeDouble(sa, "db.cosmosdb.request_charge") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeDbCosmosdbRequestChargev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("db.cosmosdb.request_charge")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeDouble
+  Version:      "v1.26.0",
 }
 
 var ruleTypeDbCosmosdbRequestContentLengthv1260 = &rule.AttributeRule{
 	Name:         "type.db.cosmosdb.request_content_length",
-	Title:        "The type of `db.cosmosdb.request_content_length` is int",
-	Check:        checkTypeDbCosmosdbRequestContentLengthv1260,
+	Title:        "The type of `db.cosmosdb.request_content_length` should be int",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeInt(sa, "db.cosmosdb.request_content_length") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeDbCosmosdbRequestContentLengthv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("db.cosmosdb.request_content_length")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeInt
+  Version:      "v1.26.0",
 }
 
 var ruleTypeDbCosmosdbStatusCodev1260 = &rule.AttributeRule{
 	Name:         "type.db.cosmosdb.status_code",
-	Title:        "The type of `db.cosmosdb.status_code` is int",
-	Check:        checkTypeDbCosmosdbStatusCodev1260,
+	Title:        "The type of `db.cosmosdb.status_code` should be int",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeInt(sa, "db.cosmosdb.status_code") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeDbCosmosdbStatusCodev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("db.cosmosdb.status_code")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeInt
+  Version:      "v1.26.0",
 }
 
 var ruleTypeDbCosmosdbSubStatusCodev1260 = &rule.AttributeRule{
 	Name:         "type.db.cosmosdb.sub_status_code",
-	Title:        "The type of `db.cosmosdb.sub_status_code` is int",
-	Check:        checkTypeDbCosmosdbSubStatusCodev1260,
+	Title:        "The type of `db.cosmosdb.sub_status_code` should be int",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeInt(sa, "db.cosmosdb.sub_status_code") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeDbCosmosdbSubStatusCodev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("db.cosmosdb.sub_status_code")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeInt
+  Version:      "v1.26.0",
 }
 
 var ruleTypeDbElasticsearchClusterNamev1260 = &rule.AttributeRule{
 	Name:         "type.db.elasticsearch.cluster.name",
-	Title:        "The type of `db.elasticsearch.cluster.name` is string",
-	Check:        checkTypeDbElasticsearchClusterNamev1260,
+	Title:        "The type of `db.elasticsearch.cluster.name` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "db.elasticsearch.cluster.name") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeDbElasticsearchClusterNamev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("db.elasticsearch.cluster.name")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeDbElasticsearchNodeNamev1260 = &rule.AttributeRule{
 	Name:         "type.db.elasticsearch.node.name",
-	Title:        "The type of `db.elasticsearch.node.name` is string",
-	Check:        checkTypeDbElasticsearchNodeNamev1260,
+	Title:        "The type of `db.elasticsearch.node.name` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "db.elasticsearch.node.name") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeDbElasticsearchNodeNamev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("db.elasticsearch.node.name")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeDbInstanceIdv1260 = &rule.AttributeRule{
 	Name:         "type.db.instance.id",
-	Title:        "The type of `db.instance.id` is string",
-	Check:        checkTypeDbInstanceIdv1260,
+	Title:        "The type of `db.instance.id` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "db.instance.id") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeDbInstanceIdv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("db.instance.id")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeDbJdbcDriverClassnamev1260 = &rule.AttributeRule{
 	Name:         "type.db.jdbc.driver_classname",
-	Title:        "The type of `db.jdbc.driver_classname` is string",
-	Check:        checkTypeDbJdbcDriverClassnamev1260,
+	Title:        "The type of `db.jdbc.driver_classname` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "db.jdbc.driver_classname") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeDbJdbcDriverClassnamev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("db.jdbc.driver_classname")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeDbMongodbCollectionv1260 = &rule.AttributeRule{
 	Name:         "type.db.mongodb.collection",
-	Title:        "The type of `db.mongodb.collection` is string",
-	Check:        checkTypeDbMongodbCollectionv1260,
+	Title:        "The type of `db.mongodb.collection` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "db.mongodb.collection") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeDbMongodbCollectionv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("db.mongodb.collection")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeDbMssqlInstanceNamev1260 = &rule.AttributeRule{
 	Name:         "type.db.mssql.instance_name",
-	Title:        "The type of `db.mssql.instance_name` is string",
-	Check:        checkTypeDbMssqlInstanceNamev1260,
+	Title:        "The type of `db.mssql.instance_name` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "db.mssql.instance_name") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeDbMssqlInstanceNamev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("db.mssql.instance_name")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeDbNamev1260 = &rule.AttributeRule{
 	Name:         "type.db.name",
-	Title:        "The type of `db.name` is string",
-	Check:        checkTypeDbNamev1260,
+	Title:        "The type of `db.name` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "db.name") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeDbNamev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("db.name")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeDbNamespacev1260 = &rule.AttributeRule{
 	Name:         "type.db.namespace",
-	Title:        "The type of `db.namespace` is string",
-	Check:        checkTypeDbNamespacev1260,
+	Title:        "The type of `db.namespace` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "db.namespace") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeDbNamespacev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("db.namespace")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeDbOperationv1260 = &rule.AttributeRule{
 	Name:         "type.db.operation",
-	Title:        "The type of `db.operation` is string",
-	Check:        checkTypeDbOperationv1260,
+	Title:        "The type of `db.operation` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "db.operation") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeDbOperationv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("db.operation")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeDbOperationNamev1260 = &rule.AttributeRule{
 	Name:         "type.db.operation.name",
-	Title:        "The type of `db.operation.name` is string",
-	Check:        checkTypeDbOperationNamev1260,
+	Title:        "The type of `db.operation.name` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "db.operation.name") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeDbOperationNamev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("db.operation.name")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeDbQueryTextv1260 = &rule.AttributeRule{
 	Name:         "type.db.query.text",
-	Title:        "The type of `db.query.text` is string",
-	Check:        checkTypeDbQueryTextv1260,
+	Title:        "The type of `db.query.text` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "db.query.text") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeDbQueryTextv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("db.query.text")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeDbRedisDatabaseIndexv1260 = &rule.AttributeRule{
 	Name:         "type.db.redis.database_index",
-	Title:        "The type of `db.redis.database_index` is int",
-	Check:        checkTypeDbRedisDatabaseIndexv1260,
+	Title:        "The type of `db.redis.database_index` should be int",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeInt(sa, "db.redis.database_index") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeDbRedisDatabaseIndexv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("db.redis.database_index")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeInt
+  Version:      "v1.26.0",
 }
 
 var ruleTypeDbSqlTablev1260 = &rule.AttributeRule{
 	Name:         "type.db.sql.table",
-	Title:        "The type of `db.sql.table` is string",
-	Check:        checkTypeDbSqlTablev1260,
+	Title:        "The type of `db.sql.table` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "db.sql.table") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeDbSqlTablev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("db.sql.table")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeDbStatementv1260 = &rule.AttributeRule{
 	Name:         "type.db.statement",
-	Title:        "The type of `db.statement` is string",
-	Check:        checkTypeDbStatementv1260,
+	Title:        "The type of `db.statement` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "db.statement") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeDbStatementv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("db.statement")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeDbUserv1260 = &rule.AttributeRule{
 	Name:         "type.db.user",
-	Title:        "The type of `db.user` is string",
-	Check:        checkTypeDbUserv1260,
+	Title:        "The type of `db.user` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "db.user") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeDbUserv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("db.user")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeDeploymentEnvironmentv1260 = &rule.AttributeRule{
 	Name:         "type.deployment.environment",
-	Title:        "The type of `deployment.environment` is string",
-	Check:        checkTypeDeploymentEnvironmentv1260,
+	Title:        "The type of `deployment.environment` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "deployment.environment") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeDeploymentEnvironmentv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("deployment.environment")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeDestinationAddressv1260 = &rule.AttributeRule{
 	Name:         "type.destination.address",
-	Title:        "The type of `destination.address` is string",
-	Check:        checkTypeDestinationAddressv1260,
+	Title:        "The type of `destination.address` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "destination.address") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeDestinationAddressv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("destination.address")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeDestinationPortv1260 = &rule.AttributeRule{
 	Name:         "type.destination.port",
-	Title:        "The type of `destination.port` is int",
-	Check:        checkTypeDestinationPortv1260,
+	Title:        "The type of `destination.port` should be int",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeInt(sa, "destination.port") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeDestinationPortv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("destination.port")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeInt
+  Version:      "v1.26.0",
 }
 
 var ruleTypeDeviceIdv1260 = &rule.AttributeRule{
 	Name:         "type.device.id",
-	Title:        "The type of `device.id` is string",
-	Check:        checkTypeDeviceIdv1260,
+	Title:        "The type of `device.id` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "device.id") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeDeviceIdv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("device.id")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeDeviceManufacturerv1260 = &rule.AttributeRule{
 	Name:         "type.device.manufacturer",
-	Title:        "The type of `device.manufacturer` is string",
-	Check:        checkTypeDeviceManufacturerv1260,
+	Title:        "The type of `device.manufacturer` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "device.manufacturer") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeDeviceManufacturerv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("device.manufacturer")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeDeviceModelIdentifierv1260 = &rule.AttributeRule{
 	Name:         "type.device.model.identifier",
-	Title:        "The type of `device.model.identifier` is string",
-	Check:        checkTypeDeviceModelIdentifierv1260,
+	Title:        "The type of `device.model.identifier` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "device.model.identifier") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeDeviceModelIdentifierv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("device.model.identifier")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeDeviceModelNamev1260 = &rule.AttributeRule{
 	Name:         "type.device.model.name",
-	Title:        "The type of `device.model.name` is string",
-	Check:        checkTypeDeviceModelNamev1260,
+	Title:        "The type of `device.model.name` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "device.model.name") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeDeviceModelNamev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("device.model.name")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeDnsQuestionNamev1260 = &rule.AttributeRule{
 	Name:         "type.dns.question.name",
-	Title:        "The type of `dns.question.name` is string",
-	Check:        checkTypeDnsQuestionNamev1260,
+	Title:        "The type of `dns.question.name` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "dns.question.name") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeDnsQuestionNamev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("dns.question.name")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeEnduserIdv1260 = &rule.AttributeRule{
 	Name:         "type.enduser.id",
-	Title:        "The type of `enduser.id` is string",
-	Check:        checkTypeEnduserIdv1260,
+	Title:        "The type of `enduser.id` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "enduser.id") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeEnduserIdv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("enduser.id")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeEnduserRolev1260 = &rule.AttributeRule{
 	Name:         "type.enduser.role",
-	Title:        "The type of `enduser.role` is string",
-	Check:        checkTypeEnduserRolev1260,
+	Title:        "The type of `enduser.role` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "enduser.role") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeEnduserRolev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("enduser.role")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeEnduserScopev1260 = &rule.AttributeRule{
 	Name:         "type.enduser.scope",
-	Title:        "The type of `enduser.scope` is string",
-	Check:        checkTypeEnduserScopev1260,
+	Title:        "The type of `enduser.scope` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "enduser.scope") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeEnduserScopev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("enduser.scope")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeEventNamev1260 = &rule.AttributeRule{
 	Name:         "type.event.name",
-	Title:        "The type of `event.name` is string",
-	Check:        checkTypeEventNamev1260,
+	Title:        "The type of `event.name` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "event.name") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeEventNamev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("event.name")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeExceptionEscapedv1260 = &rule.AttributeRule{
 	Name:         "type.exception.escaped",
-	Title:        "The type of `exception.escaped` is boolean",
-	Check:        checkTypeExceptionEscapedv1260,
+	Title:        "The type of `exception.escaped` should be boolean",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeBool(sa, "exception.escaped") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityStable,
 	Source:       "",
-}
-
-func checkTypeExceptionEscapedv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("exception.escaped")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeBool
+  Version:      "v1.26.0",
 }
 
 var ruleTypeExceptionMessagev1260 = &rule.AttributeRule{
 	Name:         "type.exception.message",
-	Title:        "The type of `exception.message` is string",
-	Check:        checkTypeExceptionMessagev1260,
+	Title:        "The type of `exception.message` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "exception.message") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityStable,
 	Source:       "",
-}
-
-func checkTypeExceptionMessagev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("exception.message")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeExceptionStacktracev1260 = &rule.AttributeRule{
 	Name:         "type.exception.stacktrace",
-	Title:        "The type of `exception.stacktrace` is string",
-	Check:        checkTypeExceptionStacktracev1260,
+	Title:        "The type of `exception.stacktrace` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "exception.stacktrace") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityStable,
 	Source:       "",
-}
-
-func checkTypeExceptionStacktracev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("exception.stacktrace")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeExceptionTypev1260 = &rule.AttributeRule{
 	Name:         "type.exception.type",
-	Title:        "The type of `exception.type` is string",
-	Check:        checkTypeExceptionTypev1260,
+	Title:        "The type of `exception.type` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "exception.type") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityStable,
 	Source:       "",
-}
-
-func checkTypeExceptionTypev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("exception.type")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeFaasColdstartv1260 = &rule.AttributeRule{
 	Name:         "type.faas.coldstart",
-	Title:        "The type of `faas.coldstart` is boolean",
-	Check:        checkTypeFaasColdstartv1260,
+	Title:        "The type of `faas.coldstart` should be boolean",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeBool(sa, "faas.coldstart") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeFaasColdstartv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("faas.coldstart")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeBool
+  Version:      "v1.26.0",
 }
 
 var ruleTypeFaasCronv1260 = &rule.AttributeRule{
 	Name:         "type.faas.cron",
-	Title:        "The type of `faas.cron` is string",
-	Check:        checkTypeFaasCronv1260,
+	Title:        "The type of `faas.cron` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "faas.cron") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeFaasCronv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("faas.cron")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeFaasDocumentCollectionv1260 = &rule.AttributeRule{
 	Name:         "type.faas.document.collection",
-	Title:        "The type of `faas.document.collection` is string",
-	Check:        checkTypeFaasDocumentCollectionv1260,
+	Title:        "The type of `faas.document.collection` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "faas.document.collection") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeFaasDocumentCollectionv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("faas.document.collection")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeFaasDocumentNamev1260 = &rule.AttributeRule{
 	Name:         "type.faas.document.name",
-	Title:        "The type of `faas.document.name` is string",
-	Check:        checkTypeFaasDocumentNamev1260,
+	Title:        "The type of `faas.document.name` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "faas.document.name") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeFaasDocumentNamev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("faas.document.name")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeFaasDocumentTimev1260 = &rule.AttributeRule{
 	Name:         "type.faas.document.time",
-	Title:        "The type of `faas.document.time` is string",
-	Check:        checkTypeFaasDocumentTimev1260,
+	Title:        "The type of `faas.document.time` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "faas.document.time") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeFaasDocumentTimev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("faas.document.time")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeFaasInstancev1260 = &rule.AttributeRule{
 	Name:         "type.faas.instance",
-	Title:        "The type of `faas.instance` is string",
-	Check:        checkTypeFaasInstancev1260,
+	Title:        "The type of `faas.instance` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "faas.instance") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeFaasInstancev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("faas.instance")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeFaasInvocationIdv1260 = &rule.AttributeRule{
 	Name:         "type.faas.invocation_id",
-	Title:        "The type of `faas.invocation_id` is string",
-	Check:        checkTypeFaasInvocationIdv1260,
+	Title:        "The type of `faas.invocation_id` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "faas.invocation_id") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeFaasInvocationIdv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("faas.invocation_id")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeFaasInvokedNamev1260 = &rule.AttributeRule{
 	Name:         "type.faas.invoked_name",
-	Title:        "The type of `faas.invoked_name` is string",
-	Check:        checkTypeFaasInvokedNamev1260,
+	Title:        "The type of `faas.invoked_name` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "faas.invoked_name") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeFaasInvokedNamev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("faas.invoked_name")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeFaasInvokedRegionv1260 = &rule.AttributeRule{
 	Name:         "type.faas.invoked_region",
-	Title:        "The type of `faas.invoked_region` is string",
-	Check:        checkTypeFaasInvokedRegionv1260,
+	Title:        "The type of `faas.invoked_region` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "faas.invoked_region") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeFaasInvokedRegionv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("faas.invoked_region")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeFaasMaxMemoryv1260 = &rule.AttributeRule{
 	Name:         "type.faas.max_memory",
-	Title:        "The type of `faas.max_memory` is int",
-	Check:        checkTypeFaasMaxMemoryv1260,
+	Title:        "The type of `faas.max_memory` should be int",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeInt(sa, "faas.max_memory") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeFaasMaxMemoryv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("faas.max_memory")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeInt
+  Version:      "v1.26.0",
 }
 
 var ruleTypeFaasNamev1260 = &rule.AttributeRule{
 	Name:         "type.faas.name",
-	Title:        "The type of `faas.name` is string",
-	Check:        checkTypeFaasNamev1260,
+	Title:        "The type of `faas.name` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "faas.name") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeFaasNamev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("faas.name")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeFaasTimev1260 = &rule.AttributeRule{
 	Name:         "type.faas.time",
-	Title:        "The type of `faas.time` is string",
-	Check:        checkTypeFaasTimev1260,
+	Title:        "The type of `faas.time` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "faas.time") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeFaasTimev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("faas.time")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeFaasVersionv1260 = &rule.AttributeRule{
 	Name:         "type.faas.version",
-	Title:        "The type of `faas.version` is string",
-	Check:        checkTypeFaasVersionv1260,
+	Title:        "The type of `faas.version` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "faas.version") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeFaasVersionv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("faas.version")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeFeatureFlagKeyv1260 = &rule.AttributeRule{
 	Name:         "type.feature_flag.key",
-	Title:        "The type of `feature_flag.key` is string",
-	Check:        checkTypeFeatureFlagKeyv1260,
+	Title:        "The type of `feature_flag.key` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "feature_flag.key") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeFeatureFlagKeyv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("feature_flag.key")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeFeatureFlagProviderNamev1260 = &rule.AttributeRule{
 	Name:         "type.feature_flag.provider_name",
-	Title:        "The type of `feature_flag.provider_name` is string",
-	Check:        checkTypeFeatureFlagProviderNamev1260,
+	Title:        "The type of `feature_flag.provider_name` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "feature_flag.provider_name") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeFeatureFlagProviderNamev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("feature_flag.provider_name")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeFeatureFlagVariantv1260 = &rule.AttributeRule{
 	Name:         "type.feature_flag.variant",
-	Title:        "The type of `feature_flag.variant` is string",
-	Check:        checkTypeFeatureFlagVariantv1260,
+	Title:        "The type of `feature_flag.variant` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "feature_flag.variant") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeFeatureFlagVariantv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("feature_flag.variant")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeFileDirectoryv1260 = &rule.AttributeRule{
 	Name:         "type.file.directory",
-	Title:        "The type of `file.directory` is string",
-	Check:        checkTypeFileDirectoryv1260,
+	Title:        "The type of `file.directory` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "file.directory") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeFileDirectoryv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("file.directory")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeFileExtensionv1260 = &rule.AttributeRule{
 	Name:         "type.file.extension",
-	Title:        "The type of `file.extension` is string",
-	Check:        checkTypeFileExtensionv1260,
+	Title:        "The type of `file.extension` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "file.extension") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeFileExtensionv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("file.extension")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeFileNamev1260 = &rule.AttributeRule{
 	Name:         "type.file.name",
-	Title:        "The type of `file.name` is string",
-	Check:        checkTypeFileNamev1260,
+	Title:        "The type of `file.name` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "file.name") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeFileNamev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("file.name")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeFilePathv1260 = &rule.AttributeRule{
 	Name:         "type.file.path",
-	Title:        "The type of `file.path` is string",
-	Check:        checkTypeFilePathv1260,
+	Title:        "The type of `file.path` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "file.path") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeFilePathv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("file.path")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeFileSizev1260 = &rule.AttributeRule{
 	Name:         "type.file.size",
-	Title:        "The type of `file.size` is int",
-	Check:        checkTypeFileSizev1260,
+	Title:        "The type of `file.size` should be int",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeInt(sa, "file.size") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeFileSizev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("file.size")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeInt
+  Version:      "v1.26.0",
 }
 
 var ruleTypeGcpCloudRunJobExecutionv1260 = &rule.AttributeRule{
 	Name:         "type.gcp.cloud_run.job.execution",
-	Title:        "The type of `gcp.cloud_run.job.execution` is string",
-	Check:        checkTypeGcpCloudRunJobExecutionv1260,
+	Title:        "The type of `gcp.cloud_run.job.execution` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "gcp.cloud_run.job.execution") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeGcpCloudRunJobExecutionv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("gcp.cloud_run.job.execution")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeGcpCloudRunJobTaskIndexv1260 = &rule.AttributeRule{
 	Name:         "type.gcp.cloud_run.job.task_index",
-	Title:        "The type of `gcp.cloud_run.job.task_index` is int",
-	Check:        checkTypeGcpCloudRunJobTaskIndexv1260,
+	Title:        "The type of `gcp.cloud_run.job.task_index` should be int",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeInt(sa, "gcp.cloud_run.job.task_index") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeGcpCloudRunJobTaskIndexv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("gcp.cloud_run.job.task_index")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeInt
+  Version:      "v1.26.0",
 }
 
 var ruleTypeGcpGceInstanceHostnamev1260 = &rule.AttributeRule{
 	Name:         "type.gcp.gce.instance.hostname",
-	Title:        "The type of `gcp.gce.instance.hostname` is string",
-	Check:        checkTypeGcpGceInstanceHostnamev1260,
+	Title:        "The type of `gcp.gce.instance.hostname` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "gcp.gce.instance.hostname") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeGcpGceInstanceHostnamev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("gcp.gce.instance.hostname")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeGcpGceInstanceNamev1260 = &rule.AttributeRule{
 	Name:         "type.gcp.gce.instance.name",
-	Title:        "The type of `gcp.gce.instance.name` is string",
-	Check:        checkTypeGcpGceInstanceNamev1260,
+	Title:        "The type of `gcp.gce.instance.name` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "gcp.gce.instance.name") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeGcpGceInstanceNamev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("gcp.gce.instance.name")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeGenAiCompletionv1260 = &rule.AttributeRule{
 	Name:         "type.gen_ai.completion",
-	Title:        "The type of `gen_ai.completion` is string",
-	Check:        checkTypeGenAiCompletionv1260,
+	Title:        "The type of `gen_ai.completion` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "gen_ai.completion") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeGenAiCompletionv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("gen_ai.completion")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeGenAiPromptv1260 = &rule.AttributeRule{
 	Name:         "type.gen_ai.prompt",
-	Title:        "The type of `gen_ai.prompt` is string",
-	Check:        checkTypeGenAiPromptv1260,
+	Title:        "The type of `gen_ai.prompt` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "gen_ai.prompt") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeGenAiPromptv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("gen_ai.prompt")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeGenAiRequestMaxTokensv1260 = &rule.AttributeRule{
 	Name:         "type.gen_ai.request.max_tokens",
-	Title:        "The type of `gen_ai.request.max_tokens` is int",
-	Check:        checkTypeGenAiRequestMaxTokensv1260,
+	Title:        "The type of `gen_ai.request.max_tokens` should be int",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeInt(sa, "gen_ai.request.max_tokens") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeGenAiRequestMaxTokensv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("gen_ai.request.max_tokens")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeInt
+  Version:      "v1.26.0",
 }
 
 var ruleTypeGenAiRequestModelv1260 = &rule.AttributeRule{
 	Name:         "type.gen_ai.request.model",
-	Title:        "The type of `gen_ai.request.model` is string",
-	Check:        checkTypeGenAiRequestModelv1260,
+	Title:        "The type of `gen_ai.request.model` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "gen_ai.request.model") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeGenAiRequestModelv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("gen_ai.request.model")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeGenAiRequestTemperaturev1260 = &rule.AttributeRule{
 	Name:         "type.gen_ai.request.temperature",
-	Title:        "The type of `gen_ai.request.temperature` is double",
-	Check:        checkTypeGenAiRequestTemperaturev1260,
+	Title:        "The type of `gen_ai.request.temperature` should be double",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeDouble(sa, "gen_ai.request.temperature") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeGenAiRequestTemperaturev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("gen_ai.request.temperature")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeDouble
+  Version:      "v1.26.0",
 }
 
 var ruleTypeGenAiRequestTopPv1260 = &rule.AttributeRule{
 	Name:         "type.gen_ai.request.top_p",
-	Title:        "The type of `gen_ai.request.top_p` is double",
-	Check:        checkTypeGenAiRequestTopPv1260,
+	Title:        "The type of `gen_ai.request.top_p` should be double",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeDouble(sa, "gen_ai.request.top_p") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeGenAiRequestTopPv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("gen_ai.request.top_p")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeDouble
+  Version:      "v1.26.0",
 }
 
 var ruleTypeGenAiResponseFinishReasonsv1260 = &rule.AttributeRule{
 	Name:         "type.gen_ai.response.finish_reasons",
-	Title:        "The type of `gen_ai.response.finish_reasons` is string[]",
-	Check:        checkTypeGenAiResponseFinishReasonsv1260,
+	Title:        "The type of `gen_ai.response.finish_reasons` should be string[]",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStrSlice(sa, "gen_ai.response.finish_reasons") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeGenAiResponseFinishReasonsv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("gen_ai.response.finish_reasons")
-  if !ok {
-    return true
-  }
-  if val.Type() != pcommon.ValueTypeSlice {
-    return false
-  }
-  for _, v := range val.Slice().AsRaw() {
-    if _, ok := v.(string); !ok {
-      return false
-    }
-  }
-  return true
+  Version:      "v1.26.0",
 }
 
 var ruleTypeGenAiResponseIdv1260 = &rule.AttributeRule{
 	Name:         "type.gen_ai.response.id",
-	Title:        "The type of `gen_ai.response.id` is string",
-	Check:        checkTypeGenAiResponseIdv1260,
+	Title:        "The type of `gen_ai.response.id` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "gen_ai.response.id") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeGenAiResponseIdv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("gen_ai.response.id")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeGenAiResponseModelv1260 = &rule.AttributeRule{
 	Name:         "type.gen_ai.response.model",
-	Title:        "The type of `gen_ai.response.model` is string",
-	Check:        checkTypeGenAiResponseModelv1260,
+	Title:        "The type of `gen_ai.response.model` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "gen_ai.response.model") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeGenAiResponseModelv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("gen_ai.response.model")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeGenAiUsageCompletionTokensv1260 = &rule.AttributeRule{
 	Name:         "type.gen_ai.usage.completion_tokens",
-	Title:        "The type of `gen_ai.usage.completion_tokens` is int",
-	Check:        checkTypeGenAiUsageCompletionTokensv1260,
+	Title:        "The type of `gen_ai.usage.completion_tokens` should be int",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeInt(sa, "gen_ai.usage.completion_tokens") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeGenAiUsageCompletionTokensv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("gen_ai.usage.completion_tokens")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeInt
+  Version:      "v1.26.0",
 }
 
 var ruleTypeGenAiUsagePromptTokensv1260 = &rule.AttributeRule{
 	Name:         "type.gen_ai.usage.prompt_tokens",
-	Title:        "The type of `gen_ai.usage.prompt_tokens` is int",
-	Check:        checkTypeGenAiUsagePromptTokensv1260,
+	Title:        "The type of `gen_ai.usage.prompt_tokens` should be int",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeInt(sa, "gen_ai.usage.prompt_tokens") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeGenAiUsagePromptTokensv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("gen_ai.usage.prompt_tokens")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeInt
+  Version:      "v1.26.0",
 }
 
 var ruleTypeGraphqlDocumentv1260 = &rule.AttributeRule{
 	Name:         "type.graphql.document",
-	Title:        "The type of `graphql.document` is string",
-	Check:        checkTypeGraphqlDocumentv1260,
+	Title:        "The type of `graphql.document` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "graphql.document") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeGraphqlDocumentv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("graphql.document")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeGraphqlOperationNamev1260 = &rule.AttributeRule{
 	Name:         "type.graphql.operation.name",
-	Title:        "The type of `graphql.operation.name` is string",
-	Check:        checkTypeGraphqlOperationNamev1260,
+	Title:        "The type of `graphql.operation.name` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "graphql.operation.name") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeGraphqlOperationNamev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("graphql.operation.name")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeHerokuAppIdv1260 = &rule.AttributeRule{
 	Name:         "type.heroku.app.id",
-	Title:        "The type of `heroku.app.id` is string",
-	Check:        checkTypeHerokuAppIdv1260,
+	Title:        "The type of `heroku.app.id` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "heroku.app.id") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeHerokuAppIdv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("heroku.app.id")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeHerokuReleaseCommitv1260 = &rule.AttributeRule{
 	Name:         "type.heroku.release.commit",
-	Title:        "The type of `heroku.release.commit` is string",
-	Check:        checkTypeHerokuReleaseCommitv1260,
+	Title:        "The type of `heroku.release.commit` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "heroku.release.commit") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeHerokuReleaseCommitv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("heroku.release.commit")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeHerokuReleaseCreationTimestampv1260 = &rule.AttributeRule{
 	Name:         "type.heroku.release.creation_timestamp",
-	Title:        "The type of `heroku.release.creation_timestamp` is string",
-	Check:        checkTypeHerokuReleaseCreationTimestampv1260,
+	Title:        "The type of `heroku.release.creation_timestamp` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "heroku.release.creation_timestamp") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeHerokuReleaseCreationTimestampv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("heroku.release.creation_timestamp")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeHostCpuCacheL2Sizev1260 = &rule.AttributeRule{
 	Name:         "type.host.cpu.cache.l2.size",
-	Title:        "The type of `host.cpu.cache.l2.size` is int",
-	Check:        checkTypeHostCpuCacheL2Sizev1260,
+	Title:        "The type of `host.cpu.cache.l2.size` should be int",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeInt(sa, "host.cpu.cache.l2.size") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeHostCpuCacheL2Sizev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("host.cpu.cache.l2.size")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeInt
+  Version:      "v1.26.0",
 }
 
 var ruleTypeHostCpuFamilyv1260 = &rule.AttributeRule{
 	Name:         "type.host.cpu.family",
-	Title:        "The type of `host.cpu.family` is string",
-	Check:        checkTypeHostCpuFamilyv1260,
+	Title:        "The type of `host.cpu.family` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "host.cpu.family") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeHostCpuFamilyv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("host.cpu.family")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeHostCpuModelIdv1260 = &rule.AttributeRule{
 	Name:         "type.host.cpu.model.id",
-	Title:        "The type of `host.cpu.model.id` is string",
-	Check:        checkTypeHostCpuModelIdv1260,
+	Title:        "The type of `host.cpu.model.id` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "host.cpu.model.id") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeHostCpuModelIdv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("host.cpu.model.id")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeHostCpuModelNamev1260 = &rule.AttributeRule{
 	Name:         "type.host.cpu.model.name",
-	Title:        "The type of `host.cpu.model.name` is string",
-	Check:        checkTypeHostCpuModelNamev1260,
+	Title:        "The type of `host.cpu.model.name` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "host.cpu.model.name") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeHostCpuModelNamev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("host.cpu.model.name")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeHostCpuSteppingv1260 = &rule.AttributeRule{
 	Name:         "type.host.cpu.stepping",
-	Title:        "The type of `host.cpu.stepping` is string",
-	Check:        checkTypeHostCpuSteppingv1260,
+	Title:        "The type of `host.cpu.stepping` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "host.cpu.stepping") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeHostCpuSteppingv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("host.cpu.stepping")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeHostCpuVendorIdv1260 = &rule.AttributeRule{
 	Name:         "type.host.cpu.vendor.id",
-	Title:        "The type of `host.cpu.vendor.id` is string",
-	Check:        checkTypeHostCpuVendorIdv1260,
+	Title:        "The type of `host.cpu.vendor.id` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "host.cpu.vendor.id") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeHostCpuVendorIdv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("host.cpu.vendor.id")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeHostIdv1260 = &rule.AttributeRule{
 	Name:         "type.host.id",
-	Title:        "The type of `host.id` is string",
-	Check:        checkTypeHostIdv1260,
+	Title:        "The type of `host.id` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "host.id") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeHostIdv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("host.id")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeHostImageIdv1260 = &rule.AttributeRule{
 	Name:         "type.host.image.id",
-	Title:        "The type of `host.image.id` is string",
-	Check:        checkTypeHostImageIdv1260,
+	Title:        "The type of `host.image.id` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "host.image.id") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeHostImageIdv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("host.image.id")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeHostImageNamev1260 = &rule.AttributeRule{
 	Name:         "type.host.image.name",
-	Title:        "The type of `host.image.name` is string",
-	Check:        checkTypeHostImageNamev1260,
+	Title:        "The type of `host.image.name` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "host.image.name") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeHostImageNamev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("host.image.name")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeHostImageVersionv1260 = &rule.AttributeRule{
 	Name:         "type.host.image.version",
-	Title:        "The type of `host.image.version` is string",
-	Check:        checkTypeHostImageVersionv1260,
+	Title:        "The type of `host.image.version` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "host.image.version") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeHostImageVersionv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("host.image.version")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeHostIpv1260 = &rule.AttributeRule{
 	Name:         "type.host.ip",
-	Title:        "The type of `host.ip` is string[]",
-	Check:        checkTypeHostIpv1260,
+	Title:        "The type of `host.ip` should be string[]",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStrSlice(sa, "host.ip") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeHostIpv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("host.ip")
-  if !ok {
-    return true
-  }
-  if val.Type() != pcommon.ValueTypeSlice {
-    return false
-  }
-  for _, v := range val.Slice().AsRaw() {
-    if _, ok := v.(string); !ok {
-      return false
-    }
-  }
-  return true
+  Version:      "v1.26.0",
 }
 
 var ruleTypeHostMacv1260 = &rule.AttributeRule{
 	Name:         "type.host.mac",
-	Title:        "The type of `host.mac` is string[]",
-	Check:        checkTypeHostMacv1260,
+	Title:        "The type of `host.mac` should be string[]",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStrSlice(sa, "host.mac") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeHostMacv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("host.mac")
-  if !ok {
-    return true
-  }
-  if val.Type() != pcommon.ValueTypeSlice {
-    return false
-  }
-  for _, v := range val.Slice().AsRaw() {
-    if _, ok := v.(string); !ok {
-      return false
-    }
-  }
-  return true
+  Version:      "v1.26.0",
 }
 
 var ruleTypeHostNamev1260 = &rule.AttributeRule{
 	Name:         "type.host.name",
-	Title:        "The type of `host.name` is string",
-	Check:        checkTypeHostNamev1260,
+	Title:        "The type of `host.name` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "host.name") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeHostNamev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("host.name")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeHostTypev1260 = &rule.AttributeRule{
 	Name:         "type.host.type",
-	Title:        "The type of `host.type` is string",
-	Check:        checkTypeHostTypev1260,
+	Title:        "The type of `host.type` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "host.type") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeHostTypev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("host.type")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeHttpClientIpv1260 = &rule.AttributeRule{
 	Name:         "type.http.client_ip",
-	Title:        "The type of `http.client_ip` is string",
-	Check:        checkTypeHttpClientIpv1260,
+	Title:        "The type of `http.client_ip` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "http.client_ip") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeHttpClientIpv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("http.client_ip")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeHttpHostv1260 = &rule.AttributeRule{
 	Name:         "type.http.host",
-	Title:        "The type of `http.host` is string",
-	Check:        checkTypeHttpHostv1260,
+	Title:        "The type of `http.host` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "http.host") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeHttpHostv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("http.host")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeHttpMethodv1260 = &rule.AttributeRule{
 	Name:         "type.http.method",
-	Title:        "The type of `http.method` is string",
-	Check:        checkTypeHttpMethodv1260,
+	Title:        "The type of `http.method` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "http.method") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeHttpMethodv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("http.method")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeHttpRequestBodySizev1260 = &rule.AttributeRule{
 	Name:         "type.http.request.body.size",
-	Title:        "The type of `http.request.body.size` is int",
-	Check:        checkTypeHttpRequestBodySizev1260,
+	Title:        "The type of `http.request.body.size` should be int",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeInt(sa, "http.request.body.size") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeHttpRequestBodySizev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("http.request.body.size")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeInt
+  Version:      "v1.26.0",
 }
 
 var ruleTypeHttpRequestMethodOriginalv1260 = &rule.AttributeRule{
 	Name:         "type.http.request.method_original",
-	Title:        "The type of `http.request.method_original` is string",
-	Check:        checkTypeHttpRequestMethodOriginalv1260,
+	Title:        "The type of `http.request.method_original` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "http.request.method_original") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityStable,
 	Source:       "",
-}
-
-func checkTypeHttpRequestMethodOriginalv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("http.request.method_original")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeHttpRequestResendCountv1260 = &rule.AttributeRule{
 	Name:         "type.http.request.resend_count",
-	Title:        "The type of `http.request.resend_count` is int",
-	Check:        checkTypeHttpRequestResendCountv1260,
+	Title:        "The type of `http.request.resend_count` should be int",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeInt(sa, "http.request.resend_count") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityStable,
 	Source:       "",
-}
-
-func checkTypeHttpRequestResendCountv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("http.request.resend_count")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeInt
+  Version:      "v1.26.0",
 }
 
 var ruleTypeHttpRequestSizev1260 = &rule.AttributeRule{
 	Name:         "type.http.request.size",
-	Title:        "The type of `http.request.size` is int",
-	Check:        checkTypeHttpRequestSizev1260,
+	Title:        "The type of `http.request.size` should be int",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeInt(sa, "http.request.size") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeHttpRequestSizev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("http.request.size")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeInt
+  Version:      "v1.26.0",
 }
 
 var ruleTypeHttpRequestContentLengthv1260 = &rule.AttributeRule{
 	Name:         "type.http.request_content_length",
-	Title:        "The type of `http.request_content_length` is int",
-	Check:        checkTypeHttpRequestContentLengthv1260,
+	Title:        "The type of `http.request_content_length` should be int",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeInt(sa, "http.request_content_length") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeHttpRequestContentLengthv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("http.request_content_length")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeInt
+  Version:      "v1.26.0",
 }
 
 var ruleTypeHttpRequestContentLengthUncompressedv1260 = &rule.AttributeRule{
 	Name:         "type.http.request_content_length_uncompressed",
-	Title:        "The type of `http.request_content_length_uncompressed` is int",
-	Check:        checkTypeHttpRequestContentLengthUncompressedv1260,
+	Title:        "The type of `http.request_content_length_uncompressed` should be int",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeInt(sa, "http.request_content_length_uncompressed") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeHttpRequestContentLengthUncompressedv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("http.request_content_length_uncompressed")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeInt
+  Version:      "v1.26.0",
 }
 
 var ruleTypeHttpResponseBodySizev1260 = &rule.AttributeRule{
 	Name:         "type.http.response.body.size",
-	Title:        "The type of `http.response.body.size` is int",
-	Check:        checkTypeHttpResponseBodySizev1260,
+	Title:        "The type of `http.response.body.size` should be int",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeInt(sa, "http.response.body.size") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeHttpResponseBodySizev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("http.response.body.size")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeInt
+  Version:      "v1.26.0",
 }
 
 var ruleTypeHttpResponseSizev1260 = &rule.AttributeRule{
 	Name:         "type.http.response.size",
-	Title:        "The type of `http.response.size` is int",
-	Check:        checkTypeHttpResponseSizev1260,
+	Title:        "The type of `http.response.size` should be int",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeInt(sa, "http.response.size") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeHttpResponseSizev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("http.response.size")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeInt
+  Version:      "v1.26.0",
 }
 
 var ruleTypeHttpResponseStatusCodev1260 = &rule.AttributeRule{
 	Name:         "type.http.response.status_code",
-	Title:        "The type of `http.response.status_code` is int",
-	Check:        checkTypeHttpResponseStatusCodev1260,
+	Title:        "The type of `http.response.status_code` should be int",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeInt(sa, "http.response.status_code") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityStable,
 	Source:       "",
-}
-
-func checkTypeHttpResponseStatusCodev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("http.response.status_code")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeInt
+  Version:      "v1.26.0",
 }
 
 var ruleTypeHttpResponseContentLengthv1260 = &rule.AttributeRule{
 	Name:         "type.http.response_content_length",
-	Title:        "The type of `http.response_content_length` is int",
-	Check:        checkTypeHttpResponseContentLengthv1260,
+	Title:        "The type of `http.response_content_length` should be int",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeInt(sa, "http.response_content_length") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeHttpResponseContentLengthv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("http.response_content_length")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeInt
+  Version:      "v1.26.0",
 }
 
 var ruleTypeHttpResponseContentLengthUncompressedv1260 = &rule.AttributeRule{
 	Name:         "type.http.response_content_length_uncompressed",
-	Title:        "The type of `http.response_content_length_uncompressed` is int",
-	Check:        checkTypeHttpResponseContentLengthUncompressedv1260,
+	Title:        "The type of `http.response_content_length_uncompressed` should be int",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeInt(sa, "http.response_content_length_uncompressed") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeHttpResponseContentLengthUncompressedv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("http.response_content_length_uncompressed")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeInt
+  Version:      "v1.26.0",
 }
 
 var ruleTypeHttpRoutev1260 = &rule.AttributeRule{
 	Name:         "type.http.route",
-	Title:        "The type of `http.route` is string",
-	Check:        checkTypeHttpRoutev1260,
+	Title:        "The type of `http.route` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "http.route") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityStable,
 	Source:       "",
-}
-
-func checkTypeHttpRoutev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("http.route")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeHttpSchemev1260 = &rule.AttributeRule{
 	Name:         "type.http.scheme",
-	Title:        "The type of `http.scheme` is string",
-	Check:        checkTypeHttpSchemev1260,
+	Title:        "The type of `http.scheme` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "http.scheme") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeHttpSchemev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("http.scheme")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeHttpServerNamev1260 = &rule.AttributeRule{
 	Name:         "type.http.server_name",
-	Title:        "The type of `http.server_name` is string",
-	Check:        checkTypeHttpServerNamev1260,
+	Title:        "The type of `http.server_name` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "http.server_name") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeHttpServerNamev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("http.server_name")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeHttpStatusCodev1260 = &rule.AttributeRule{
 	Name:         "type.http.status_code",
-	Title:        "The type of `http.status_code` is int",
-	Check:        checkTypeHttpStatusCodev1260,
+	Title:        "The type of `http.status_code` should be int",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeInt(sa, "http.status_code") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeHttpStatusCodev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("http.status_code")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeInt
+  Version:      "v1.26.0",
 }
 
 var ruleTypeHttpTargetv1260 = &rule.AttributeRule{
 	Name:         "type.http.target",
-	Title:        "The type of `http.target` is string",
-	Check:        checkTypeHttpTargetv1260,
+	Title:        "The type of `http.target` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "http.target") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeHttpTargetv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("http.target")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeHttpUrlv1260 = &rule.AttributeRule{
 	Name:         "type.http.url",
-	Title:        "The type of `http.url` is string",
-	Check:        checkTypeHttpUrlv1260,
+	Title:        "The type of `http.url` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "http.url") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeHttpUrlv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("http.url")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeHttpUserAgentv1260 = &rule.AttributeRule{
 	Name:         "type.http.user_agent",
-	Title:        "The type of `http.user_agent` is string",
-	Check:        checkTypeHttpUserAgentv1260,
+	Title:        "The type of `http.user_agent` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "http.user_agent") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeHttpUserAgentv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("http.user_agent")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeJvmBufferPoolNamev1260 = &rule.AttributeRule{
 	Name:         "type.jvm.buffer.pool.name",
-	Title:        "The type of `jvm.buffer.pool.name` is string",
-	Check:        checkTypeJvmBufferPoolNamev1260,
+	Title:        "The type of `jvm.buffer.pool.name` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "jvm.buffer.pool.name") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeJvmBufferPoolNamev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("jvm.buffer.pool.name")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeJvmGcActionv1260 = &rule.AttributeRule{
 	Name:         "type.jvm.gc.action",
-	Title:        "The type of `jvm.gc.action` is string",
-	Check:        checkTypeJvmGcActionv1260,
+	Title:        "The type of `jvm.gc.action` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "jvm.gc.action") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityStable,
 	Source:       "",
-}
-
-func checkTypeJvmGcActionv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("jvm.gc.action")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeJvmGcNamev1260 = &rule.AttributeRule{
 	Name:         "type.jvm.gc.name",
-	Title:        "The type of `jvm.gc.name` is string",
-	Check:        checkTypeJvmGcNamev1260,
+	Title:        "The type of `jvm.gc.name` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "jvm.gc.name") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityStable,
 	Source:       "",
-}
-
-func checkTypeJvmGcNamev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("jvm.gc.name")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeJvmMemoryPoolNamev1260 = &rule.AttributeRule{
 	Name:         "type.jvm.memory.pool.name",
-	Title:        "The type of `jvm.memory.pool.name` is string",
-	Check:        checkTypeJvmMemoryPoolNamev1260,
+	Title:        "The type of `jvm.memory.pool.name` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "jvm.memory.pool.name") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityStable,
 	Source:       "",
-}
-
-func checkTypeJvmMemoryPoolNamev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("jvm.memory.pool.name")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeJvmThreadDaemonv1260 = &rule.AttributeRule{
 	Name:         "type.jvm.thread.daemon",
-	Title:        "The type of `jvm.thread.daemon` is boolean",
-	Check:        checkTypeJvmThreadDaemonv1260,
+	Title:        "The type of `jvm.thread.daemon` should be boolean",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeBool(sa, "jvm.thread.daemon") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityStable,
 	Source:       "",
-}
-
-func checkTypeJvmThreadDaemonv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("jvm.thread.daemon")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeBool
+  Version:      "v1.26.0",
 }
 
 var ruleTypeK8SClusterNamev1260 = &rule.AttributeRule{
 	Name:         "type.k8s.cluster.name",
-	Title:        "The type of `k8s.cluster.name` is string",
-	Check:        checkTypeK8SClusterNamev1260,
+	Title:        "The type of `k8s.cluster.name` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "k8s.cluster.name") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeK8SClusterNamev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("k8s.cluster.name")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeK8SClusterUidv1260 = &rule.AttributeRule{
 	Name:         "type.k8s.cluster.uid",
-	Title:        "The type of `k8s.cluster.uid` is string",
-	Check:        checkTypeK8SClusterUidv1260,
+	Title:        "The type of `k8s.cluster.uid` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "k8s.cluster.uid") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeK8SClusterUidv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("k8s.cluster.uid")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeK8SContainerNamev1260 = &rule.AttributeRule{
 	Name:         "type.k8s.container.name",
-	Title:        "The type of `k8s.container.name` is string",
-	Check:        checkTypeK8SContainerNamev1260,
+	Title:        "The type of `k8s.container.name` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "k8s.container.name") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeK8SContainerNamev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("k8s.container.name")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeK8SContainerRestartCountv1260 = &rule.AttributeRule{
 	Name:         "type.k8s.container.restart_count",
-	Title:        "The type of `k8s.container.restart_count` is int",
-	Check:        checkTypeK8SContainerRestartCountv1260,
+	Title:        "The type of `k8s.container.restart_count` should be int",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeInt(sa, "k8s.container.restart_count") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeK8SContainerRestartCountv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("k8s.container.restart_count")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeInt
+  Version:      "v1.26.0",
 }
 
 var ruleTypeK8SContainerStatusLastTerminatedReasonv1260 = &rule.AttributeRule{
 	Name:         "type.k8s.container.status.last_terminated_reason",
-	Title:        "The type of `k8s.container.status.last_terminated_reason` is string",
-	Check:        checkTypeK8SContainerStatusLastTerminatedReasonv1260,
+	Title:        "The type of `k8s.container.status.last_terminated_reason` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "k8s.container.status.last_terminated_reason") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeK8SContainerStatusLastTerminatedReasonv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("k8s.container.status.last_terminated_reason")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeK8SCronjobNamev1260 = &rule.AttributeRule{
 	Name:         "type.k8s.cronjob.name",
-	Title:        "The type of `k8s.cronjob.name` is string",
-	Check:        checkTypeK8SCronjobNamev1260,
+	Title:        "The type of `k8s.cronjob.name` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "k8s.cronjob.name") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeK8SCronjobNamev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("k8s.cronjob.name")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeK8SCronjobUidv1260 = &rule.AttributeRule{
 	Name:         "type.k8s.cronjob.uid",
-	Title:        "The type of `k8s.cronjob.uid` is string",
-	Check:        checkTypeK8SCronjobUidv1260,
+	Title:        "The type of `k8s.cronjob.uid` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "k8s.cronjob.uid") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeK8SCronjobUidv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("k8s.cronjob.uid")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeK8SDaemonsetNamev1260 = &rule.AttributeRule{
 	Name:         "type.k8s.daemonset.name",
-	Title:        "The type of `k8s.daemonset.name` is string",
-	Check:        checkTypeK8SDaemonsetNamev1260,
+	Title:        "The type of `k8s.daemonset.name` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "k8s.daemonset.name") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeK8SDaemonsetNamev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("k8s.daemonset.name")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeK8SDaemonsetUidv1260 = &rule.AttributeRule{
 	Name:         "type.k8s.daemonset.uid",
-	Title:        "The type of `k8s.daemonset.uid` is string",
-	Check:        checkTypeK8SDaemonsetUidv1260,
+	Title:        "The type of `k8s.daemonset.uid` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "k8s.daemonset.uid") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeK8SDaemonsetUidv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("k8s.daemonset.uid")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeK8SDeploymentNamev1260 = &rule.AttributeRule{
 	Name:         "type.k8s.deployment.name",
-	Title:        "The type of `k8s.deployment.name` is string",
-	Check:        checkTypeK8SDeploymentNamev1260,
+	Title:        "The type of `k8s.deployment.name` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "k8s.deployment.name") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeK8SDeploymentNamev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("k8s.deployment.name")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeK8SDeploymentUidv1260 = &rule.AttributeRule{
 	Name:         "type.k8s.deployment.uid",
-	Title:        "The type of `k8s.deployment.uid` is string",
-	Check:        checkTypeK8SDeploymentUidv1260,
+	Title:        "The type of `k8s.deployment.uid` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "k8s.deployment.uid") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeK8SDeploymentUidv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("k8s.deployment.uid")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeK8SJobNamev1260 = &rule.AttributeRule{
 	Name:         "type.k8s.job.name",
-	Title:        "The type of `k8s.job.name` is string",
-	Check:        checkTypeK8SJobNamev1260,
+	Title:        "The type of `k8s.job.name` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "k8s.job.name") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeK8SJobNamev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("k8s.job.name")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeK8SJobUidv1260 = &rule.AttributeRule{
 	Name:         "type.k8s.job.uid",
-	Title:        "The type of `k8s.job.uid` is string",
-	Check:        checkTypeK8SJobUidv1260,
+	Title:        "The type of `k8s.job.uid` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "k8s.job.uid") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeK8SJobUidv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("k8s.job.uid")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeK8SNamespaceNamev1260 = &rule.AttributeRule{
 	Name:         "type.k8s.namespace.name",
-	Title:        "The type of `k8s.namespace.name` is string",
-	Check:        checkTypeK8SNamespaceNamev1260,
+	Title:        "The type of `k8s.namespace.name` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "k8s.namespace.name") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeK8SNamespaceNamev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("k8s.namespace.name")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeK8SNodeNamev1260 = &rule.AttributeRule{
 	Name:         "type.k8s.node.name",
-	Title:        "The type of `k8s.node.name` is string",
-	Check:        checkTypeK8SNodeNamev1260,
+	Title:        "The type of `k8s.node.name` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "k8s.node.name") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeK8SNodeNamev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("k8s.node.name")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeK8SNodeUidv1260 = &rule.AttributeRule{
 	Name:         "type.k8s.node.uid",
-	Title:        "The type of `k8s.node.uid` is string",
-	Check:        checkTypeK8SNodeUidv1260,
+	Title:        "The type of `k8s.node.uid` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "k8s.node.uid") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeK8SNodeUidv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("k8s.node.uid")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeK8SPodNamev1260 = &rule.AttributeRule{
 	Name:         "type.k8s.pod.name",
-	Title:        "The type of `k8s.pod.name` is string",
-	Check:        checkTypeK8SPodNamev1260,
+	Title:        "The type of `k8s.pod.name` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "k8s.pod.name") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeK8SPodNamev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("k8s.pod.name")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeK8SPodUidv1260 = &rule.AttributeRule{
 	Name:         "type.k8s.pod.uid",
-	Title:        "The type of `k8s.pod.uid` is string",
-	Check:        checkTypeK8SPodUidv1260,
+	Title:        "The type of `k8s.pod.uid` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "k8s.pod.uid") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeK8SPodUidv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("k8s.pod.uid")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeK8SReplicasetNamev1260 = &rule.AttributeRule{
 	Name:         "type.k8s.replicaset.name",
-	Title:        "The type of `k8s.replicaset.name` is string",
-	Check:        checkTypeK8SReplicasetNamev1260,
+	Title:        "The type of `k8s.replicaset.name` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "k8s.replicaset.name") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeK8SReplicasetNamev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("k8s.replicaset.name")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeK8SReplicasetUidv1260 = &rule.AttributeRule{
 	Name:         "type.k8s.replicaset.uid",
-	Title:        "The type of `k8s.replicaset.uid` is string",
-	Check:        checkTypeK8SReplicasetUidv1260,
+	Title:        "The type of `k8s.replicaset.uid` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "k8s.replicaset.uid") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeK8SReplicasetUidv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("k8s.replicaset.uid")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeK8SStatefulsetNamev1260 = &rule.AttributeRule{
 	Name:         "type.k8s.statefulset.name",
-	Title:        "The type of `k8s.statefulset.name` is string",
-	Check:        checkTypeK8SStatefulsetNamev1260,
+	Title:        "The type of `k8s.statefulset.name` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "k8s.statefulset.name") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeK8SStatefulsetNamev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("k8s.statefulset.name")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeK8SStatefulsetUidv1260 = &rule.AttributeRule{
 	Name:         "type.k8s.statefulset.uid",
-	Title:        "The type of `k8s.statefulset.uid` is string",
-	Check:        checkTypeK8SStatefulsetUidv1260,
+	Title:        "The type of `k8s.statefulset.uid` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "k8s.statefulset.uid") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeK8SStatefulsetUidv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("k8s.statefulset.uid")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeLogFileNamev1260 = &rule.AttributeRule{
 	Name:         "type.log.file.name",
-	Title:        "The type of `log.file.name` is string",
-	Check:        checkTypeLogFileNamev1260,
+	Title:        "The type of `log.file.name` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "log.file.name") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeLogFileNamev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("log.file.name")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeLogFileNameResolvedv1260 = &rule.AttributeRule{
 	Name:         "type.log.file.name_resolved",
-	Title:        "The type of `log.file.name_resolved` is string",
-	Check:        checkTypeLogFileNameResolvedv1260,
+	Title:        "The type of `log.file.name_resolved` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "log.file.name_resolved") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeLogFileNameResolvedv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("log.file.name_resolved")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeLogFilePathv1260 = &rule.AttributeRule{
 	Name:         "type.log.file.path",
-	Title:        "The type of `log.file.path` is string",
-	Check:        checkTypeLogFilePathv1260,
+	Title:        "The type of `log.file.path` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "log.file.path") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeLogFilePathv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("log.file.path")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeLogFilePathResolvedv1260 = &rule.AttributeRule{
 	Name:         "type.log.file.path_resolved",
-	Title:        "The type of `log.file.path_resolved` is string",
-	Check:        checkTypeLogFilePathResolvedv1260,
+	Title:        "The type of `log.file.path_resolved` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "log.file.path_resolved") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeLogFilePathResolvedv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("log.file.path_resolved")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeLogRecordUidv1260 = &rule.AttributeRule{
 	Name:         "type.log.record.uid",
-	Title:        "The type of `log.record.uid` is string",
-	Check:        checkTypeLogRecordUidv1260,
+	Title:        "The type of `log.record.uid` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "log.record.uid") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeLogRecordUidv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("log.record.uid")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeMessageCompressedSizev1260 = &rule.AttributeRule{
 	Name:         "type.message.compressed_size",
-	Title:        "The type of `message.compressed_size` is int",
-	Check:        checkTypeMessageCompressedSizev1260,
+	Title:        "The type of `message.compressed_size` should be int",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeInt(sa, "message.compressed_size") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeMessageCompressedSizev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("message.compressed_size")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeInt
+  Version:      "v1.26.0",
 }
 
 var ruleTypeMessageIdv1260 = &rule.AttributeRule{
 	Name:         "type.message.id",
-	Title:        "The type of `message.id` is int",
-	Check:        checkTypeMessageIdv1260,
+	Title:        "The type of `message.id` should be int",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeInt(sa, "message.id") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeMessageIdv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("message.id")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeInt
+  Version:      "v1.26.0",
 }
 
 var ruleTypeMessageUncompressedSizev1260 = &rule.AttributeRule{
 	Name:         "type.message.uncompressed_size",
-	Title:        "The type of `message.uncompressed_size` is int",
-	Check:        checkTypeMessageUncompressedSizev1260,
+	Title:        "The type of `message.uncompressed_size` should be int",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeInt(sa, "message.uncompressed_size") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeMessageUncompressedSizev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("message.uncompressed_size")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeInt
+  Version:      "v1.26.0",
 }
 
 var ruleTypeMessagingBatchMessageCountv1260 = &rule.AttributeRule{
 	Name:         "type.messaging.batch.message_count",
-	Title:        "The type of `messaging.batch.message_count` is int",
-	Check:        checkTypeMessagingBatchMessageCountv1260,
+	Title:        "The type of `messaging.batch.message_count` should be int",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeInt(sa, "messaging.batch.message_count") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeMessagingBatchMessageCountv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("messaging.batch.message_count")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeInt
+  Version:      "v1.26.0",
 }
 
 var ruleTypeMessagingClientIdv1260 = &rule.AttributeRule{
 	Name:         "type.messaging.client.id",
-	Title:        "The type of `messaging.client.id` is string",
-	Check:        checkTypeMessagingClientIdv1260,
+	Title:        "The type of `messaging.client.id` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "messaging.client.id") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeMessagingClientIdv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("messaging.client.id")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeMessagingClient_Idv1260 = &rule.AttributeRule{
 	Name:         "type.messaging.client_id",
-	Title:        "The type of `messaging.client_id` is string",
-	Check:        checkTypeMessagingClient_Idv1260,
+	Title:        "The type of `messaging.client_id` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "messaging.client_id") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeMessagingClient_Idv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("messaging.client_id")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeMessagingDestinationAnonymousv1260 = &rule.AttributeRule{
 	Name:         "type.messaging.destination.anonymous",
-	Title:        "The type of `messaging.destination.anonymous` is boolean",
-	Check:        checkTypeMessagingDestinationAnonymousv1260,
+	Title:        "The type of `messaging.destination.anonymous` should be boolean",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeBool(sa, "messaging.destination.anonymous") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeMessagingDestinationAnonymousv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("messaging.destination.anonymous")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeBool
+  Version:      "v1.26.0",
 }
 
 var ruleTypeMessagingDestinationNamev1260 = &rule.AttributeRule{
 	Name:         "type.messaging.destination.name",
-	Title:        "The type of `messaging.destination.name` is string",
-	Check:        checkTypeMessagingDestinationNamev1260,
+	Title:        "The type of `messaging.destination.name` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "messaging.destination.name") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeMessagingDestinationNamev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("messaging.destination.name")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeMessagingDestinationPartitionIdv1260 = &rule.AttributeRule{
 	Name:         "type.messaging.destination.partition.id",
-	Title:        "The type of `messaging.destination.partition.id` is string",
-	Check:        checkTypeMessagingDestinationPartitionIdv1260,
+	Title:        "The type of `messaging.destination.partition.id` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "messaging.destination.partition.id") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeMessagingDestinationPartitionIdv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("messaging.destination.partition.id")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeMessagingDestinationTemplatev1260 = &rule.AttributeRule{
 	Name:         "type.messaging.destination.template",
-	Title:        "The type of `messaging.destination.template` is string",
-	Check:        checkTypeMessagingDestinationTemplatev1260,
+	Title:        "The type of `messaging.destination.template` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "messaging.destination.template") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeMessagingDestinationTemplatev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("messaging.destination.template")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeMessagingDestinationTemporaryv1260 = &rule.AttributeRule{
 	Name:         "type.messaging.destination.temporary",
-	Title:        "The type of `messaging.destination.temporary` is boolean",
-	Check:        checkTypeMessagingDestinationTemporaryv1260,
+	Title:        "The type of `messaging.destination.temporary` should be boolean",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeBool(sa, "messaging.destination.temporary") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeMessagingDestinationTemporaryv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("messaging.destination.temporary")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeBool
+  Version:      "v1.26.0",
 }
 
 var ruleTypeMessagingDestinationPublishAnonymousv1260 = &rule.AttributeRule{
 	Name:         "type.messaging.destination_publish.anonymous",
-	Title:        "The type of `messaging.destination_publish.anonymous` is boolean",
-	Check:        checkTypeMessagingDestinationPublishAnonymousv1260,
+	Title:        "The type of `messaging.destination_publish.anonymous` should be boolean",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeBool(sa, "messaging.destination_publish.anonymous") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeMessagingDestinationPublishAnonymousv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("messaging.destination_publish.anonymous")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeBool
+  Version:      "v1.26.0",
 }
 
 var ruleTypeMessagingDestinationPublishNamev1260 = &rule.AttributeRule{
 	Name:         "type.messaging.destination_publish.name",
-	Title:        "The type of `messaging.destination_publish.name` is string",
-	Check:        checkTypeMessagingDestinationPublishNamev1260,
+	Title:        "The type of `messaging.destination_publish.name` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "messaging.destination_publish.name") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeMessagingDestinationPublishNamev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("messaging.destination_publish.name")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeMessagingEventhubsConsumerGroupv1260 = &rule.AttributeRule{
 	Name:         "type.messaging.eventhubs.consumer.group",
-	Title:        "The type of `messaging.eventhubs.consumer.group` is string",
-	Check:        checkTypeMessagingEventhubsConsumerGroupv1260,
+	Title:        "The type of `messaging.eventhubs.consumer.group` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "messaging.eventhubs.consumer.group") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeMessagingEventhubsConsumerGroupv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("messaging.eventhubs.consumer.group")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeMessagingEventhubsMessageEnqueuedTimev1260 = &rule.AttributeRule{
 	Name:         "type.messaging.eventhubs.message.enqueued_time",
-	Title:        "The type of `messaging.eventhubs.message.enqueued_time` is int",
-	Check:        checkTypeMessagingEventhubsMessageEnqueuedTimev1260,
+	Title:        "The type of `messaging.eventhubs.message.enqueued_time` should be int",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeInt(sa, "messaging.eventhubs.message.enqueued_time") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeMessagingEventhubsMessageEnqueuedTimev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("messaging.eventhubs.message.enqueued_time")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeInt
+  Version:      "v1.26.0",
 }
 
 var ruleTypeMessagingGcpPubsubMessageAckDeadlinev1260 = &rule.AttributeRule{
 	Name:         "type.messaging.gcp_pubsub.message.ack_deadline",
-	Title:        "The type of `messaging.gcp_pubsub.message.ack_deadline` is int",
-	Check:        checkTypeMessagingGcpPubsubMessageAckDeadlinev1260,
+	Title:        "The type of `messaging.gcp_pubsub.message.ack_deadline` should be int",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeInt(sa, "messaging.gcp_pubsub.message.ack_deadline") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeMessagingGcpPubsubMessageAckDeadlinev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("messaging.gcp_pubsub.message.ack_deadline")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeInt
+  Version:      "v1.26.0",
 }
 
 var ruleTypeMessagingGcpPubsubMessageAckIdv1260 = &rule.AttributeRule{
 	Name:         "type.messaging.gcp_pubsub.message.ack_id",
-	Title:        "The type of `messaging.gcp_pubsub.message.ack_id` is string",
-	Check:        checkTypeMessagingGcpPubsubMessageAckIdv1260,
+	Title:        "The type of `messaging.gcp_pubsub.message.ack_id` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "messaging.gcp_pubsub.message.ack_id") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeMessagingGcpPubsubMessageAckIdv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("messaging.gcp_pubsub.message.ack_id")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeMessagingGcpPubsubMessageDeliveryAttemptv1260 = &rule.AttributeRule{
 	Name:         "type.messaging.gcp_pubsub.message.delivery_attempt",
-	Title:        "The type of `messaging.gcp_pubsub.message.delivery_attempt` is int",
-	Check:        checkTypeMessagingGcpPubsubMessageDeliveryAttemptv1260,
+	Title:        "The type of `messaging.gcp_pubsub.message.delivery_attempt` should be int",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeInt(sa, "messaging.gcp_pubsub.message.delivery_attempt") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeMessagingGcpPubsubMessageDeliveryAttemptv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("messaging.gcp_pubsub.message.delivery_attempt")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeInt
+  Version:      "v1.26.0",
 }
 
 var ruleTypeMessagingGcpPubsubMessageOrderingKeyv1260 = &rule.AttributeRule{
 	Name:         "type.messaging.gcp_pubsub.message.ordering_key",
-	Title:        "The type of `messaging.gcp_pubsub.message.ordering_key` is string",
-	Check:        checkTypeMessagingGcpPubsubMessageOrderingKeyv1260,
+	Title:        "The type of `messaging.gcp_pubsub.message.ordering_key` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "messaging.gcp_pubsub.message.ordering_key") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeMessagingGcpPubsubMessageOrderingKeyv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("messaging.gcp_pubsub.message.ordering_key")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeMessagingKafkaConsumerGroupv1260 = &rule.AttributeRule{
 	Name:         "type.messaging.kafka.consumer.group",
-	Title:        "The type of `messaging.kafka.consumer.group` is string",
-	Check:        checkTypeMessagingKafkaConsumerGroupv1260,
+	Title:        "The type of `messaging.kafka.consumer.group` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "messaging.kafka.consumer.group") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeMessagingKafkaConsumerGroupv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("messaging.kafka.consumer.group")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeMessagingKafkaDestinationPartitionv1260 = &rule.AttributeRule{
 	Name:         "type.messaging.kafka.destination.partition",
-	Title:        "The type of `messaging.kafka.destination.partition` is int",
-	Check:        checkTypeMessagingKafkaDestinationPartitionv1260,
+	Title:        "The type of `messaging.kafka.destination.partition` should be int",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeInt(sa, "messaging.kafka.destination.partition") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeMessagingKafkaDestinationPartitionv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("messaging.kafka.destination.partition")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeInt
+  Version:      "v1.26.0",
 }
 
 var ruleTypeMessagingKafkaMessageKeyv1260 = &rule.AttributeRule{
 	Name:         "type.messaging.kafka.message.key",
-	Title:        "The type of `messaging.kafka.message.key` is string",
-	Check:        checkTypeMessagingKafkaMessageKeyv1260,
+	Title:        "The type of `messaging.kafka.message.key` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "messaging.kafka.message.key") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeMessagingKafkaMessageKeyv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("messaging.kafka.message.key")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeMessagingKafkaMessageOffsetv1260 = &rule.AttributeRule{
 	Name:         "type.messaging.kafka.message.offset",
-	Title:        "The type of `messaging.kafka.message.offset` is int",
-	Check:        checkTypeMessagingKafkaMessageOffsetv1260,
+	Title:        "The type of `messaging.kafka.message.offset` should be int",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeInt(sa, "messaging.kafka.message.offset") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeMessagingKafkaMessageOffsetv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("messaging.kafka.message.offset")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeInt
+  Version:      "v1.26.0",
 }
 
 var ruleTypeMessagingKafkaMessageTombstonev1260 = &rule.AttributeRule{
 	Name:         "type.messaging.kafka.message.tombstone",
-	Title:        "The type of `messaging.kafka.message.tombstone` is boolean",
-	Check:        checkTypeMessagingKafkaMessageTombstonev1260,
+	Title:        "The type of `messaging.kafka.message.tombstone` should be boolean",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeBool(sa, "messaging.kafka.message.tombstone") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeMessagingKafkaMessageTombstonev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("messaging.kafka.message.tombstone")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeBool
+  Version:      "v1.26.0",
 }
 
 var ruleTypeMessagingMessageBodySizev1260 = &rule.AttributeRule{
 	Name:         "type.messaging.message.body.size",
-	Title:        "The type of `messaging.message.body.size` is int",
-	Check:        checkTypeMessagingMessageBodySizev1260,
+	Title:        "The type of `messaging.message.body.size` should be int",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeInt(sa, "messaging.message.body.size") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeMessagingMessageBodySizev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("messaging.message.body.size")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeInt
+  Version:      "v1.26.0",
 }
 
 var ruleTypeMessagingMessageConversationIdv1260 = &rule.AttributeRule{
 	Name:         "type.messaging.message.conversation_id",
-	Title:        "The type of `messaging.message.conversation_id` is string",
-	Check:        checkTypeMessagingMessageConversationIdv1260,
+	Title:        "The type of `messaging.message.conversation_id` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "messaging.message.conversation_id") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeMessagingMessageConversationIdv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("messaging.message.conversation_id")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeMessagingMessageEnvelopeSizev1260 = &rule.AttributeRule{
 	Name:         "type.messaging.message.envelope.size",
-	Title:        "The type of `messaging.message.envelope.size` is int",
-	Check:        checkTypeMessagingMessageEnvelopeSizev1260,
+	Title:        "The type of `messaging.message.envelope.size` should be int",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeInt(sa, "messaging.message.envelope.size") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeMessagingMessageEnvelopeSizev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("messaging.message.envelope.size")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeInt
+  Version:      "v1.26.0",
 }
 
 var ruleTypeMessagingMessageIdv1260 = &rule.AttributeRule{
 	Name:         "type.messaging.message.id",
-	Title:        "The type of `messaging.message.id` is string",
-	Check:        checkTypeMessagingMessageIdv1260,
+	Title:        "The type of `messaging.message.id` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "messaging.message.id") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeMessagingMessageIdv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("messaging.message.id")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeMessagingOperationv1260 = &rule.AttributeRule{
 	Name:         "type.messaging.operation",
-	Title:        "The type of `messaging.operation` is string",
-	Check:        checkTypeMessagingOperationv1260,
+	Title:        "The type of `messaging.operation` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "messaging.operation") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeMessagingOperationv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("messaging.operation")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeMessagingOperationNamev1260 = &rule.AttributeRule{
 	Name:         "type.messaging.operation.name",
-	Title:        "The type of `messaging.operation.name` is string",
-	Check:        checkTypeMessagingOperationNamev1260,
+	Title:        "The type of `messaging.operation.name` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "messaging.operation.name") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeMessagingOperationNamev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("messaging.operation.name")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeMessagingRabbitmqDestinationRoutingKeyv1260 = &rule.AttributeRule{
 	Name:         "type.messaging.rabbitmq.destination.routing_key",
-	Title:        "The type of `messaging.rabbitmq.destination.routing_key` is string",
-	Check:        checkTypeMessagingRabbitmqDestinationRoutingKeyv1260,
+	Title:        "The type of `messaging.rabbitmq.destination.routing_key` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "messaging.rabbitmq.destination.routing_key") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeMessagingRabbitmqDestinationRoutingKeyv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("messaging.rabbitmq.destination.routing_key")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeMessagingRabbitmqMessageDeliveryTagv1260 = &rule.AttributeRule{
 	Name:         "type.messaging.rabbitmq.message.delivery_tag",
-	Title:        "The type of `messaging.rabbitmq.message.delivery_tag` is int",
-	Check:        checkTypeMessagingRabbitmqMessageDeliveryTagv1260,
+	Title:        "The type of `messaging.rabbitmq.message.delivery_tag` should be int",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeInt(sa, "messaging.rabbitmq.message.delivery_tag") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeMessagingRabbitmqMessageDeliveryTagv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("messaging.rabbitmq.message.delivery_tag")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeInt
+  Version:      "v1.26.0",
 }
 
 var ruleTypeMessagingRocketmqClientGroupv1260 = &rule.AttributeRule{
 	Name:         "type.messaging.rocketmq.client_group",
-	Title:        "The type of `messaging.rocketmq.client_group` is string",
-	Check:        checkTypeMessagingRocketmqClientGroupv1260,
+	Title:        "The type of `messaging.rocketmq.client_group` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "messaging.rocketmq.client_group") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeMessagingRocketmqClientGroupv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("messaging.rocketmq.client_group")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeMessagingRocketmqMessageDelayTimeLevelv1260 = &rule.AttributeRule{
 	Name:         "type.messaging.rocketmq.message.delay_time_level",
-	Title:        "The type of `messaging.rocketmq.message.delay_time_level` is int",
-	Check:        checkTypeMessagingRocketmqMessageDelayTimeLevelv1260,
+	Title:        "The type of `messaging.rocketmq.message.delay_time_level` should be int",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeInt(sa, "messaging.rocketmq.message.delay_time_level") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeMessagingRocketmqMessageDelayTimeLevelv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("messaging.rocketmq.message.delay_time_level")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeInt
+  Version:      "v1.26.0",
 }
 
 var ruleTypeMessagingRocketmqMessageDeliveryTimestampv1260 = &rule.AttributeRule{
 	Name:         "type.messaging.rocketmq.message.delivery_timestamp",
-	Title:        "The type of `messaging.rocketmq.message.delivery_timestamp` is int",
-	Check:        checkTypeMessagingRocketmqMessageDeliveryTimestampv1260,
+	Title:        "The type of `messaging.rocketmq.message.delivery_timestamp` should be int",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeInt(sa, "messaging.rocketmq.message.delivery_timestamp") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeMessagingRocketmqMessageDeliveryTimestampv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("messaging.rocketmq.message.delivery_timestamp")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeInt
+  Version:      "v1.26.0",
 }
 
 var ruleTypeMessagingRocketmqMessageGroupv1260 = &rule.AttributeRule{
 	Name:         "type.messaging.rocketmq.message.group",
-	Title:        "The type of `messaging.rocketmq.message.group` is string",
-	Check:        checkTypeMessagingRocketmqMessageGroupv1260,
+	Title:        "The type of `messaging.rocketmq.message.group` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "messaging.rocketmq.message.group") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeMessagingRocketmqMessageGroupv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("messaging.rocketmq.message.group")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeMessagingRocketmqMessageKeysv1260 = &rule.AttributeRule{
 	Name:         "type.messaging.rocketmq.message.keys",
-	Title:        "The type of `messaging.rocketmq.message.keys` is string[]",
-	Check:        checkTypeMessagingRocketmqMessageKeysv1260,
+	Title:        "The type of `messaging.rocketmq.message.keys` should be string[]",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStrSlice(sa, "messaging.rocketmq.message.keys") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeMessagingRocketmqMessageKeysv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("messaging.rocketmq.message.keys")
-  if !ok {
-    return true
-  }
-  if val.Type() != pcommon.ValueTypeSlice {
-    return false
-  }
-  for _, v := range val.Slice().AsRaw() {
-    if _, ok := v.(string); !ok {
-      return false
-    }
-  }
-  return true
+  Version:      "v1.26.0",
 }
 
 var ruleTypeMessagingRocketmqMessageTagv1260 = &rule.AttributeRule{
 	Name:         "type.messaging.rocketmq.message.tag",
-	Title:        "The type of `messaging.rocketmq.message.tag` is string",
-	Check:        checkTypeMessagingRocketmqMessageTagv1260,
+	Title:        "The type of `messaging.rocketmq.message.tag` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "messaging.rocketmq.message.tag") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeMessagingRocketmqMessageTagv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("messaging.rocketmq.message.tag")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeMessagingRocketmqNamespacev1260 = &rule.AttributeRule{
 	Name:         "type.messaging.rocketmq.namespace",
-	Title:        "The type of `messaging.rocketmq.namespace` is string",
-	Check:        checkTypeMessagingRocketmqNamespacev1260,
+	Title:        "The type of `messaging.rocketmq.namespace` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "messaging.rocketmq.namespace") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeMessagingRocketmqNamespacev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("messaging.rocketmq.namespace")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeMessagingServicebusDestinationSubscriptionNamev1260 = &rule.AttributeRule{
 	Name:         "type.messaging.servicebus.destination.subscription_name",
-	Title:        "The type of `messaging.servicebus.destination.subscription_name` is string",
-	Check:        checkTypeMessagingServicebusDestinationSubscriptionNamev1260,
+	Title:        "The type of `messaging.servicebus.destination.subscription_name` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "messaging.servicebus.destination.subscription_name") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeMessagingServicebusDestinationSubscriptionNamev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("messaging.servicebus.destination.subscription_name")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeMessagingServicebusMessageDeliveryCountv1260 = &rule.AttributeRule{
 	Name:         "type.messaging.servicebus.message.delivery_count",
-	Title:        "The type of `messaging.servicebus.message.delivery_count` is int",
-	Check:        checkTypeMessagingServicebusMessageDeliveryCountv1260,
+	Title:        "The type of `messaging.servicebus.message.delivery_count` should be int",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeInt(sa, "messaging.servicebus.message.delivery_count") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeMessagingServicebusMessageDeliveryCountv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("messaging.servicebus.message.delivery_count")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeInt
+  Version:      "v1.26.0",
 }
 
 var ruleTypeMessagingServicebusMessageEnqueuedTimev1260 = &rule.AttributeRule{
 	Name:         "type.messaging.servicebus.message.enqueued_time",
-	Title:        "The type of `messaging.servicebus.message.enqueued_time` is int",
-	Check:        checkTypeMessagingServicebusMessageEnqueuedTimev1260,
+	Title:        "The type of `messaging.servicebus.message.enqueued_time` should be int",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeInt(sa, "messaging.servicebus.message.enqueued_time") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeMessagingServicebusMessageEnqueuedTimev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("messaging.servicebus.message.enqueued_time")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeInt
+  Version:      "v1.26.0",
 }
 
 var ruleTypeNetHostIpv1260 = &rule.AttributeRule{
 	Name:         "type.net.host.ip",
-	Title:        "The type of `net.host.ip` is string",
-	Check:        checkTypeNetHostIpv1260,
+	Title:        "The type of `net.host.ip` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "net.host.ip") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeNetHostIpv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("net.host.ip")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeNetHostNamev1260 = &rule.AttributeRule{
 	Name:         "type.net.host.name",
-	Title:        "The type of `net.host.name` is string",
-	Check:        checkTypeNetHostNamev1260,
+	Title:        "The type of `net.host.name` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "net.host.name") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeNetHostNamev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("net.host.name")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeNetHostPortv1260 = &rule.AttributeRule{
 	Name:         "type.net.host.port",
-	Title:        "The type of `net.host.port` is int",
-	Check:        checkTypeNetHostPortv1260,
+	Title:        "The type of `net.host.port` should be int",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeInt(sa, "net.host.port") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeNetHostPortv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("net.host.port")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeInt
+  Version:      "v1.26.0",
 }
 
 var ruleTypeNetPeerIpv1260 = &rule.AttributeRule{
 	Name:         "type.net.peer.ip",
-	Title:        "The type of `net.peer.ip` is string",
-	Check:        checkTypeNetPeerIpv1260,
+	Title:        "The type of `net.peer.ip` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "net.peer.ip") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeNetPeerIpv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("net.peer.ip")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeNetPeerNamev1260 = &rule.AttributeRule{
 	Name:         "type.net.peer.name",
-	Title:        "The type of `net.peer.name` is string",
-	Check:        checkTypeNetPeerNamev1260,
+	Title:        "The type of `net.peer.name` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "net.peer.name") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeNetPeerNamev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("net.peer.name")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeNetPeerPortv1260 = &rule.AttributeRule{
 	Name:         "type.net.peer.port",
-	Title:        "The type of `net.peer.port` is int",
-	Check:        checkTypeNetPeerPortv1260,
+	Title:        "The type of `net.peer.port` should be int",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeInt(sa, "net.peer.port") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeNetPeerPortv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("net.peer.port")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeInt
+  Version:      "v1.26.0",
 }
 
 var ruleTypeNetProtocolNamev1260 = &rule.AttributeRule{
 	Name:         "type.net.protocol.name",
-	Title:        "The type of `net.protocol.name` is string",
-	Check:        checkTypeNetProtocolNamev1260,
+	Title:        "The type of `net.protocol.name` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "net.protocol.name") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeNetProtocolNamev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("net.protocol.name")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeNetProtocolVersionv1260 = &rule.AttributeRule{
 	Name:         "type.net.protocol.version",
-	Title:        "The type of `net.protocol.version` is string",
-	Check:        checkTypeNetProtocolVersionv1260,
+	Title:        "The type of `net.protocol.version` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "net.protocol.version") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeNetProtocolVersionv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("net.protocol.version")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeNetSockHostAddrv1260 = &rule.AttributeRule{
 	Name:         "type.net.sock.host.addr",
-	Title:        "The type of `net.sock.host.addr` is string",
-	Check:        checkTypeNetSockHostAddrv1260,
+	Title:        "The type of `net.sock.host.addr` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "net.sock.host.addr") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeNetSockHostAddrv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("net.sock.host.addr")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeNetSockHostPortv1260 = &rule.AttributeRule{
 	Name:         "type.net.sock.host.port",
-	Title:        "The type of `net.sock.host.port` is int",
-	Check:        checkTypeNetSockHostPortv1260,
+	Title:        "The type of `net.sock.host.port` should be int",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeInt(sa, "net.sock.host.port") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeNetSockHostPortv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("net.sock.host.port")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeInt
+  Version:      "v1.26.0",
 }
 
 var ruleTypeNetSockPeerAddrv1260 = &rule.AttributeRule{
 	Name:         "type.net.sock.peer.addr",
-	Title:        "The type of `net.sock.peer.addr` is string",
-	Check:        checkTypeNetSockPeerAddrv1260,
+	Title:        "The type of `net.sock.peer.addr` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "net.sock.peer.addr") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeNetSockPeerAddrv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("net.sock.peer.addr")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeNetSockPeerNamev1260 = &rule.AttributeRule{
 	Name:         "type.net.sock.peer.name",
-	Title:        "The type of `net.sock.peer.name` is string",
-	Check:        checkTypeNetSockPeerNamev1260,
+	Title:        "The type of `net.sock.peer.name` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "net.sock.peer.name") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeNetSockPeerNamev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("net.sock.peer.name")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeNetSockPeerPortv1260 = &rule.AttributeRule{
 	Name:         "type.net.sock.peer.port",
-	Title:        "The type of `net.sock.peer.port` is int",
-	Check:        checkTypeNetSockPeerPortv1260,
+	Title:        "The type of `net.sock.peer.port` should be int",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeInt(sa, "net.sock.peer.port") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeNetSockPeerPortv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("net.sock.peer.port")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeInt
+  Version:      "v1.26.0",
 }
 
 var ruleTypeNetworkCarrierIccv1260 = &rule.AttributeRule{
 	Name:         "type.network.carrier.icc",
-	Title:        "The type of `network.carrier.icc` is string",
-	Check:        checkTypeNetworkCarrierIccv1260,
+	Title:        "The type of `network.carrier.icc` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "network.carrier.icc") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeNetworkCarrierIccv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("network.carrier.icc")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeNetworkCarrierMccv1260 = &rule.AttributeRule{
 	Name:         "type.network.carrier.mcc",
-	Title:        "The type of `network.carrier.mcc` is string",
-	Check:        checkTypeNetworkCarrierMccv1260,
+	Title:        "The type of `network.carrier.mcc` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "network.carrier.mcc") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeNetworkCarrierMccv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("network.carrier.mcc")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeNetworkCarrierMncv1260 = &rule.AttributeRule{
 	Name:         "type.network.carrier.mnc",
-	Title:        "The type of `network.carrier.mnc` is string",
-	Check:        checkTypeNetworkCarrierMncv1260,
+	Title:        "The type of `network.carrier.mnc` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "network.carrier.mnc") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeNetworkCarrierMncv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("network.carrier.mnc")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeNetworkCarrierNamev1260 = &rule.AttributeRule{
 	Name:         "type.network.carrier.name",
-	Title:        "The type of `network.carrier.name` is string",
-	Check:        checkTypeNetworkCarrierNamev1260,
+	Title:        "The type of `network.carrier.name` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "network.carrier.name") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeNetworkCarrierNamev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("network.carrier.name")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeNetworkLocalAddressv1260 = &rule.AttributeRule{
 	Name:         "type.network.local.address",
-	Title:        "The type of `network.local.address` is string",
-	Check:        checkTypeNetworkLocalAddressv1260,
+	Title:        "The type of `network.local.address` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "network.local.address") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityStable,
 	Source:       "",
-}
-
-func checkTypeNetworkLocalAddressv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("network.local.address")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeNetworkLocalPortv1260 = &rule.AttributeRule{
 	Name:         "type.network.local.port",
-	Title:        "The type of `network.local.port` is int",
-	Check:        checkTypeNetworkLocalPortv1260,
+	Title:        "The type of `network.local.port` should be int",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeInt(sa, "network.local.port") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityStable,
 	Source:       "",
-}
-
-func checkTypeNetworkLocalPortv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("network.local.port")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeInt
+  Version:      "v1.26.0",
 }
 
 var ruleTypeNetworkPeerAddressv1260 = &rule.AttributeRule{
 	Name:         "type.network.peer.address",
-	Title:        "The type of `network.peer.address` is string",
-	Check:        checkTypeNetworkPeerAddressv1260,
+	Title:        "The type of `network.peer.address` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "network.peer.address") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityStable,
 	Source:       "",
-}
-
-func checkTypeNetworkPeerAddressv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("network.peer.address")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeNetworkPeerPortv1260 = &rule.AttributeRule{
 	Name:         "type.network.peer.port",
-	Title:        "The type of `network.peer.port` is int",
-	Check:        checkTypeNetworkPeerPortv1260,
+	Title:        "The type of `network.peer.port` should be int",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeInt(sa, "network.peer.port") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityStable,
 	Source:       "",
-}
-
-func checkTypeNetworkPeerPortv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("network.peer.port")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeInt
+  Version:      "v1.26.0",
 }
 
 var ruleTypeNetworkProtocolNamev1260 = &rule.AttributeRule{
 	Name:         "type.network.protocol.name",
-	Title:        "The type of `network.protocol.name` is string",
-	Check:        checkTypeNetworkProtocolNamev1260,
+	Title:        "The type of `network.protocol.name` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "network.protocol.name") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityStable,
 	Source:       "",
-}
-
-func checkTypeNetworkProtocolNamev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("network.protocol.name")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeNetworkProtocolVersionv1260 = &rule.AttributeRule{
 	Name:         "type.network.protocol.version",
-	Title:        "The type of `network.protocol.version` is string",
-	Check:        checkTypeNetworkProtocolVersionv1260,
+	Title:        "The type of `network.protocol.version` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "network.protocol.version") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityStable,
 	Source:       "",
-}
-
-func checkTypeNetworkProtocolVersionv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("network.protocol.version")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeOciManifestDigestv1260 = &rule.AttributeRule{
 	Name:         "type.oci.manifest.digest",
-	Title:        "The type of `oci.manifest.digest` is string",
-	Check:        checkTypeOciManifestDigestv1260,
+	Title:        "The type of `oci.manifest.digest` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "oci.manifest.digest") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeOciManifestDigestv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("oci.manifest.digest")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeOsBuildIdv1260 = &rule.AttributeRule{
 	Name:         "type.os.build_id",
-	Title:        "The type of `os.build_id` is string",
-	Check:        checkTypeOsBuildIdv1260,
+	Title:        "The type of `os.build_id` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "os.build_id") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeOsBuildIdv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("os.build_id")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeOsDescriptionv1260 = &rule.AttributeRule{
 	Name:         "type.os.description",
-	Title:        "The type of `os.description` is string",
-	Check:        checkTypeOsDescriptionv1260,
+	Title:        "The type of `os.description` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "os.description") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeOsDescriptionv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("os.description")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeOsNamev1260 = &rule.AttributeRule{
 	Name:         "type.os.name",
-	Title:        "The type of `os.name` is string",
-	Check:        checkTypeOsNamev1260,
+	Title:        "The type of `os.name` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "os.name") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeOsNamev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("os.name")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeOsVersionv1260 = &rule.AttributeRule{
 	Name:         "type.os.version",
-	Title:        "The type of `os.version` is string",
-	Check:        checkTypeOsVersionv1260,
+	Title:        "The type of `os.version` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "os.version") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeOsVersionv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("os.version")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeOtelLibraryNamev1260 = &rule.AttributeRule{
 	Name:         "type.otel.library.name",
-	Title:        "The type of `otel.library.name` is string",
-	Check:        checkTypeOtelLibraryNamev1260,
+	Title:        "The type of `otel.library.name` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "otel.library.name") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeOtelLibraryNamev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("otel.library.name")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeOtelLibraryVersionv1260 = &rule.AttributeRule{
 	Name:         "type.otel.library.version",
-	Title:        "The type of `otel.library.version` is string",
-	Check:        checkTypeOtelLibraryVersionv1260,
+	Title:        "The type of `otel.library.version` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "otel.library.version") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeOtelLibraryVersionv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("otel.library.version")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeOtelScopeNamev1260 = &rule.AttributeRule{
 	Name:         "type.otel.scope.name",
-	Title:        "The type of `otel.scope.name` is string",
-	Check:        checkTypeOtelScopeNamev1260,
+	Title:        "The type of `otel.scope.name` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "otel.scope.name") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityStable,
 	Source:       "",
-}
-
-func checkTypeOtelScopeNamev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("otel.scope.name")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeOtelScopeVersionv1260 = &rule.AttributeRule{
 	Name:         "type.otel.scope.version",
-	Title:        "The type of `otel.scope.version` is string",
-	Check:        checkTypeOtelScopeVersionv1260,
+	Title:        "The type of `otel.scope.version` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "otel.scope.version") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityStable,
 	Source:       "",
-}
-
-func checkTypeOtelScopeVersionv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("otel.scope.version")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeOtelStatusDescriptionv1260 = &rule.AttributeRule{
 	Name:         "type.otel.status_description",
-	Title:        "The type of `otel.status_description` is string",
-	Check:        checkTypeOtelStatusDescriptionv1260,
+	Title:        "The type of `otel.status_description` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "otel.status_description") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityStable,
 	Source:       "",
-}
-
-func checkTypeOtelStatusDescriptionv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("otel.status_description")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypePeerServicev1260 = &rule.AttributeRule{
 	Name:         "type.peer.service",
-	Title:        "The type of `peer.service` is string",
-	Check:        checkTypePeerServicev1260,
+	Title:        "The type of `peer.service` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "peer.service") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypePeerServicev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("peer.service")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypePoolNamev1260 = &rule.AttributeRule{
 	Name:         "type.pool.name",
-	Title:        "The type of `pool.name` is string",
-	Check:        checkTypePoolNamev1260,
+	Title:        "The type of `pool.name` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "pool.name") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypePoolNamev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("pool.name")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeProcessCommandv1260 = &rule.AttributeRule{
 	Name:         "type.process.command",
-	Title:        "The type of `process.command` is string",
-	Check:        checkTypeProcessCommandv1260,
+	Title:        "The type of `process.command` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "process.command") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeProcessCommandv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("process.command")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeProcessCommandArgsv1260 = &rule.AttributeRule{
 	Name:         "type.process.command_args",
-	Title:        "The type of `process.command_args` is string[]",
-	Check:        checkTypeProcessCommandArgsv1260,
+	Title:        "The type of `process.command_args` should be string[]",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStrSlice(sa, "process.command_args") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeProcessCommandArgsv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("process.command_args")
-  if !ok {
-    return true
-  }
-  if val.Type() != pcommon.ValueTypeSlice {
-    return false
-  }
-  for _, v := range val.Slice().AsRaw() {
-    if _, ok := v.(string); !ok {
-      return false
-    }
-  }
-  return true
+  Version:      "v1.26.0",
 }
 
 var ruleTypeProcessCommandLinev1260 = &rule.AttributeRule{
 	Name:         "type.process.command_line",
-	Title:        "The type of `process.command_line` is string",
-	Check:        checkTypeProcessCommandLinev1260,
+	Title:        "The type of `process.command_line` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "process.command_line") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeProcessCommandLinev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("process.command_line")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeProcessCreationTimev1260 = &rule.AttributeRule{
 	Name:         "type.process.creation.time",
-	Title:        "The type of `process.creation.time` is string",
-	Check:        checkTypeProcessCreationTimev1260,
+	Title:        "The type of `process.creation.time` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "process.creation.time") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeProcessCreationTimev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("process.creation.time")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeProcessExecutableNamev1260 = &rule.AttributeRule{
 	Name:         "type.process.executable.name",
-	Title:        "The type of `process.executable.name` is string",
-	Check:        checkTypeProcessExecutableNamev1260,
+	Title:        "The type of `process.executable.name` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "process.executable.name") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeProcessExecutableNamev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("process.executable.name")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeProcessExecutablePathv1260 = &rule.AttributeRule{
 	Name:         "type.process.executable.path",
-	Title:        "The type of `process.executable.path` is string",
-	Check:        checkTypeProcessExecutablePathv1260,
+	Title:        "The type of `process.executable.path` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "process.executable.path") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeProcessExecutablePathv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("process.executable.path")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeProcessExitCodev1260 = &rule.AttributeRule{
 	Name:         "type.process.exit.code",
-	Title:        "The type of `process.exit.code` is int",
-	Check:        checkTypeProcessExitCodev1260,
+	Title:        "The type of `process.exit.code` should be int",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeInt(sa, "process.exit.code") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeProcessExitCodev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("process.exit.code")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeInt
+  Version:      "v1.26.0",
 }
 
 var ruleTypeProcessExitTimev1260 = &rule.AttributeRule{
 	Name:         "type.process.exit.time",
-	Title:        "The type of `process.exit.time` is string",
-	Check:        checkTypeProcessExitTimev1260,
+	Title:        "The type of `process.exit.time` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "process.exit.time") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeProcessExitTimev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("process.exit.time")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeProcessGroupLeaderPidv1260 = &rule.AttributeRule{
 	Name:         "type.process.group_leader.pid",
-	Title:        "The type of `process.group_leader.pid` is int",
-	Check:        checkTypeProcessGroupLeaderPidv1260,
+	Title:        "The type of `process.group_leader.pid` should be int",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeInt(sa, "process.group_leader.pid") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeProcessGroupLeaderPidv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("process.group_leader.pid")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeInt
+  Version:      "v1.26.0",
 }
 
 var ruleTypeProcessInteractivev1260 = &rule.AttributeRule{
 	Name:         "type.process.interactive",
-	Title:        "The type of `process.interactive` is boolean",
-	Check:        checkTypeProcessInteractivev1260,
+	Title:        "The type of `process.interactive` should be boolean",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeBool(sa, "process.interactive") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeProcessInteractivev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("process.interactive")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeBool
+  Version:      "v1.26.0",
 }
 
 var ruleTypeProcessOwnerv1260 = &rule.AttributeRule{
 	Name:         "type.process.owner",
-	Title:        "The type of `process.owner` is string",
-	Check:        checkTypeProcessOwnerv1260,
+	Title:        "The type of `process.owner` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "process.owner") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeProcessOwnerv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("process.owner")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeProcessParentPidv1260 = &rule.AttributeRule{
 	Name:         "type.process.parent_pid",
-	Title:        "The type of `process.parent_pid` is int",
-	Check:        checkTypeProcessParentPidv1260,
+	Title:        "The type of `process.parent_pid` should be int",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeInt(sa, "process.parent_pid") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeProcessParentPidv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("process.parent_pid")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeInt
+  Version:      "v1.26.0",
 }
 
 var ruleTypeProcessPidv1260 = &rule.AttributeRule{
 	Name:         "type.process.pid",
-	Title:        "The type of `process.pid` is int",
-	Check:        checkTypeProcessPidv1260,
+	Title:        "The type of `process.pid` should be int",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeInt(sa, "process.pid") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeProcessPidv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("process.pid")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeInt
+  Version:      "v1.26.0",
 }
 
 var ruleTypeProcessRealUserIdv1260 = &rule.AttributeRule{
 	Name:         "type.process.real_user.id",
-	Title:        "The type of `process.real_user.id` is int",
-	Check:        checkTypeProcessRealUserIdv1260,
+	Title:        "The type of `process.real_user.id` should be int",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeInt(sa, "process.real_user.id") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeProcessRealUserIdv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("process.real_user.id")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeInt
+  Version:      "v1.26.0",
 }
 
 var ruleTypeProcessRealUserNamev1260 = &rule.AttributeRule{
 	Name:         "type.process.real_user.name",
-	Title:        "The type of `process.real_user.name` is string",
-	Check:        checkTypeProcessRealUserNamev1260,
+	Title:        "The type of `process.real_user.name` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "process.real_user.name") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeProcessRealUserNamev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("process.real_user.name")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeProcessRuntimeDescriptionv1260 = &rule.AttributeRule{
 	Name:         "type.process.runtime.description",
-	Title:        "The type of `process.runtime.description` is string",
-	Check:        checkTypeProcessRuntimeDescriptionv1260,
+	Title:        "The type of `process.runtime.description` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "process.runtime.description") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeProcessRuntimeDescriptionv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("process.runtime.description")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeProcessRuntimeNamev1260 = &rule.AttributeRule{
 	Name:         "type.process.runtime.name",
-	Title:        "The type of `process.runtime.name` is string",
-	Check:        checkTypeProcessRuntimeNamev1260,
+	Title:        "The type of `process.runtime.name` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "process.runtime.name") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeProcessRuntimeNamev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("process.runtime.name")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeProcessRuntimeVersionv1260 = &rule.AttributeRule{
 	Name:         "type.process.runtime.version",
-	Title:        "The type of `process.runtime.version` is string",
-	Check:        checkTypeProcessRuntimeVersionv1260,
+	Title:        "The type of `process.runtime.version` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "process.runtime.version") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeProcessRuntimeVersionv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("process.runtime.version")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeProcessSavedUserIdv1260 = &rule.AttributeRule{
 	Name:         "type.process.saved_user.id",
-	Title:        "The type of `process.saved_user.id` is int",
-	Check:        checkTypeProcessSavedUserIdv1260,
+	Title:        "The type of `process.saved_user.id` should be int",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeInt(sa, "process.saved_user.id") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeProcessSavedUserIdv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("process.saved_user.id")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeInt
+  Version:      "v1.26.0",
 }
 
 var ruleTypeProcessSavedUserNamev1260 = &rule.AttributeRule{
 	Name:         "type.process.saved_user.name",
-	Title:        "The type of `process.saved_user.name` is string",
-	Check:        checkTypeProcessSavedUserNamev1260,
+	Title:        "The type of `process.saved_user.name` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "process.saved_user.name") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeProcessSavedUserNamev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("process.saved_user.name")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeProcessSessionLeaderPidv1260 = &rule.AttributeRule{
 	Name:         "type.process.session_leader.pid",
-	Title:        "The type of `process.session_leader.pid` is int",
-	Check:        checkTypeProcessSessionLeaderPidv1260,
+	Title:        "The type of `process.session_leader.pid` should be int",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeInt(sa, "process.session_leader.pid") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeProcessSessionLeaderPidv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("process.session_leader.pid")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeInt
+  Version:      "v1.26.0",
 }
 
 var ruleTypeProcessUserIdv1260 = &rule.AttributeRule{
 	Name:         "type.process.user.id",
-	Title:        "The type of `process.user.id` is int",
-	Check:        checkTypeProcessUserIdv1260,
+	Title:        "The type of `process.user.id` should be int",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeInt(sa, "process.user.id") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeProcessUserIdv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("process.user.id")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeInt
+  Version:      "v1.26.0",
 }
 
 var ruleTypeProcessUserNamev1260 = &rule.AttributeRule{
 	Name:         "type.process.user.name",
-	Title:        "The type of `process.user.name` is string",
-	Check:        checkTypeProcessUserNamev1260,
+	Title:        "The type of `process.user.name` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "process.user.name") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeProcessUserNamev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("process.user.name")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeProcessVpidv1260 = &rule.AttributeRule{
 	Name:         "type.process.vpid",
-	Title:        "The type of `process.vpid` is int",
-	Check:        checkTypeProcessVpidv1260,
+	Title:        "The type of `process.vpid` should be int",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeInt(sa, "process.vpid") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeProcessVpidv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("process.vpid")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeInt
+  Version:      "v1.26.0",
 }
 
 var ruleTypeRpcJsonrpcErrorCodev1260 = &rule.AttributeRule{
 	Name:         "type.rpc.jsonrpc.error_code",
-	Title:        "The type of `rpc.jsonrpc.error_code` is int",
-	Check:        checkTypeRpcJsonrpcErrorCodev1260,
+	Title:        "The type of `rpc.jsonrpc.error_code` should be int",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeInt(sa, "rpc.jsonrpc.error_code") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeRpcJsonrpcErrorCodev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("rpc.jsonrpc.error_code")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeInt
+  Version:      "v1.26.0",
 }
 
 var ruleTypeRpcJsonrpcErrorMessagev1260 = &rule.AttributeRule{
 	Name:         "type.rpc.jsonrpc.error_message",
-	Title:        "The type of `rpc.jsonrpc.error_message` is string",
-	Check:        checkTypeRpcJsonrpcErrorMessagev1260,
+	Title:        "The type of `rpc.jsonrpc.error_message` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "rpc.jsonrpc.error_message") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeRpcJsonrpcErrorMessagev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("rpc.jsonrpc.error_message")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeRpcJsonrpcRequestIdv1260 = &rule.AttributeRule{
 	Name:         "type.rpc.jsonrpc.request_id",
-	Title:        "The type of `rpc.jsonrpc.request_id` is string",
-	Check:        checkTypeRpcJsonrpcRequestIdv1260,
+	Title:        "The type of `rpc.jsonrpc.request_id` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "rpc.jsonrpc.request_id") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeRpcJsonrpcRequestIdv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("rpc.jsonrpc.request_id")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeRpcJsonrpcVersionv1260 = &rule.AttributeRule{
 	Name:         "type.rpc.jsonrpc.version",
-	Title:        "The type of `rpc.jsonrpc.version` is string",
-	Check:        checkTypeRpcJsonrpcVersionv1260,
+	Title:        "The type of `rpc.jsonrpc.version` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "rpc.jsonrpc.version") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeRpcJsonrpcVersionv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("rpc.jsonrpc.version")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeRpcMessageCompressedSizev1260 = &rule.AttributeRule{
 	Name:         "type.rpc.message.compressed_size",
-	Title:        "The type of `rpc.message.compressed_size` is int",
-	Check:        checkTypeRpcMessageCompressedSizev1260,
+	Title:        "The type of `rpc.message.compressed_size` should be int",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeInt(sa, "rpc.message.compressed_size") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeRpcMessageCompressedSizev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("rpc.message.compressed_size")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeInt
+  Version:      "v1.26.0",
 }
 
 var ruleTypeRpcMessageIdv1260 = &rule.AttributeRule{
 	Name:         "type.rpc.message.id",
-	Title:        "The type of `rpc.message.id` is int",
-	Check:        checkTypeRpcMessageIdv1260,
+	Title:        "The type of `rpc.message.id` should be int",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeInt(sa, "rpc.message.id") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeRpcMessageIdv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("rpc.message.id")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeInt
+  Version:      "v1.26.0",
 }
 
 var ruleTypeRpcMessageUncompressedSizev1260 = &rule.AttributeRule{
 	Name:         "type.rpc.message.uncompressed_size",
-	Title:        "The type of `rpc.message.uncompressed_size` is int",
-	Check:        checkTypeRpcMessageUncompressedSizev1260,
+	Title:        "The type of `rpc.message.uncompressed_size` should be int",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeInt(sa, "rpc.message.uncompressed_size") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeRpcMessageUncompressedSizev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("rpc.message.uncompressed_size")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeInt
+  Version:      "v1.26.0",
 }
 
 var ruleTypeRpcMethodv1260 = &rule.AttributeRule{
 	Name:         "type.rpc.method",
-	Title:        "The type of `rpc.method` is string",
-	Check:        checkTypeRpcMethodv1260,
+	Title:        "The type of `rpc.method` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "rpc.method") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeRpcMethodv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("rpc.method")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeRpcServicev1260 = &rule.AttributeRule{
 	Name:         "type.rpc.service",
-	Title:        "The type of `rpc.service` is string",
-	Check:        checkTypeRpcServicev1260,
+	Title:        "The type of `rpc.service` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "rpc.service") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeRpcServicev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("rpc.service")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeServerAddressv1260 = &rule.AttributeRule{
 	Name:         "type.server.address",
-	Title:        "The type of `server.address` is string",
-	Check:        checkTypeServerAddressv1260,
+	Title:        "The type of `server.address` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "server.address") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityStable,
 	Source:       "",
-}
-
-func checkTypeServerAddressv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("server.address")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeServerPortv1260 = &rule.AttributeRule{
 	Name:         "type.server.port",
-	Title:        "The type of `server.port` is int",
-	Check:        checkTypeServerPortv1260,
+	Title:        "The type of `server.port` should be int",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeInt(sa, "server.port") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityStable,
 	Source:       "",
-}
-
-func checkTypeServerPortv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("server.port")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeInt
+  Version:      "v1.26.0",
 }
 
 var ruleTypeServiceInstanceIdv1260 = &rule.AttributeRule{
 	Name:         "type.service.instance.id",
-	Title:        "The type of `service.instance.id` is string",
-	Check:        checkTypeServiceInstanceIdv1260,
+	Title:        "The type of `service.instance.id` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "service.instance.id") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeServiceInstanceIdv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("service.instance.id")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeServiceNamev1260 = &rule.AttributeRule{
 	Name:         "type.service.name",
-	Title:        "The type of `service.name` is string",
-	Check:        checkTypeServiceNamev1260,
+	Title:        "The type of `service.name` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "service.name") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityStable,
 	Source:       "",
-}
-
-func checkTypeServiceNamev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("service.name")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeServiceNamespacev1260 = &rule.AttributeRule{
 	Name:         "type.service.namespace",
-	Title:        "The type of `service.namespace` is string",
-	Check:        checkTypeServiceNamespacev1260,
+	Title:        "The type of `service.namespace` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "service.namespace") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeServiceNamespacev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("service.namespace")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeServiceVersionv1260 = &rule.AttributeRule{
 	Name:         "type.service.version",
-	Title:        "The type of `service.version` is string",
-	Check:        checkTypeServiceVersionv1260,
+	Title:        "The type of `service.version` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "service.version") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityStable,
 	Source:       "",
-}
-
-func checkTypeServiceVersionv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("service.version")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeSessionIdv1260 = &rule.AttributeRule{
 	Name:         "type.session.id",
-	Title:        "The type of `session.id` is string",
-	Check:        checkTypeSessionIdv1260,
+	Title:        "The type of `session.id` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "session.id") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeSessionIdv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("session.id")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeSessionPreviousIdv1260 = &rule.AttributeRule{
 	Name:         "type.session.previous_id",
-	Title:        "The type of `session.previous_id` is string",
-	Check:        checkTypeSessionPreviousIdv1260,
+	Title:        "The type of `session.previous_id` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "session.previous_id") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeSessionPreviousIdv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("session.previous_id")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeSourceAddressv1260 = &rule.AttributeRule{
 	Name:         "type.source.address",
-	Title:        "The type of `source.address` is string",
-	Check:        checkTypeSourceAddressv1260,
+	Title:        "The type of `source.address` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "source.address") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeSourceAddressv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("source.address")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeSourcePortv1260 = &rule.AttributeRule{
 	Name:         "type.source.port",
-	Title:        "The type of `source.port` is int",
-	Check:        checkTypeSourcePortv1260,
+	Title:        "The type of `source.port` should be int",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeInt(sa, "source.port") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeSourcePortv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("source.port")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeInt
+  Version:      "v1.26.0",
 }
 
 var ruleTypeSystemCpuLogicalNumberv1260 = &rule.AttributeRule{
 	Name:         "type.system.cpu.logical_number",
-	Title:        "The type of `system.cpu.logical_number` is int",
-	Check:        checkTypeSystemCpuLogicalNumberv1260,
+	Title:        "The type of `system.cpu.logical_number` should be int",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeInt(sa, "system.cpu.logical_number") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeSystemCpuLogicalNumberv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("system.cpu.logical_number")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeInt
+  Version:      "v1.26.0",
 }
 
 var ruleTypeSystemDevicev1260 = &rule.AttributeRule{
 	Name:         "type.system.device",
-	Title:        "The type of `system.device` is string",
-	Check:        checkTypeSystemDevicev1260,
+	Title:        "The type of `system.device` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "system.device") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeSystemDevicev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("system.device")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeSystemFilesystemModev1260 = &rule.AttributeRule{
 	Name:         "type.system.filesystem.mode",
-	Title:        "The type of `system.filesystem.mode` is string",
-	Check:        checkTypeSystemFilesystemModev1260,
+	Title:        "The type of `system.filesystem.mode` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "system.filesystem.mode") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeSystemFilesystemModev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("system.filesystem.mode")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeSystemFilesystemMountpointv1260 = &rule.AttributeRule{
 	Name:         "type.system.filesystem.mountpoint",
-	Title:        "The type of `system.filesystem.mountpoint` is string",
-	Check:        checkTypeSystemFilesystemMountpointv1260,
+	Title:        "The type of `system.filesystem.mountpoint` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "system.filesystem.mountpoint") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeSystemFilesystemMountpointv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("system.filesystem.mountpoint")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeTelemetryDistroNamev1260 = &rule.AttributeRule{
 	Name:         "type.telemetry.distro.name",
-	Title:        "The type of `telemetry.distro.name` is string",
-	Check:        checkTypeTelemetryDistroNamev1260,
+	Title:        "The type of `telemetry.distro.name` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "telemetry.distro.name") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeTelemetryDistroNamev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("telemetry.distro.name")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeTelemetryDistroVersionv1260 = &rule.AttributeRule{
 	Name:         "type.telemetry.distro.version",
-	Title:        "The type of `telemetry.distro.version` is string",
-	Check:        checkTypeTelemetryDistroVersionv1260,
+	Title:        "The type of `telemetry.distro.version` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "telemetry.distro.version") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeTelemetryDistroVersionv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("telemetry.distro.version")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeTelemetrySdkNamev1260 = &rule.AttributeRule{
 	Name:         "type.telemetry.sdk.name",
-	Title:        "The type of `telemetry.sdk.name` is string",
-	Check:        checkTypeTelemetrySdkNamev1260,
+	Title:        "The type of `telemetry.sdk.name` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "telemetry.sdk.name") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityStable,
 	Source:       "",
-}
-
-func checkTypeTelemetrySdkNamev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("telemetry.sdk.name")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeTelemetrySdkVersionv1260 = &rule.AttributeRule{
 	Name:         "type.telemetry.sdk.version",
-	Title:        "The type of `telemetry.sdk.version` is string",
-	Check:        checkTypeTelemetrySdkVersionv1260,
+	Title:        "The type of `telemetry.sdk.version` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "telemetry.sdk.version") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityStable,
 	Source:       "",
-}
-
-func checkTypeTelemetrySdkVersionv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("telemetry.sdk.version")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeThreadIdv1260 = &rule.AttributeRule{
 	Name:         "type.thread.id",
-	Title:        "The type of `thread.id` is int",
-	Check:        checkTypeThreadIdv1260,
+	Title:        "The type of `thread.id` should be int",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeInt(sa, "thread.id") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeThreadIdv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("thread.id")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeInt
+  Version:      "v1.26.0",
 }
 
 var ruleTypeThreadNamev1260 = &rule.AttributeRule{
 	Name:         "type.thread.name",
-	Title:        "The type of `thread.name` is string",
-	Check:        checkTypeThreadNamev1260,
+	Title:        "The type of `thread.name` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "thread.name") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeThreadNamev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("thread.name")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeTlsCipherv1260 = &rule.AttributeRule{
 	Name:         "type.tls.cipher",
-	Title:        "The type of `tls.cipher` is string",
-	Check:        checkTypeTlsCipherv1260,
+	Title:        "The type of `tls.cipher` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "tls.cipher") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeTlsCipherv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("tls.cipher")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeTlsClientCertificatev1260 = &rule.AttributeRule{
 	Name:         "type.tls.client.certificate",
-	Title:        "The type of `tls.client.certificate` is string",
-	Check:        checkTypeTlsClientCertificatev1260,
+	Title:        "The type of `tls.client.certificate` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "tls.client.certificate") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeTlsClientCertificatev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("tls.client.certificate")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeTlsClientCertificateChainv1260 = &rule.AttributeRule{
 	Name:         "type.tls.client.certificate_chain",
-	Title:        "The type of `tls.client.certificate_chain` is string[]",
-	Check:        checkTypeTlsClientCertificateChainv1260,
+	Title:        "The type of `tls.client.certificate_chain` should be string[]",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStrSlice(sa, "tls.client.certificate_chain") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeTlsClientCertificateChainv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("tls.client.certificate_chain")
-  if !ok {
-    return true
-  }
-  if val.Type() != pcommon.ValueTypeSlice {
-    return false
-  }
-  for _, v := range val.Slice().AsRaw() {
-    if _, ok := v.(string); !ok {
-      return false
-    }
-  }
-  return true
+  Version:      "v1.26.0",
 }
 
 var ruleTypeTlsClientHashMd5v1260 = &rule.AttributeRule{
 	Name:         "type.tls.client.hash.md5",
-	Title:        "The type of `tls.client.hash.md5` is string",
-	Check:        checkTypeTlsClientHashMd5v1260,
+	Title:        "The type of `tls.client.hash.md5` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "tls.client.hash.md5") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeTlsClientHashMd5v1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("tls.client.hash.md5")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeTlsClientHashSha1v1260 = &rule.AttributeRule{
 	Name:         "type.tls.client.hash.sha1",
-	Title:        "The type of `tls.client.hash.sha1` is string",
-	Check:        checkTypeTlsClientHashSha1v1260,
+	Title:        "The type of `tls.client.hash.sha1` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "tls.client.hash.sha1") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeTlsClientHashSha1v1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("tls.client.hash.sha1")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeTlsClientHashSha256v1260 = &rule.AttributeRule{
 	Name:         "type.tls.client.hash.sha256",
-	Title:        "The type of `tls.client.hash.sha256` is string",
-	Check:        checkTypeTlsClientHashSha256v1260,
+	Title:        "The type of `tls.client.hash.sha256` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "tls.client.hash.sha256") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeTlsClientHashSha256v1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("tls.client.hash.sha256")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeTlsClientIssuerv1260 = &rule.AttributeRule{
 	Name:         "type.tls.client.issuer",
-	Title:        "The type of `tls.client.issuer` is string",
-	Check:        checkTypeTlsClientIssuerv1260,
+	Title:        "The type of `tls.client.issuer` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "tls.client.issuer") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeTlsClientIssuerv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("tls.client.issuer")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeTlsClientJa3v1260 = &rule.AttributeRule{
 	Name:         "type.tls.client.ja3",
-	Title:        "The type of `tls.client.ja3` is string",
-	Check:        checkTypeTlsClientJa3v1260,
+	Title:        "The type of `tls.client.ja3` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "tls.client.ja3") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeTlsClientJa3v1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("tls.client.ja3")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeTlsClientNotAfterv1260 = &rule.AttributeRule{
 	Name:         "type.tls.client.not_after",
-	Title:        "The type of `tls.client.not_after` is string",
-	Check:        checkTypeTlsClientNotAfterv1260,
+	Title:        "The type of `tls.client.not_after` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "tls.client.not_after") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeTlsClientNotAfterv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("tls.client.not_after")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeTlsClientNotBeforev1260 = &rule.AttributeRule{
 	Name:         "type.tls.client.not_before",
-	Title:        "The type of `tls.client.not_before` is string",
-	Check:        checkTypeTlsClientNotBeforev1260,
+	Title:        "The type of `tls.client.not_before` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "tls.client.not_before") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeTlsClientNotBeforev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("tls.client.not_before")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeTlsClientServerNamev1260 = &rule.AttributeRule{
 	Name:         "type.tls.client.server_name",
-	Title:        "The type of `tls.client.server_name` is string",
-	Check:        checkTypeTlsClientServerNamev1260,
+	Title:        "The type of `tls.client.server_name` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "tls.client.server_name") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeTlsClientServerNamev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("tls.client.server_name")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeTlsClientSubjectv1260 = &rule.AttributeRule{
 	Name:         "type.tls.client.subject",
-	Title:        "The type of `tls.client.subject` is string",
-	Check:        checkTypeTlsClientSubjectv1260,
+	Title:        "The type of `tls.client.subject` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "tls.client.subject") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeTlsClientSubjectv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("tls.client.subject")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeTlsClientSupportedCiphersv1260 = &rule.AttributeRule{
 	Name:         "type.tls.client.supported_ciphers",
-	Title:        "The type of `tls.client.supported_ciphers` is string[]",
-	Check:        checkTypeTlsClientSupportedCiphersv1260,
+	Title:        "The type of `tls.client.supported_ciphers` should be string[]",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStrSlice(sa, "tls.client.supported_ciphers") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeTlsClientSupportedCiphersv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("tls.client.supported_ciphers")
-  if !ok {
-    return true
-  }
-  if val.Type() != pcommon.ValueTypeSlice {
-    return false
-  }
-  for _, v := range val.Slice().AsRaw() {
-    if _, ok := v.(string); !ok {
-      return false
-    }
-  }
-  return true
+  Version:      "v1.26.0",
 }
 
 var ruleTypeTlsCurvev1260 = &rule.AttributeRule{
 	Name:         "type.tls.curve",
-	Title:        "The type of `tls.curve` is string",
-	Check:        checkTypeTlsCurvev1260,
+	Title:        "The type of `tls.curve` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "tls.curve") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeTlsCurvev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("tls.curve")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeTlsEstablishedv1260 = &rule.AttributeRule{
 	Name:         "type.tls.established",
-	Title:        "The type of `tls.established` is boolean",
-	Check:        checkTypeTlsEstablishedv1260,
+	Title:        "The type of `tls.established` should be boolean",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeBool(sa, "tls.established") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeTlsEstablishedv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("tls.established")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeBool
+  Version:      "v1.26.0",
 }
 
 var ruleTypeTlsNextProtocolv1260 = &rule.AttributeRule{
 	Name:         "type.tls.next_protocol",
-	Title:        "The type of `tls.next_protocol` is string",
-	Check:        checkTypeTlsNextProtocolv1260,
+	Title:        "The type of `tls.next_protocol` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "tls.next_protocol") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeTlsNextProtocolv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("tls.next_protocol")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeTlsProtocolVersionv1260 = &rule.AttributeRule{
 	Name:         "type.tls.protocol.version",
-	Title:        "The type of `tls.protocol.version` is string",
-	Check:        checkTypeTlsProtocolVersionv1260,
+	Title:        "The type of `tls.protocol.version` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "tls.protocol.version") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeTlsProtocolVersionv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("tls.protocol.version")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeTlsResumedv1260 = &rule.AttributeRule{
 	Name:         "type.tls.resumed",
-	Title:        "The type of `tls.resumed` is boolean",
-	Check:        checkTypeTlsResumedv1260,
+	Title:        "The type of `tls.resumed` should be boolean",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeBool(sa, "tls.resumed") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeTlsResumedv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("tls.resumed")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeBool
+  Version:      "v1.26.0",
 }
 
 var ruleTypeTlsServerCertificatev1260 = &rule.AttributeRule{
 	Name:         "type.tls.server.certificate",
-	Title:        "The type of `tls.server.certificate` is string",
-	Check:        checkTypeTlsServerCertificatev1260,
+	Title:        "The type of `tls.server.certificate` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "tls.server.certificate") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeTlsServerCertificatev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("tls.server.certificate")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeTlsServerCertificateChainv1260 = &rule.AttributeRule{
 	Name:         "type.tls.server.certificate_chain",
-	Title:        "The type of `tls.server.certificate_chain` is string[]",
-	Check:        checkTypeTlsServerCertificateChainv1260,
+	Title:        "The type of `tls.server.certificate_chain` should be string[]",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStrSlice(sa, "tls.server.certificate_chain") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeTlsServerCertificateChainv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("tls.server.certificate_chain")
-  if !ok {
-    return true
-  }
-  if val.Type() != pcommon.ValueTypeSlice {
-    return false
-  }
-  for _, v := range val.Slice().AsRaw() {
-    if _, ok := v.(string); !ok {
-      return false
-    }
-  }
-  return true
+  Version:      "v1.26.0",
 }
 
 var ruleTypeTlsServerHashMd5v1260 = &rule.AttributeRule{
 	Name:         "type.tls.server.hash.md5",
-	Title:        "The type of `tls.server.hash.md5` is string",
-	Check:        checkTypeTlsServerHashMd5v1260,
+	Title:        "The type of `tls.server.hash.md5` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "tls.server.hash.md5") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeTlsServerHashMd5v1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("tls.server.hash.md5")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeTlsServerHashSha1v1260 = &rule.AttributeRule{
 	Name:         "type.tls.server.hash.sha1",
-	Title:        "The type of `tls.server.hash.sha1` is string",
-	Check:        checkTypeTlsServerHashSha1v1260,
+	Title:        "The type of `tls.server.hash.sha1` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "tls.server.hash.sha1") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeTlsServerHashSha1v1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("tls.server.hash.sha1")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeTlsServerHashSha256v1260 = &rule.AttributeRule{
 	Name:         "type.tls.server.hash.sha256",
-	Title:        "The type of `tls.server.hash.sha256` is string",
-	Check:        checkTypeTlsServerHashSha256v1260,
+	Title:        "The type of `tls.server.hash.sha256` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "tls.server.hash.sha256") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeTlsServerHashSha256v1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("tls.server.hash.sha256")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeTlsServerIssuerv1260 = &rule.AttributeRule{
 	Name:         "type.tls.server.issuer",
-	Title:        "The type of `tls.server.issuer` is string",
-	Check:        checkTypeTlsServerIssuerv1260,
+	Title:        "The type of `tls.server.issuer` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "tls.server.issuer") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeTlsServerIssuerv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("tls.server.issuer")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeTlsServerJa3Sv1260 = &rule.AttributeRule{
 	Name:         "type.tls.server.ja3s",
-	Title:        "The type of `tls.server.ja3s` is string",
-	Check:        checkTypeTlsServerJa3Sv1260,
+	Title:        "The type of `tls.server.ja3s` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "tls.server.ja3s") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeTlsServerJa3Sv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("tls.server.ja3s")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeTlsServerNotAfterv1260 = &rule.AttributeRule{
 	Name:         "type.tls.server.not_after",
-	Title:        "The type of `tls.server.not_after` is string",
-	Check:        checkTypeTlsServerNotAfterv1260,
+	Title:        "The type of `tls.server.not_after` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "tls.server.not_after") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeTlsServerNotAfterv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("tls.server.not_after")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeTlsServerNotBeforev1260 = &rule.AttributeRule{
 	Name:         "type.tls.server.not_before",
-	Title:        "The type of `tls.server.not_before` is string",
-	Check:        checkTypeTlsServerNotBeforev1260,
+	Title:        "The type of `tls.server.not_before` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "tls.server.not_before") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeTlsServerNotBeforev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("tls.server.not_before")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeTlsServerSubjectv1260 = &rule.AttributeRule{
 	Name:         "type.tls.server.subject",
-	Title:        "The type of `tls.server.subject` is string",
-	Check:        checkTypeTlsServerSubjectv1260,
+	Title:        "The type of `tls.server.subject` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "tls.server.subject") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeTlsServerSubjectv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("tls.server.subject")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeUrlDomainv1260 = &rule.AttributeRule{
 	Name:         "type.url.domain",
-	Title:        "The type of `url.domain` is string",
-	Check:        checkTypeUrlDomainv1260,
+	Title:        "The type of `url.domain` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "url.domain") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeUrlDomainv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("url.domain")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeUrlExtensionv1260 = &rule.AttributeRule{
 	Name:         "type.url.extension",
-	Title:        "The type of `url.extension` is string",
-	Check:        checkTypeUrlExtensionv1260,
+	Title:        "The type of `url.extension` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "url.extension") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeUrlExtensionv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("url.extension")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeUrlFragmentv1260 = &rule.AttributeRule{
 	Name:         "type.url.fragment",
-	Title:        "The type of `url.fragment` is string",
-	Check:        checkTypeUrlFragmentv1260,
+	Title:        "The type of `url.fragment` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "url.fragment") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityStable,
 	Source:       "",
-}
-
-func checkTypeUrlFragmentv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("url.fragment")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeUrlFullv1260 = &rule.AttributeRule{
 	Name:         "type.url.full",
-	Title:        "The type of `url.full` is string",
-	Check:        checkTypeUrlFullv1260,
+	Title:        "The type of `url.full` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "url.full") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityStable,
 	Source:       "",
-}
-
-func checkTypeUrlFullv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("url.full")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeUrlOriginalv1260 = &rule.AttributeRule{
 	Name:         "type.url.original",
-	Title:        "The type of `url.original` is string",
-	Check:        checkTypeUrlOriginalv1260,
+	Title:        "The type of `url.original` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "url.original") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeUrlOriginalv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("url.original")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeUrlPathv1260 = &rule.AttributeRule{
 	Name:         "type.url.path",
-	Title:        "The type of `url.path` is string",
-	Check:        checkTypeUrlPathv1260,
+	Title:        "The type of `url.path` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "url.path") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityStable,
 	Source:       "",
-}
-
-func checkTypeUrlPathv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("url.path")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeUrlPortv1260 = &rule.AttributeRule{
 	Name:         "type.url.port",
-	Title:        "The type of `url.port` is int",
-	Check:        checkTypeUrlPortv1260,
+	Title:        "The type of `url.port` should be int",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeInt(sa, "url.port") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeUrlPortv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("url.port")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeInt
+  Version:      "v1.26.0",
 }
 
 var ruleTypeUrlQueryv1260 = &rule.AttributeRule{
 	Name:         "type.url.query",
-	Title:        "The type of `url.query` is string",
-	Check:        checkTypeUrlQueryv1260,
+	Title:        "The type of `url.query` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "url.query") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityStable,
 	Source:       "",
-}
-
-func checkTypeUrlQueryv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("url.query")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeUrlRegisteredDomainv1260 = &rule.AttributeRule{
 	Name:         "type.url.registered_domain",
-	Title:        "The type of `url.registered_domain` is string",
-	Check:        checkTypeUrlRegisteredDomainv1260,
+	Title:        "The type of `url.registered_domain` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "url.registered_domain") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeUrlRegisteredDomainv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("url.registered_domain")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeUrlSchemev1260 = &rule.AttributeRule{
 	Name:         "type.url.scheme",
-	Title:        "The type of `url.scheme` is string",
-	Check:        checkTypeUrlSchemev1260,
+	Title:        "The type of `url.scheme` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "url.scheme") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityStable,
 	Source:       "",
-}
-
-func checkTypeUrlSchemev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("url.scheme")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeUrlSubdomainv1260 = &rule.AttributeRule{
 	Name:         "type.url.subdomain",
-	Title:        "The type of `url.subdomain` is string",
-	Check:        checkTypeUrlSubdomainv1260,
+	Title:        "The type of `url.subdomain` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "url.subdomain") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeUrlSubdomainv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("url.subdomain")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeUrlTemplatev1260 = &rule.AttributeRule{
 	Name:         "type.url.template",
-	Title:        "The type of `url.template` is string",
-	Check:        checkTypeUrlTemplatev1260,
+	Title:        "The type of `url.template` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "url.template") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeUrlTemplatev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("url.template")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeUrlTopLevelDomainv1260 = &rule.AttributeRule{
 	Name:         "type.url.top_level_domain",
-	Title:        "The type of `url.top_level_domain` is string",
-	Check:        checkTypeUrlTopLevelDomainv1260,
+	Title:        "The type of `url.top_level_domain` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "url.top_level_domain") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeUrlTopLevelDomainv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("url.top_level_domain")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeUserAgentNamev1260 = &rule.AttributeRule{
 	Name:         "type.user_agent.name",
-	Title:        "The type of `user_agent.name` is string",
-	Check:        checkTypeUserAgentNamev1260,
+	Title:        "The type of `user_agent.name` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "user_agent.name") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeUserAgentNamev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("user_agent.name")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeUserAgentOriginalv1260 = &rule.AttributeRule{
 	Name:         "type.user_agent.original",
-	Title:        "The type of `user_agent.original` is string",
-	Check:        checkTypeUserAgentOriginalv1260,
+	Title:        "The type of `user_agent.original` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "user_agent.original") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityStable,
 	Source:       "",
-}
-
-func checkTypeUserAgentOriginalv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("user_agent.original")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeUserAgentVersionv1260 = &rule.AttributeRule{
 	Name:         "type.user_agent.version",
-	Title:        "The type of `user_agent.version` is string",
-	Check:        checkTypeUserAgentVersionv1260,
+	Title:        "The type of `user_agent.version` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "user_agent.version") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeUserAgentVersionv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("user_agent.version")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeWebengineDescriptionv1260 = &rule.AttributeRule{
 	Name:         "type.webengine.description",
-	Title:        "The type of `webengine.description` is string",
-	Check:        checkTypeWebengineDescriptionv1260,
+	Title:        "The type of `webengine.description` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "webengine.description") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeWebengineDescriptionv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("webengine.description")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeWebengineNamev1260 = &rule.AttributeRule{
 	Name:         "type.webengine.name",
-	Title:        "The type of `webengine.name` is string",
-	Check:        checkTypeWebengineNamev1260,
+	Title:        "The type of `webengine.name` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "webengine.name") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeWebengineNamev1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("webengine.name")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 
 var ruleTypeWebengineVersionv1260 = &rule.AttributeRule{
 	Name:         "type.webengine.version",
-	Title:        "The type of `webengine.version` is string",
-	Check:        checkTypeWebengineVersionv1260,
+	Title:        "The type of `webengine.version` should be string",
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "webengine.version") },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkTypeWebengineVersionv1260(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("webengine.version")
-  if !ok {
-    return true
-  }
-  return val.Type() == pcommon.ValueTypeStr
+  Version:      "v1.26.0",
 }
 

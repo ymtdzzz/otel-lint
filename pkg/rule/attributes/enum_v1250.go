@@ -2,8 +2,6 @@
 package attributes
 
 import (
-	"slices"
-
 	"github.com/ymtdzzz/otel-lint/pkg/rule"
 )
 
@@ -34,357 +32,210 @@ var RulesEnumv1250 = []*rule.AttributeRule{
 var ruleEnumAndroidStatev1250 = &rule.AttributeRule{
 	Name:         "enum.android.state",
 	Title:        "This attribute represents the state the application has transitioned into at the occurrence of the event.",
-	Check:        checkEnumAndroidStatev1250,
+	Check:        func(sa *rule.SignalAttributes) bool { return valueValidEnum(sa, "android.state", []string{ "created", "background", "foreground" }) },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkEnumAndroidStatev1250(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("android.state")
-  if !ok {
-    return true
-  }
-  return slices.Contains([]string{ "created", "background", "foreground" }, val.Str())
+  Version:      "v1.25.0",
 }
 
 var ruleEnumAwsEcsLaunchtypev1250 = &rule.AttributeRule{
 	Name:         "enum.aws.ecs.launchtype",
 	Title:        "The [launch type](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/launch_types.html) for an ECS task.",
-	Check:        checkEnumAwsEcsLaunchtypev1250,
+	Check:        func(sa *rule.SignalAttributes) bool { return valueValidEnum(sa, "aws.ecs.launchtype", []string{ "ec2", "fargate" }) },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkEnumAwsEcsLaunchtypev1250(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("aws.ecs.launchtype")
-  if !ok {
-    return true
-  }
-  return slices.Contains([]string{ "ec2", "fargate" }, val.Str())
+  Version:      "v1.25.0",
 }
 
 var ruleEnumDbCosmosdbConnectionModev1250 = &rule.AttributeRule{
 	Name:         "enum.db.cosmosdb.connection_mode",
 	Title:        "Cosmos client connection mode.",
-	Check:        checkEnumDbCosmosdbConnectionModev1250,
+	Check:        func(sa *rule.SignalAttributes) bool { return valueValidEnum(sa, "db.cosmosdb.connection_mode", []string{ "gateway", "direct" }) },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkEnumDbCosmosdbConnectionModev1250(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("db.cosmosdb.connection_mode")
-  if !ok {
-    return true
-  }
-  return slices.Contains([]string{ "gateway", "direct" }, val.Str())
+  Version:      "v1.25.0",
 }
 
 var ruleEnumDiskIoDirectionv1250 = &rule.AttributeRule{
 	Name:         "enum.disk.io.direction",
 	Title:        "The disk IO operation direction.",
-	Check:        checkEnumDiskIoDirectionv1250,
+	Check:        func(sa *rule.SignalAttributes) bool { return valueValidEnum(sa, "disk.io.direction", []string{ "read", "write" }) },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkEnumDiskIoDirectionv1250(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("disk.io.direction")
-  if !ok {
-    return true
-  }
-  return slices.Contains([]string{ "read", "write" }, val.Str())
+  Version:      "v1.25.0",
 }
 
 var ruleEnumFaasTriggerv1250 = &rule.AttributeRule{
 	Name:         "enum.faas.trigger",
 	Title:        "Type of the trigger which caused this function invocation.",
-	Check:        checkEnumFaasTriggerv1250,
+	Check:        func(sa *rule.SignalAttributes) bool { return valueValidEnum(sa, "faas.trigger", []string{ "datasource", "http", "pubsub", "timer", "other" }) },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkEnumFaasTriggerv1250(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("faas.trigger")
-  if !ok {
-    return true
-  }
-  return slices.Contains([]string{ "datasource", "http", "pubsub", "timer", "other" }, val.Str())
+  Version:      "v1.25.0",
 }
 
 var ruleEnumGraphqlOperationTypev1250 = &rule.AttributeRule{
 	Name:         "enum.graphql.operation.type",
 	Title:        "The type of the operation being executed.",
-	Check:        checkEnumGraphqlOperationTypev1250,
+	Check:        func(sa *rule.SignalAttributes) bool { return valueValidEnum(sa, "graphql.operation.type", []string{ "query", "mutation", "subscription" }) },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkEnumGraphqlOperationTypev1250(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("graphql.operation.type")
-  if !ok {
-    return true
-  }
-  return slices.Contains([]string{ "query", "mutation", "subscription" }, val.Str())
+  Version:      "v1.25.0",
 }
 
 var ruleEnumIosStatev1250 = &rule.AttributeRule{
 	Name:         "enum.ios.state",
 	Title:        "This attribute represents the state the application has transitioned into at the occurrence of the event.",
-	Check:        checkEnumIosStatev1250,
+	Check:        func(sa *rule.SignalAttributes) bool { return valueValidEnum(sa, "ios.state", []string{ "active", "inactive", "background", "foreground", "terminate" }) },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkEnumIosStatev1250(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("ios.state")
-  if !ok {
-    return true
-  }
-  return slices.Contains([]string{ "active", "inactive", "background", "foreground", "terminate" }, val.Str())
+  Version:      "v1.25.0",
 }
 
 var ruleEnumJvmMemoryTypev1250 = &rule.AttributeRule{
 	Name:         "enum.jvm.memory.type",
 	Title:        "The type of memory.",
-	Check:        checkEnumJvmMemoryTypev1250,
+	Check:        func(sa *rule.SignalAttributes) bool { return valueValidEnum(sa, "jvm.memory.type", []string{ "heap", "non_heap" }) },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityStable,
 	Source:       "",
-}
-
-func checkEnumJvmMemoryTypev1250(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("jvm.memory.type")
-  if !ok {
-    return true
-  }
-  return slices.Contains([]string{ "heap", "non_heap" }, val.Str())
+  Version:      "v1.25.0",
 }
 
 var ruleEnumJvmThreadStatev1250 = &rule.AttributeRule{
 	Name:         "enum.jvm.thread.state",
 	Title:        "State of the thread.",
-	Check:        checkEnumJvmThreadStatev1250,
+	Check:        func(sa *rule.SignalAttributes) bool { return valueValidEnum(sa, "jvm.thread.state", []string{ "new", "runnable", "blocked", "waiting", "timed_waiting", "terminated" }) },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityStable,
 	Source:       "",
-}
-
-func checkEnumJvmThreadStatev1250(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("jvm.thread.state")
-  if !ok {
-    return true
-  }
-  return slices.Contains([]string{ "new", "runnable", "blocked", "waiting", "timed_waiting", "terminated" }, val.Str())
+  Version:      "v1.25.0",
 }
 
 var ruleEnumLogIostreamv1250 = &rule.AttributeRule{
 	Name:         "enum.log.iostream",
 	Title:        "The stream associated with the log. See below for a list of well-known values.",
-	Check:        checkEnumLogIostreamv1250,
+	Check:        func(sa *rule.SignalAttributes) bool { return valueValidEnum(sa, "log.iostream", []string{ "stdout", "stderr" }) },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkEnumLogIostreamv1250(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("log.iostream")
-  if !ok {
-    return true
-  }
-  return slices.Contains([]string{ "stdout", "stderr" }, val.Str())
+  Version:      "v1.25.0",
 }
 
 var ruleEnumMessagingRocketmqConsumptionModelv1250 = &rule.AttributeRule{
 	Name:         "enum.messaging.rocketmq.consumption_model",
 	Title:        "Model of message consumption. This only applies to consumer spans.",
-	Check:        checkEnumMessagingRocketmqConsumptionModelv1250,
+	Check:        func(sa *rule.SignalAttributes) bool { return valueValidEnum(sa, "messaging.rocketmq.consumption_model", []string{ "clustering", "broadcasting" }) },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkEnumMessagingRocketmqConsumptionModelv1250(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("messaging.rocketmq.consumption_model")
-  if !ok {
-    return true
-  }
-  return slices.Contains([]string{ "clustering", "broadcasting" }, val.Str())
+  Version:      "v1.25.0",
 }
 
 var ruleEnumMessagingRocketmqMessageTypev1250 = &rule.AttributeRule{
 	Name:         "enum.messaging.rocketmq.message.type",
 	Title:        "Type of message.",
-	Check:        checkEnumMessagingRocketmqMessageTypev1250,
+	Check:        func(sa *rule.SignalAttributes) bool { return valueValidEnum(sa, "messaging.rocketmq.message.type", []string{ "normal", "fifo", "delay", "transaction" }) },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkEnumMessagingRocketmqMessageTypev1250(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("messaging.rocketmq.message.type")
-  if !ok {
-    return true
-  }
-  return slices.Contains([]string{ "normal", "fifo", "delay", "transaction" }, val.Str())
+  Version:      "v1.25.0",
 }
 
 var ruleEnumNetworkIoDirectionv1250 = &rule.AttributeRule{
 	Name:         "enum.network.io.direction",
 	Title:        "The network IO operation direction.",
-	Check:        checkEnumNetworkIoDirectionv1250,
+	Check:        func(sa *rule.SignalAttributes) bool { return valueValidEnum(sa, "network.io.direction", []string{ "transmit", "receive" }) },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkEnumNetworkIoDirectionv1250(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("network.io.direction")
-  if !ok {
-    return true
-  }
-  return slices.Contains([]string{ "transmit", "receive" }, val.Str())
+  Version:      "v1.25.0",
 }
 
 var ruleEnumOpentracingRefTypev1250 = &rule.AttributeRule{
 	Name:         "enum.opentracing.ref_type",
 	Title:        "Parent-child Reference type",
-	Check:        checkEnumOpentracingRefTypev1250,
+	Check:        func(sa *rule.SignalAttributes) bool { return valueValidEnum(sa, "opentracing.ref_type", []string{ "child_of", "follows_from" }) },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkEnumOpentracingRefTypev1250(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("opentracing.ref_type")
-  if !ok {
-    return true
-  }
-  return slices.Contains([]string{ "child_of", "follows_from" }, val.Str())
+  Version:      "v1.25.0",
 }
 
 var ruleEnumOtelStatusCodev1250 = &rule.AttributeRule{
 	Name:         "enum.otel.status_code",
 	Title:        "Name of the code, either OK or ERROR. MUST NOT be set if the status code is UNSET.",
-	Check:        checkEnumOtelStatusCodev1250,
+	Check:        func(sa *rule.SignalAttributes) bool { return valueValidEnum(sa, "otel.status_code", []string{ "OK", "ERROR" }) },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityStable,
 	Source:       "",
-}
-
-func checkEnumOtelStatusCodev1250(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("otel.status_code")
-  if !ok {
-    return true
-  }
-  return slices.Contains([]string{ "OK", "ERROR" }, val.Str())
+  Version:      "v1.25.0",
 }
 
 var ruleEnumStatev1250 = &rule.AttributeRule{
 	Name:         "enum.state",
 	Title:        "The state of a connection in the pool",
-	Check:        checkEnumStatev1250,
+	Check:        func(sa *rule.SignalAttributes) bool { return valueValidEnum(sa, "state", []string{ "idle", "used" }) },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkEnumStatev1250(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("state")
-  if !ok {
-    return true
-  }
-  return slices.Contains([]string{ "idle", "used" }, val.Str())
+  Version:      "v1.25.0",
 }
 
 var ruleEnumSystemFilesystemStatev1250 = &rule.AttributeRule{
 	Name:         "enum.system.filesystem.state",
 	Title:        "The filesystem state",
-	Check:        checkEnumSystemFilesystemStatev1250,
+	Check:        func(sa *rule.SignalAttributes) bool { return valueValidEnum(sa, "system.filesystem.state", []string{ "used", "free", "reserved" }) },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkEnumSystemFilesystemStatev1250(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("system.filesystem.state")
-  if !ok {
-    return true
-  }
-  return slices.Contains([]string{ "used", "free", "reserved" }, val.Str())
+  Version:      "v1.25.0",
 }
 
 var ruleEnumSystemNetworkStatev1250 = &rule.AttributeRule{
 	Name:         "enum.system.network.state",
 	Title:        "A stateless protocol MUST NOT set this attribute",
-	Check:        checkEnumSystemNetworkStatev1250,
+	Check:        func(sa *rule.SignalAttributes) bool { return valueValidEnum(sa, "system.network.state", []string{ "close", "close_wait", "closing", "delete", "established", "fin_wait_1", "fin_wait_2", "last_ack", "listen", "syn_recv", "syn_sent", "time_wait" }) },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkEnumSystemNetworkStatev1250(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("system.network.state")
-  if !ok {
-    return true
-  }
-  return slices.Contains([]string{ "close", "close_wait", "closing", "delete", "established", "fin_wait_1", "fin_wait_2", "last_ack", "listen", "syn_recv", "syn_sent", "time_wait" }, val.Str())
+  Version:      "v1.25.0",
 }
 
 var ruleEnumSystemPagingDirectionv1250 = &rule.AttributeRule{
 	Name:         "enum.system.paging.direction",
 	Title:        "The paging access direction",
-	Check:        checkEnumSystemPagingDirectionv1250,
+	Check:        func(sa *rule.SignalAttributes) bool { return valueValidEnum(sa, "system.paging.direction", []string{ "in", "out" }) },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkEnumSystemPagingDirectionv1250(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("system.paging.direction")
-  if !ok {
-    return true
-  }
-  return slices.Contains([]string{ "in", "out" }, val.Str())
+  Version:      "v1.25.0",
 }
 
 var ruleEnumSystemPagingStatev1250 = &rule.AttributeRule{
 	Name:         "enum.system.paging.state",
 	Title:        "The memory paging state",
-	Check:        checkEnumSystemPagingStatev1250,
+	Check:        func(sa *rule.SignalAttributes) bool { return valueValidEnum(sa, "system.paging.state", []string{ "used", "free" }) },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkEnumSystemPagingStatev1250(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("system.paging.state")
-  if !ok {
-    return true
-  }
-  return slices.Contains([]string{ "used", "free" }, val.Str())
+  Version:      "v1.25.0",
 }
 
 var ruleEnumSystemPagingTypev1250 = &rule.AttributeRule{
 	Name:         "enum.system.paging.type",
 	Title:        "The memory paging type",
-	Check:        checkEnumSystemPagingTypev1250,
+	Check:        func(sa *rule.SignalAttributes) bool { return valueValidEnum(sa, "system.paging.type", []string{ "major", "minor" }) },
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-}
-
-func checkEnumSystemPagingTypev1250(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("system.paging.type")
-  if !ok {
-    return true
-  }
-  return slices.Contains([]string{ "major", "minor" }, val.Str())
+  Version:      "v1.25.0",
 }
 

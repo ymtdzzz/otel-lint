@@ -4,8 +4,6 @@
 package attributes
 
 import (
-	"slices"
-
 	"github.com/ymtdzzz/otel-lint/pkg/rule"
 )
 
@@ -20,18 +18,11 @@ var RulesEnum{{ version }} = []*rule.AttributeRule{
 var ruleEnum{{ attr_name }}{{ version }} = &rule.AttributeRule{
 	Name:         "enum.{{attr.name}}",
 	Title:        "{{ attr.brief | trim | replace("\"", "") }}",
-	Check:        checkEnum{{ attr_name }}{{ version }},
+	Check:        func(sa *rule.SignalAttributes) bool { return valueValidEnum(sa, "{{ attr.name }}", []string{ "{{ attr.type.members | map(attribute="value") | join('", "') }}" }) },
 	Severity:     rule.SeverityError,
 	Stability:    rule.{{ attr.stability | map_text("stabilities", "StabilityExperimental") }},
 	Source:       "",
-}
-
-func checkEnum{{ attr_name }}{{ version }}(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("{{ attr.name }}")
-  if !ok {
-    return true
-  }
-  return slices.Contains([]string{ "{{ attr.type.members | map(attribute="value") | join('", "') }}" }, val.Str())
+  Version:      "{{ params.version }}",
 }
 
 {% endfor %}

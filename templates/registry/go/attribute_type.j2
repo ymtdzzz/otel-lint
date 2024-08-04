@@ -5,7 +5,6 @@ package attributes
 
 import (
 	"github.com/ymtdzzz/otel-lint/pkg/rule"
-	"go.opentelemetry.io/collector/pdata/pcommon"
 )
 
 var RulesType{{ version }} = []*rule.AttributeRule{
@@ -26,67 +25,28 @@ var RulesType{{ version }} = []*rule.AttributeRule{
 {% endif %}
 var ruleType{{ attr_name }}{{ version }} = &rule.AttributeRule{
 	Name:         "type.{{attr.name}}",
-	Title:        "The type of `{{ attr.name }}` is {{ attr.type }}",
-	Check:        checkType{{ attr_name }}{{ version }},
+	Title:        "The type of `{{ attr.name }}` should be {{ attr.type }}",
+  {% if attr.type == "string" %}
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStr(sa, "{{ attr.name }}") },
+  {% elif attr.type == "int" %}
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeInt(sa, "{{ attr.name }}") },
+  {% elif attr.type == "double" %}
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeDouble(sa, "{{ attr.name }}") },
+  {% elif attr.type == "boolean" %}
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeBool(sa, "{{ attr.name }}") },
+  {% elif attr.type == "string[]" %}
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeStrSlice(sa, "{{ attr.name }}") },
+  {% elif attr.type == "int[]" %}
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeIntSlice(sa, "{{ attr.name }}") },
+  {% elif attr.type == "double[]" %}
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeDoubleSlice(sa, "{{ attr.name }}") },
+  {% elif attr.type == "boolean[]" %}
+	Check:        func(sa *rule.SignalAttributes) bool { return valueTypeBoolSlice(sa, "{{ attr.name }}") },
+  {% endif %}
 	Severity:     rule.SeverityError,
 	Stability:    rule.{{ attr.stability | map_text("stabilities", "StabilityExperimental") }},
 	Source:       "",
-}
-
-func checkType{{ attr_name }}{{ version }}(a *rule.SignalAttributes) bool {
-  val, ok := a.Get("{{ attr.name }}")
-  if !ok {
-    return true
-  }
-  {% if attr.type == "string" %}
-  return val.Type() == pcommon.ValueTypeStr
-  {% elif attr.type == "int" %}
-  return val.Type() == pcommon.ValueTypeInt
-  {% elif attr.type == "double" %}
-  return val.Type() == pcommon.ValueTypeDouble
-  {% elif attr.type == "boolean" %}
-  return val.Type() == pcommon.ValueTypeBool
-  {% elif attr.type == "string[]" %}
-  if val.Type() != pcommon.ValueTypeSlice {
-    return false
-  }
-  for _, v := range val.Slice().AsRaw() {
-    if _, ok := v.(string); !ok {
-      return false
-    }
-  }
-  return true
-  {% elif attr.type == "int[]" %}
-  if val.Type() != pcommon.ValueTypeSlice {
-    return false
-  }
-  for _, v := range val.Slice().AsRaw() {
-    if _, ok := v.(int64); !ok {
-      return false
-    }
-  }
-  return true
-  {% elif attr.type == "double[]" %}
-  if val.Type() != pcommon.ValueTypeSlice {
-    return false
-  }
-  for _, v := range val.Slice().AsRaw() {
-    if _, ok := v.(float64); !ok {
-      return false
-    }
-  }
-  return true
-  {% elif attr.type == "boolean[]" %}
-  if val.Type() != pcommon.ValueTypeSlice {
-    return false
-  }
-  for _, v := range val.Slice().AsRaw() {
-    if _, ok := v.(bool); !ok {
-      return false
-    }
-  }
-  return true
-  {% endif %}
+  Version:      "{{ params.version }}",
 }
 
 {% endfor %}

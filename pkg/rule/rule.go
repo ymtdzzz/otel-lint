@@ -7,6 +7,7 @@ type AttributeRule struct {
 	Severity  Severity
 	Stability Stability
 	Source    string
+	Version   string
 }
 
 type MetricRule struct {
@@ -16,4 +17,5 @@ type MetricRule struct {
 	Severity  Severity
 	Stability Stability
 	Source    string
+	Version   string
 }
