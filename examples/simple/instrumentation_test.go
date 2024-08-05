@@ -20,7 +20,7 @@ func TestDoTrace(t *testing.T) {
 
 	/*
 		for _, s := range sr.Ended() {
-			assert.NoSemConvErrorSpan(t, s, linter.WithoutRules([]string{"deprecated.http.user_agent"}))
+			assert.NoSemConvErrorSpan(t, s, linter.IgnoreRules([]string{"deprecated.http.user_agent"}))
 		}
 	*/
 }
