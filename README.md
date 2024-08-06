@@ -1,40 +1,30 @@
 # otel-lint
 
-otel-lint is a tool to check whether OpenTelemetry instrumentation libraries adhere to Semantic Conventions. It provides a linting feature to ensure your instrumentation is up to standard.
-
+otel-lint is a library to check whether OpenTelemetry instrumentation libraries adhere to Semantic Conventions. It provides a linting feature to ensure your instrumentation is up to standard.
 
 ## Features
-### Supported Rules
-
-Currently, this tool supports Semantic Convention versions from v1.24.0 to v1.27.0.
-
-#### Attributes
-
-- Deprecated attributes
-- Type mismatches
-- Enum value mismatches (unallowed custom values used)
-
-#### Resources
-
-Not yet supported
-
-#### Traces
-
-Not yet supported
-
-#### Metrics
-
-- Deprecated metric names
-
-#### Logs
-
-Not yet supported
 
 ### Integrations
 
 - **`assert` package for Golang**: Lint checks for your instrumentation library development flow
 - **Custom processor `lintprocessor`**: End-to-end lint checks for your instrumented application's pipeline
   - see: https://github.com/ymtdzzz/opentelemetry-collector-extra/tree/main/processor/lintprocessor
+
+### Supported Rules
+
+Currently, this tool supports Semantic Convention versions from `v1.24.0` to `v1.27.0`.
+
+| Type      | Rule Name      | Rule ID                          | Severity | Description                                 |
+| --------- | -------------- | -------------------------------- | -------- | ------------------------------------------- |
+| \-        | Schema URL     | `schema_url\`                    | Warn     | SchemaURL is not set or invalid format      |
+| \-        | Schema Version | `schema_version\`                | Warn     | Unsupported schema version                  |
+| Attribute | Deprecated     | `deprecated.{{ attribute key }}` | Error    | Deprecated attribute key is used            |
+| Attribute | Type           | `type.{{ attribute_key }}`       | Error    | Attribute value is wrong                    |
+| Attribute | Enum           | `enum.{{ attribute_key }}`       | Error    | Attribute value is not allowed in enum list |
+| Resource  | \-             | \-                               | \-       | Not yet supported                           |
+| Trace     | \-             | \-                               | \-       | Not yet supported                           |
+| Metric    | Deprecated     | `deprecated.{{ metric name }}`   | Error    | Deprecated metric name is used              |
+| Log       | \-             | -                                | \-       | Not yet supported                           |
 
 ## Getting Started
 ### For Golang Instrumentation Libraries
