@@ -11,7 +11,6 @@ var RulesDeprecatedv1270 = []*rule.MetricRule{
 	ruleDeprecatedMessagingProcessMessagesv1270,
 	ruleDeprecatedMessagingPublishMessagesv1270,
 	ruleDeprecatedMessagingReceiveMessagesv1270,
-	ruleDeprecatedJvmBufferMemoryUsagev1270,
 	ruleDeprecatedDbClientConnectionsUsagev1270,
 	ruleDeprecatedDbClientConnectionsIdleMaxv1270,
 	ruleDeprecatedDbClientConnectionsIdleMinv1270,
@@ -21,6 +20,7 @@ var RulesDeprecatedv1270 = []*rule.MetricRule{
 	ruleDeprecatedDbClientConnectionsCreateTimev1270,
 	ruleDeprecatedDbClientConnectionsWaitTimev1270,
 	ruleDeprecatedDbClientConnectionsUseTimev1270,
+	ruleDeprecatedJvmBufferMemoryUsagev1270,
 }
 
 var ruleDeprecatedMessagingPublishDurationv1270 = &rule.MetricRule{
@@ -30,7 +30,7 @@ var ruleDeprecatedMessagingPublishDurationv1270 = &rule.MetricRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.27.0",
+	Version:      "v1.27.0",
 }
 
 var ruleDeprecatedMessagingReceiveDurationv1270 = &rule.MetricRule{
@@ -40,7 +40,7 @@ var ruleDeprecatedMessagingReceiveDurationv1270 = &rule.MetricRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.27.0",
+	Version:      "v1.27.0",
 }
 
 var ruleDeprecatedMessagingProcessMessagesv1270 = &rule.MetricRule{
@@ -50,7 +50,7 @@ var ruleDeprecatedMessagingProcessMessagesv1270 = &rule.MetricRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.27.0",
+	Version:      "v1.27.0",
 }
 
 var ruleDeprecatedMessagingPublishMessagesv1270 = &rule.MetricRule{
@@ -60,7 +60,7 @@ var ruleDeprecatedMessagingPublishMessagesv1270 = &rule.MetricRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.27.0",
+	Version:      "v1.27.0",
 }
 
 var ruleDeprecatedMessagingReceiveMessagesv1270 = &rule.MetricRule{
@@ -70,17 +70,7 @@ var ruleDeprecatedMessagingReceiveMessagesv1270 = &rule.MetricRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.27.0",
-}
-
-var ruleDeprecatedJvmBufferMemoryUsagev1270 = &rule.MetricRule{
-	Name:         "deprecated.jvm.buffer.memory.usage",
-	Title:        "Deprecated, use `jvm.buffer.memory.used` instead.",
-	Check:        func(m *rule.Metrics) bool { return metricNameNot(m, "jvm.buffer.memory.usage") },
-	Severity:     rule.SeverityError,
-	Stability:    rule.StabilityExperimental,
-	Source:       "",
-  Version:      "v1.27.0",
+	Version:      "v1.27.0",
 }
 
 var ruleDeprecatedDbClientConnectionsUsagev1270 = &rule.MetricRule{
@@ -90,7 +80,7 @@ var ruleDeprecatedDbClientConnectionsUsagev1270 = &rule.MetricRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.27.0",
+	Version:      "v1.27.0",
 }
 
 var ruleDeprecatedDbClientConnectionsIdleMaxv1270 = &rule.MetricRule{
@@ -100,7 +90,7 @@ var ruleDeprecatedDbClientConnectionsIdleMaxv1270 = &rule.MetricRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.27.0",
+	Version:      "v1.27.0",
 }
 
 var ruleDeprecatedDbClientConnectionsIdleMinv1270 = &rule.MetricRule{
@@ -110,7 +100,7 @@ var ruleDeprecatedDbClientConnectionsIdleMinv1270 = &rule.MetricRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.27.0",
+	Version:      "v1.27.0",
 }
 
 var ruleDeprecatedDbClientConnectionsMaxv1270 = &rule.MetricRule{
@@ -120,7 +110,7 @@ var ruleDeprecatedDbClientConnectionsMaxv1270 = &rule.MetricRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.27.0",
+	Version:      "v1.27.0",
 }
 
 var ruleDeprecatedDbClientConnectionsPendingRequestsv1270 = &rule.MetricRule{
@@ -130,7 +120,7 @@ var ruleDeprecatedDbClientConnectionsPendingRequestsv1270 = &rule.MetricRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.27.0",
+	Version:      "v1.27.0",
 }
 
 var ruleDeprecatedDbClientConnectionsTimeoutsv1270 = &rule.MetricRule{
@@ -140,7 +130,7 @@ var ruleDeprecatedDbClientConnectionsTimeoutsv1270 = &rule.MetricRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.27.0",
+	Version:      "v1.27.0",
 }
 
 var ruleDeprecatedDbClientConnectionsCreateTimev1270 = &rule.MetricRule{
@@ -150,7 +140,7 @@ var ruleDeprecatedDbClientConnectionsCreateTimev1270 = &rule.MetricRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.27.0",
+	Version:      "v1.27.0",
 }
 
 var ruleDeprecatedDbClientConnectionsWaitTimev1270 = &rule.MetricRule{
@@ -160,7 +150,7 @@ var ruleDeprecatedDbClientConnectionsWaitTimev1270 = &rule.MetricRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.27.0",
+	Version:      "v1.27.0",
 }
 
 var ruleDeprecatedDbClientConnectionsUseTimev1270 = &rule.MetricRule{
@@ -170,6 +160,16 @@ var ruleDeprecatedDbClientConnectionsUseTimev1270 = &rule.MetricRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.27.0",
+	Version:      "v1.27.0",
+}
+
+var ruleDeprecatedJvmBufferMemoryUsagev1270 = &rule.MetricRule{
+	Name:         "deprecated.jvm.buffer.memory.usage",
+	Title:        "Deprecated, use `jvm.buffer.memory.used` instead.",
+	Check:        func(m *rule.Metrics) bool { return metricNameNot(m, "jvm.buffer.memory.usage") },
+	Severity:     rule.SeverityError,
+	Stability:    rule.StabilityExperimental,
+	Source:       "",
+	Version:      "v1.27.0",
 }
 

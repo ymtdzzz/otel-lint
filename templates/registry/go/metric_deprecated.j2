@@ -22,7 +22,7 @@ var ruleDeprecated{{ metric_name }}{{ version }} = &rule.MetricRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.{{ metric.stability | map_text("stabilities", "StabilityExperimental") }},
 	Source:       "",
-  Version:      "{{ params.version }}",
+	Version:      "{{ params.version }}",
 }
 
 {% endfor %}

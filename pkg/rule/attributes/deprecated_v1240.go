@@ -37,7 +37,7 @@ var ruleDeprecatedHttpFlavorv1240 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.24.0",
+	Version:      "v1.24.0",
 }
 
 var ruleDeprecatedHttpMethodv1240 = &rule.AttributeRule{
@@ -47,7 +47,7 @@ var ruleDeprecatedHttpMethodv1240 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.24.0",
+	Version:      "v1.24.0",
 }
 
 var ruleDeprecatedHttpRequestContentLengthv1240 = &rule.AttributeRule{
@@ -57,7 +57,7 @@ var ruleDeprecatedHttpRequestContentLengthv1240 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.24.0",
+	Version:      "v1.24.0",
 }
 
 var ruleDeprecatedHttpResponseContentLengthv1240 = &rule.AttributeRule{
@@ -67,7 +67,7 @@ var ruleDeprecatedHttpResponseContentLengthv1240 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.24.0",
+	Version:      "v1.24.0",
 }
 
 var ruleDeprecatedHttpSchemev1240 = &rule.AttributeRule{
@@ -77,7 +77,7 @@ var ruleDeprecatedHttpSchemev1240 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.24.0",
+	Version:      "v1.24.0",
 }
 
 var ruleDeprecatedHttpStatusCodev1240 = &rule.AttributeRule{
@@ -87,7 +87,7 @@ var ruleDeprecatedHttpStatusCodev1240 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.24.0",
+	Version:      "v1.24.0",
 }
 
 var ruleDeprecatedHttpTargetv1240 = &rule.AttributeRule{
@@ -97,7 +97,7 @@ var ruleDeprecatedHttpTargetv1240 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.24.0",
+	Version:      "v1.24.0",
 }
 
 var ruleDeprecatedHttpUrlv1240 = &rule.AttributeRule{
@@ -107,7 +107,7 @@ var ruleDeprecatedHttpUrlv1240 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.24.0",
+	Version:      "v1.24.0",
 }
 
 var ruleDeprecatedHttpUserAgentv1240 = &rule.AttributeRule{
@@ -117,7 +117,7 @@ var ruleDeprecatedHttpUserAgentv1240 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.24.0",
+	Version:      "v1.24.0",
 }
 
 var ruleDeprecatedNetHostNamev1240 = &rule.AttributeRule{
@@ -127,7 +127,7 @@ var ruleDeprecatedNetHostNamev1240 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.24.0",
+	Version:      "v1.24.0",
 }
 
 var ruleDeprecatedNetHostPortv1240 = &rule.AttributeRule{
@@ -137,7 +137,7 @@ var ruleDeprecatedNetHostPortv1240 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.24.0",
+	Version:      "v1.24.0",
 }
 
 var ruleDeprecatedNetPeerNamev1240 = &rule.AttributeRule{
@@ -147,7 +147,7 @@ var ruleDeprecatedNetPeerNamev1240 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.24.0",
+	Version:      "v1.24.0",
 }
 
 var ruleDeprecatedNetPeerPortv1240 = &rule.AttributeRule{
@@ -157,7 +157,7 @@ var ruleDeprecatedNetPeerPortv1240 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.24.0",
+	Version:      "v1.24.0",
 }
 
 var ruleDeprecatedNetProtocolNamev1240 = &rule.AttributeRule{
@@ -167,7 +167,7 @@ var ruleDeprecatedNetProtocolNamev1240 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.24.0",
+	Version:      "v1.24.0",
 }
 
 var ruleDeprecatedNetProtocolVersionv1240 = &rule.AttributeRule{
@@ -177,7 +177,7 @@ var ruleDeprecatedNetProtocolVersionv1240 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.24.0",
+	Version:      "v1.24.0",
 }
 
 var ruleDeprecatedNetSockFamilyv1240 = &rule.AttributeRule{
@@ -187,7 +187,7 @@ var ruleDeprecatedNetSockFamilyv1240 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.24.0",
+	Version:      "v1.24.0",
 }
 
 var ruleDeprecatedNetSockHostAddrv1240 = &rule.AttributeRule{
@@ -197,7 +197,7 @@ var ruleDeprecatedNetSockHostAddrv1240 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.24.0",
+	Version:      "v1.24.0",
 }
 
 var ruleDeprecatedNetSockHostPortv1240 = &rule.AttributeRule{
@@ -207,7 +207,7 @@ var ruleDeprecatedNetSockHostPortv1240 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.24.0",
+	Version:      "v1.24.0",
 }
 
 var ruleDeprecatedNetSockPeerAddrv1240 = &rule.AttributeRule{
@@ -217,7 +217,7 @@ var ruleDeprecatedNetSockPeerAddrv1240 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.24.0",
+	Version:      "v1.24.0",
 }
 
 var ruleDeprecatedNetSockPeerNamev1240 = &rule.AttributeRule{
@@ -227,7 +227,7 @@ var ruleDeprecatedNetSockPeerNamev1240 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.24.0",
+	Version:      "v1.24.0",
 }
 
 var ruleDeprecatedNetSockPeerPortv1240 = &rule.AttributeRule{
@@ -237,7 +237,7 @@ var ruleDeprecatedNetSockPeerPortv1240 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.24.0",
+	Version:      "v1.24.0",
 }
 
 var ruleDeprecatedNetTransportv1240 = &rule.AttributeRule{
@@ -247,6 +247,6 @@ var ruleDeprecatedNetTransportv1240 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.24.0",
+	Version:      "v1.24.0",
 }
 

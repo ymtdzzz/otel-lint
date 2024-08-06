@@ -36,7 +36,7 @@ var ruleEnumAndroidStatev1240 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.24.0",
+	Version:      "v1.24.0",
 }
 
 var ruleEnumAwsEcsLaunchtypev1240 = &rule.AttributeRule{
@@ -46,7 +46,7 @@ var ruleEnumAwsEcsLaunchtypev1240 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.24.0",
+	Version:      "v1.24.0",
 }
 
 var ruleEnumDbCosmosdbConnectionModev1240 = &rule.AttributeRule{
@@ -56,7 +56,7 @@ var ruleEnumDbCosmosdbConnectionModev1240 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.24.0",
+	Version:      "v1.24.0",
 }
 
 var ruleEnumDiskIoDirectionv1240 = &rule.AttributeRule{
@@ -66,7 +66,7 @@ var ruleEnumDiskIoDirectionv1240 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.24.0",
+	Version:      "v1.24.0",
 }
 
 var ruleEnumFaasTriggerv1240 = &rule.AttributeRule{
@@ -76,7 +76,7 @@ var ruleEnumFaasTriggerv1240 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.24.0",
+	Version:      "v1.24.0",
 }
 
 var ruleEnumGraphqlOperationTypev1240 = &rule.AttributeRule{
@@ -86,7 +86,7 @@ var ruleEnumGraphqlOperationTypev1240 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.24.0",
+	Version:      "v1.24.0",
 }
 
 var ruleEnumIosStatev1240 = &rule.AttributeRule{
@@ -96,7 +96,7 @@ var ruleEnumIosStatev1240 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.24.0",
+	Version:      "v1.24.0",
 }
 
 var ruleEnumJvmMemoryTypev1240 = &rule.AttributeRule{
@@ -106,7 +106,7 @@ var ruleEnumJvmMemoryTypev1240 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityStable,
 	Source:       "",
-  Version:      "v1.24.0",
+	Version:      "v1.24.0",
 }
 
 var ruleEnumJvmThreadStatev1240 = &rule.AttributeRule{
@@ -116,7 +116,7 @@ var ruleEnumJvmThreadStatev1240 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityStable,
 	Source:       "",
-  Version:      "v1.24.0",
+	Version:      "v1.24.0",
 }
 
 var ruleEnumLogIostreamv1240 = &rule.AttributeRule{
@@ -126,7 +126,7 @@ var ruleEnumLogIostreamv1240 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.24.0",
+	Version:      "v1.24.0",
 }
 
 var ruleEnumMessagingRocketmqConsumptionModelv1240 = &rule.AttributeRule{
@@ -136,7 +136,7 @@ var ruleEnumMessagingRocketmqConsumptionModelv1240 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.24.0",
+	Version:      "v1.24.0",
 }
 
 var ruleEnumMessagingRocketmqMessageTypev1240 = &rule.AttributeRule{
@@ -146,7 +146,7 @@ var ruleEnumMessagingRocketmqMessageTypev1240 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.24.0",
+	Version:      "v1.24.0",
 }
 
 var ruleEnumNetworkIoDirectionv1240 = &rule.AttributeRule{
@@ -156,7 +156,7 @@ var ruleEnumNetworkIoDirectionv1240 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.24.0",
+	Version:      "v1.24.0",
 }
 
 var ruleEnumOpentracingRefTypev1240 = &rule.AttributeRule{
@@ -166,7 +166,7 @@ var ruleEnumOpentracingRefTypev1240 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.24.0",
+	Version:      "v1.24.0",
 }
 
 var ruleEnumOtelStatusCodev1240 = &rule.AttributeRule{
@@ -176,7 +176,7 @@ var ruleEnumOtelStatusCodev1240 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.24.0",
+	Version:      "v1.24.0",
 }
 
 var ruleEnumStatev1240 = &rule.AttributeRule{
@@ -186,7 +186,7 @@ var ruleEnumStatev1240 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.24.0",
+	Version:      "v1.24.0",
 }
 
 var ruleEnumSystemFilesystemStatev1240 = &rule.AttributeRule{
@@ -196,7 +196,7 @@ var ruleEnumSystemFilesystemStatev1240 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.24.0",
+	Version:      "v1.24.0",
 }
 
 var ruleEnumSystemNetworkStatev1240 = &rule.AttributeRule{
@@ -206,7 +206,7 @@ var ruleEnumSystemNetworkStatev1240 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.24.0",
+	Version:      "v1.24.0",
 }
 
 var ruleEnumSystemPagingDirectionv1240 = &rule.AttributeRule{
@@ -216,7 +216,7 @@ var ruleEnumSystemPagingDirectionv1240 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.24.0",
+	Version:      "v1.24.0",
 }
 
 var ruleEnumSystemPagingStatev1240 = &rule.AttributeRule{
@@ -226,7 +226,7 @@ var ruleEnumSystemPagingStatev1240 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.24.0",
+	Version:      "v1.24.0",
 }
 
 var ruleEnumSystemPagingTypev1240 = &rule.AttributeRule{
@@ -236,6 +236,6 @@ var ruleEnumSystemPagingTypev1240 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.24.0",
+	Version:      "v1.24.0",
 }
 

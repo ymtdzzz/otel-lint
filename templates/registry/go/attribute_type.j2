@@ -46,7 +46,7 @@ var ruleType{{ attr_name }}{{ version }} = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.{{ attr.stability | map_text("stabilities", "StabilityExperimental") }},
 	Source:       "",
-  Version:      "{{ params.version }}",
+	Version:      "{{ params.version }}",
 }
 
 {% endfor %}

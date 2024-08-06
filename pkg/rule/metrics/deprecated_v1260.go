@@ -24,7 +24,7 @@ var ruleDeprecatedDbClientConnectionsUsagev1260 = &rule.MetricRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleDeprecatedDbClientConnectionsIdleMaxv1260 = &rule.MetricRule{
@@ -34,7 +34,7 @@ var ruleDeprecatedDbClientConnectionsIdleMaxv1260 = &rule.MetricRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleDeprecatedDbClientConnectionsIdleMinv1260 = &rule.MetricRule{
@@ -44,7 +44,7 @@ var ruleDeprecatedDbClientConnectionsIdleMinv1260 = &rule.MetricRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleDeprecatedDbClientConnectionsMaxv1260 = &rule.MetricRule{
@@ -54,7 +54,7 @@ var ruleDeprecatedDbClientConnectionsMaxv1260 = &rule.MetricRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleDeprecatedDbClientConnectionsPendingRequestsv1260 = &rule.MetricRule{
@@ -64,7 +64,7 @@ var ruleDeprecatedDbClientConnectionsPendingRequestsv1260 = &rule.MetricRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleDeprecatedDbClientConnectionsTimeoutsv1260 = &rule.MetricRule{
@@ -74,7 +74,7 @@ var ruleDeprecatedDbClientConnectionsTimeoutsv1260 = &rule.MetricRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleDeprecatedDbClientConnectionsCreateTimev1260 = &rule.MetricRule{
@@ -84,7 +84,7 @@ var ruleDeprecatedDbClientConnectionsCreateTimev1260 = &rule.MetricRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleDeprecatedDbClientConnectionsWaitTimev1260 = &rule.MetricRule{
@@ -94,7 +94,7 @@ var ruleDeprecatedDbClientConnectionsWaitTimev1260 = &rule.MetricRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleDeprecatedDbClientConnectionsUseTimev1260 = &rule.MetricRule{
@@ -104,6 +104,6 @@ var ruleDeprecatedDbClientConnectionsUseTimev1260 = &rule.MetricRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 

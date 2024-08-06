@@ -72,7 +72,7 @@ var ruleDeprecatedContainerLabelsv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleDeprecatedDbCassandraTablev1260 = &rule.AttributeRule{
@@ -82,7 +82,7 @@ var ruleDeprecatedDbCassandraTablev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleDeprecatedDbConnectionStringv1260 = &rule.AttributeRule{
@@ -92,7 +92,7 @@ var ruleDeprecatedDbConnectionStringv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleDeprecatedDbCosmosdbContainerv1260 = &rule.AttributeRule{
@@ -102,7 +102,7 @@ var ruleDeprecatedDbCosmosdbContainerv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleDeprecatedDbInstanceIdv1260 = &rule.AttributeRule{
@@ -112,7 +112,7 @@ var ruleDeprecatedDbInstanceIdv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleDeprecatedDbJdbcDriverClassnamev1260 = &rule.AttributeRule{
@@ -122,7 +122,7 @@ var ruleDeprecatedDbJdbcDriverClassnamev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleDeprecatedDbMongodbCollectionv1260 = &rule.AttributeRule{
@@ -132,7 +132,7 @@ var ruleDeprecatedDbMongodbCollectionv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleDeprecatedDbMssqlInstanceNamev1260 = &rule.AttributeRule{
@@ -142,7 +142,7 @@ var ruleDeprecatedDbMssqlInstanceNamev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleDeprecatedDbNamev1260 = &rule.AttributeRule{
@@ -152,7 +152,7 @@ var ruleDeprecatedDbNamev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleDeprecatedDbOperationv1260 = &rule.AttributeRule{
@@ -162,7 +162,7 @@ var ruleDeprecatedDbOperationv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleDeprecatedDbRedisDatabaseIndexv1260 = &rule.AttributeRule{
@@ -172,7 +172,7 @@ var ruleDeprecatedDbRedisDatabaseIndexv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleDeprecatedDbSqlTablev1260 = &rule.AttributeRule{
@@ -182,7 +182,7 @@ var ruleDeprecatedDbSqlTablev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleDeprecatedDbStatementv1260 = &rule.AttributeRule{
@@ -192,7 +192,7 @@ var ruleDeprecatedDbStatementv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleDeprecatedDbUserv1260 = &rule.AttributeRule{
@@ -202,7 +202,7 @@ var ruleDeprecatedDbUserv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleDeprecatedHttpClientIpv1260 = &rule.AttributeRule{
@@ -212,7 +212,7 @@ var ruleDeprecatedHttpClientIpv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleDeprecatedHttpFlavorv1260 = &rule.AttributeRule{
@@ -222,7 +222,7 @@ var ruleDeprecatedHttpFlavorv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleDeprecatedHttpHostv1260 = &rule.AttributeRule{
@@ -232,7 +232,7 @@ var ruleDeprecatedHttpHostv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleDeprecatedHttpMethodv1260 = &rule.AttributeRule{
@@ -242,7 +242,7 @@ var ruleDeprecatedHttpMethodv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleDeprecatedHttpRequestContentLengthv1260 = &rule.AttributeRule{
@@ -252,7 +252,7 @@ var ruleDeprecatedHttpRequestContentLengthv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleDeprecatedHttpRequestContentLengthUncompressedv1260 = &rule.AttributeRule{
@@ -262,7 +262,7 @@ var ruleDeprecatedHttpRequestContentLengthUncompressedv1260 = &rule.AttributeRul
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleDeprecatedHttpResponseContentLengthv1260 = &rule.AttributeRule{
@@ -272,7 +272,7 @@ var ruleDeprecatedHttpResponseContentLengthv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleDeprecatedHttpResponseContentLengthUncompressedv1260 = &rule.AttributeRule{
@@ -282,7 +282,7 @@ var ruleDeprecatedHttpResponseContentLengthUncompressedv1260 = &rule.AttributeRu
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleDeprecatedHttpSchemev1260 = &rule.AttributeRule{
@@ -292,7 +292,7 @@ var ruleDeprecatedHttpSchemev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleDeprecatedHttpServerNamev1260 = &rule.AttributeRule{
@@ -302,7 +302,7 @@ var ruleDeprecatedHttpServerNamev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleDeprecatedHttpStatusCodev1260 = &rule.AttributeRule{
@@ -312,7 +312,7 @@ var ruleDeprecatedHttpStatusCodev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleDeprecatedHttpTargetv1260 = &rule.AttributeRule{
@@ -322,7 +322,7 @@ var ruleDeprecatedHttpTargetv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleDeprecatedHttpUrlv1260 = &rule.AttributeRule{
@@ -332,7 +332,7 @@ var ruleDeprecatedHttpUrlv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleDeprecatedHttpUserAgentv1260 = &rule.AttributeRule{
@@ -342,7 +342,7 @@ var ruleDeprecatedHttpUserAgentv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleDeprecatedIosStatev1260 = &rule.AttributeRule{
@@ -352,7 +352,7 @@ var ruleDeprecatedIosStatev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleDeprecatedK8SPodLabelsv1260 = &rule.AttributeRule{
@@ -362,7 +362,7 @@ var ruleDeprecatedK8SPodLabelsv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleDeprecatedMessageCompressedSizev1260 = &rule.AttributeRule{
@@ -372,7 +372,7 @@ var ruleDeprecatedMessageCompressedSizev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleDeprecatedMessageIdv1260 = &rule.AttributeRule{
@@ -382,7 +382,7 @@ var ruleDeprecatedMessageIdv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleDeprecatedMessageTypev1260 = &rule.AttributeRule{
@@ -392,7 +392,7 @@ var ruleDeprecatedMessageTypev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleDeprecatedMessageUncompressedSizev1260 = &rule.AttributeRule{
@@ -402,7 +402,7 @@ var ruleDeprecatedMessageUncompressedSizev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleDeprecatedMessagingClientIdv1260 = &rule.AttributeRule{
@@ -412,7 +412,7 @@ var ruleDeprecatedMessagingClientIdv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleDeprecatedMessagingKafkaDestinationPartitionv1260 = &rule.AttributeRule{
@@ -422,7 +422,7 @@ var ruleDeprecatedMessagingKafkaDestinationPartitionv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleDeprecatedMessagingOperationv1260 = &rule.AttributeRule{
@@ -432,7 +432,7 @@ var ruleDeprecatedMessagingOperationv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleDeprecatedNetHostIpv1260 = &rule.AttributeRule{
@@ -442,7 +442,7 @@ var ruleDeprecatedNetHostIpv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleDeprecatedNetHostNamev1260 = &rule.AttributeRule{
@@ -452,7 +452,7 @@ var ruleDeprecatedNetHostNamev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleDeprecatedNetHostPortv1260 = &rule.AttributeRule{
@@ -462,7 +462,7 @@ var ruleDeprecatedNetHostPortv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleDeprecatedNetPeerIpv1260 = &rule.AttributeRule{
@@ -472,7 +472,7 @@ var ruleDeprecatedNetPeerIpv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleDeprecatedNetPeerNamev1260 = &rule.AttributeRule{
@@ -482,7 +482,7 @@ var ruleDeprecatedNetPeerNamev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleDeprecatedNetPeerPortv1260 = &rule.AttributeRule{
@@ -492,7 +492,7 @@ var ruleDeprecatedNetPeerPortv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleDeprecatedNetProtocolNamev1260 = &rule.AttributeRule{
@@ -502,7 +502,7 @@ var ruleDeprecatedNetProtocolNamev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleDeprecatedNetProtocolVersionv1260 = &rule.AttributeRule{
@@ -512,7 +512,7 @@ var ruleDeprecatedNetProtocolVersionv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleDeprecatedNetSockFamilyv1260 = &rule.AttributeRule{
@@ -522,7 +522,7 @@ var ruleDeprecatedNetSockFamilyv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleDeprecatedNetSockHostAddrv1260 = &rule.AttributeRule{
@@ -532,7 +532,7 @@ var ruleDeprecatedNetSockHostAddrv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleDeprecatedNetSockHostPortv1260 = &rule.AttributeRule{
@@ -542,7 +542,7 @@ var ruleDeprecatedNetSockHostPortv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleDeprecatedNetSockPeerAddrv1260 = &rule.AttributeRule{
@@ -552,7 +552,7 @@ var ruleDeprecatedNetSockPeerAddrv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleDeprecatedNetSockPeerNamev1260 = &rule.AttributeRule{
@@ -562,7 +562,7 @@ var ruleDeprecatedNetSockPeerNamev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleDeprecatedNetSockPeerPortv1260 = &rule.AttributeRule{
@@ -572,7 +572,7 @@ var ruleDeprecatedNetSockPeerPortv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleDeprecatedNetTransportv1260 = &rule.AttributeRule{
@@ -582,7 +582,7 @@ var ruleDeprecatedNetTransportv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleDeprecatedOtelLibraryNamev1260 = &rule.AttributeRule{
@@ -592,7 +592,7 @@ var ruleDeprecatedOtelLibraryNamev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleDeprecatedOtelLibraryVersionv1260 = &rule.AttributeRule{
@@ -602,7 +602,7 @@ var ruleDeprecatedOtelLibraryVersionv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleDeprecatedPoolNamev1260 = &rule.AttributeRule{
@@ -612,7 +612,7 @@ var ruleDeprecatedPoolNamev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleDeprecatedStatev1260 = &rule.AttributeRule{
@@ -622,7 +622,7 @@ var ruleDeprecatedStatev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleDeprecatedSystemProcessesStatusv1260 = &rule.AttributeRule{
@@ -632,6 +632,6 @@ var ruleDeprecatedSystemProcessesStatusv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 

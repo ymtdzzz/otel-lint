@@ -423,7 +423,7 @@ var ruleTypeAndroidOsApiLevelv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeAspnetcoreDiagnosticsHandlerTypev1260 = &rule.AttributeRule{
@@ -433,7 +433,7 @@ var ruleTypeAspnetcoreDiagnosticsHandlerTypev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityStable,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeAspnetcoreRateLimitingPolicyv1260 = &rule.AttributeRule{
@@ -443,7 +443,7 @@ var ruleTypeAspnetcoreRateLimitingPolicyv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityStable,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeAspnetcoreRequestIsUnhandledv1260 = &rule.AttributeRule{
@@ -453,7 +453,7 @@ var ruleTypeAspnetcoreRequestIsUnhandledv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityStable,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeAspnetcoreRoutingIsFallbackv1260 = &rule.AttributeRule{
@@ -463,7 +463,7 @@ var ruleTypeAspnetcoreRoutingIsFallbackv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityStable,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeAwsDynamodbAttributeDefinitionsv1260 = &rule.AttributeRule{
@@ -473,7 +473,7 @@ var ruleTypeAwsDynamodbAttributeDefinitionsv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeAwsDynamodbAttributesToGetv1260 = &rule.AttributeRule{
@@ -483,7 +483,7 @@ var ruleTypeAwsDynamodbAttributesToGetv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeAwsDynamodbConsistentReadv1260 = &rule.AttributeRule{
@@ -493,7 +493,7 @@ var ruleTypeAwsDynamodbConsistentReadv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeAwsDynamodbConsumedCapacityv1260 = &rule.AttributeRule{
@@ -503,7 +503,7 @@ var ruleTypeAwsDynamodbConsumedCapacityv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeAwsDynamodbCountv1260 = &rule.AttributeRule{
@@ -513,7 +513,7 @@ var ruleTypeAwsDynamodbCountv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeAwsDynamodbExclusiveStartTablev1260 = &rule.AttributeRule{
@@ -523,7 +523,7 @@ var ruleTypeAwsDynamodbExclusiveStartTablev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeAwsDynamodbGlobalSecondaryIndexUpdatesv1260 = &rule.AttributeRule{
@@ -533,7 +533,7 @@ var ruleTypeAwsDynamodbGlobalSecondaryIndexUpdatesv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeAwsDynamodbGlobalSecondaryIndexesv1260 = &rule.AttributeRule{
@@ -543,7 +543,7 @@ var ruleTypeAwsDynamodbGlobalSecondaryIndexesv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeAwsDynamodbIndexNamev1260 = &rule.AttributeRule{
@@ -553,7 +553,7 @@ var ruleTypeAwsDynamodbIndexNamev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeAwsDynamodbItemCollectionMetricsv1260 = &rule.AttributeRule{
@@ -563,7 +563,7 @@ var ruleTypeAwsDynamodbItemCollectionMetricsv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeAwsDynamodbLimitv1260 = &rule.AttributeRule{
@@ -573,7 +573,7 @@ var ruleTypeAwsDynamodbLimitv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeAwsDynamodbLocalSecondaryIndexesv1260 = &rule.AttributeRule{
@@ -583,7 +583,7 @@ var ruleTypeAwsDynamodbLocalSecondaryIndexesv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeAwsDynamodbProjectionv1260 = &rule.AttributeRule{
@@ -593,7 +593,7 @@ var ruleTypeAwsDynamodbProjectionv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeAwsDynamodbProvisionedReadCapacityv1260 = &rule.AttributeRule{
@@ -603,7 +603,7 @@ var ruleTypeAwsDynamodbProvisionedReadCapacityv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeAwsDynamodbProvisionedWriteCapacityv1260 = &rule.AttributeRule{
@@ -613,7 +613,7 @@ var ruleTypeAwsDynamodbProvisionedWriteCapacityv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeAwsDynamodbScanForwardv1260 = &rule.AttributeRule{
@@ -623,7 +623,7 @@ var ruleTypeAwsDynamodbScanForwardv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeAwsDynamodbScannedCountv1260 = &rule.AttributeRule{
@@ -633,7 +633,7 @@ var ruleTypeAwsDynamodbScannedCountv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeAwsDynamodbSegmentv1260 = &rule.AttributeRule{
@@ -643,7 +643,7 @@ var ruleTypeAwsDynamodbSegmentv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeAwsDynamodbSelectv1260 = &rule.AttributeRule{
@@ -653,7 +653,7 @@ var ruleTypeAwsDynamodbSelectv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeAwsDynamodbTableCountv1260 = &rule.AttributeRule{
@@ -663,7 +663,7 @@ var ruleTypeAwsDynamodbTableCountv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeAwsDynamodbTableNamesv1260 = &rule.AttributeRule{
@@ -673,7 +673,7 @@ var ruleTypeAwsDynamodbTableNamesv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeAwsDynamodbTotalSegmentsv1260 = &rule.AttributeRule{
@@ -683,7 +683,7 @@ var ruleTypeAwsDynamodbTotalSegmentsv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeAwsEcsClusterArnv1260 = &rule.AttributeRule{
@@ -693,7 +693,7 @@ var ruleTypeAwsEcsClusterArnv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeAwsEcsContainerArnv1260 = &rule.AttributeRule{
@@ -703,7 +703,7 @@ var ruleTypeAwsEcsContainerArnv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeAwsEcsTaskArnv1260 = &rule.AttributeRule{
@@ -713,7 +713,7 @@ var ruleTypeAwsEcsTaskArnv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeAwsEcsTaskFamilyv1260 = &rule.AttributeRule{
@@ -723,7 +723,7 @@ var ruleTypeAwsEcsTaskFamilyv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeAwsEcsTaskIdv1260 = &rule.AttributeRule{
@@ -733,7 +733,7 @@ var ruleTypeAwsEcsTaskIdv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeAwsEcsTaskRevisionv1260 = &rule.AttributeRule{
@@ -743,7 +743,7 @@ var ruleTypeAwsEcsTaskRevisionv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeAwsEksClusterArnv1260 = &rule.AttributeRule{
@@ -753,7 +753,7 @@ var ruleTypeAwsEksClusterArnv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeAwsLambdaInvokedArnv1260 = &rule.AttributeRule{
@@ -763,7 +763,7 @@ var ruleTypeAwsLambdaInvokedArnv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeAwsLogGroupArnsv1260 = &rule.AttributeRule{
@@ -773,7 +773,7 @@ var ruleTypeAwsLogGroupArnsv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeAwsLogGroupNamesv1260 = &rule.AttributeRule{
@@ -783,7 +783,7 @@ var ruleTypeAwsLogGroupNamesv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeAwsLogStreamArnsv1260 = &rule.AttributeRule{
@@ -793,7 +793,7 @@ var ruleTypeAwsLogStreamArnsv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeAwsLogStreamNamesv1260 = &rule.AttributeRule{
@@ -803,7 +803,7 @@ var ruleTypeAwsLogStreamNamesv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeAwsRequestIdv1260 = &rule.AttributeRule{
@@ -813,7 +813,7 @@ var ruleTypeAwsRequestIdv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeAwsS3Bucketv1260 = &rule.AttributeRule{
@@ -823,7 +823,7 @@ var ruleTypeAwsS3Bucketv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeAwsS3CopySourcev1260 = &rule.AttributeRule{
@@ -833,7 +833,7 @@ var ruleTypeAwsS3CopySourcev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeAwsS3Deletev1260 = &rule.AttributeRule{
@@ -843,7 +843,7 @@ var ruleTypeAwsS3Deletev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeAwsS3Keyv1260 = &rule.AttributeRule{
@@ -853,7 +853,7 @@ var ruleTypeAwsS3Keyv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeAwsS3PartNumberv1260 = &rule.AttributeRule{
@@ -863,7 +863,7 @@ var ruleTypeAwsS3PartNumberv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeAwsS3UploadIdv1260 = &rule.AttributeRule{
@@ -873,7 +873,7 @@ var ruleTypeAwsS3UploadIdv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeBrowserBrandsv1260 = &rule.AttributeRule{
@@ -883,7 +883,7 @@ var ruleTypeBrowserBrandsv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeBrowserLanguagev1260 = &rule.AttributeRule{
@@ -893,7 +893,7 @@ var ruleTypeBrowserLanguagev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeBrowserMobilev1260 = &rule.AttributeRule{
@@ -903,7 +903,7 @@ var ruleTypeBrowserMobilev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeBrowserPlatformv1260 = &rule.AttributeRule{
@@ -913,7 +913,7 @@ var ruleTypeBrowserPlatformv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeClientAddressv1260 = &rule.AttributeRule{
@@ -923,7 +923,7 @@ var ruleTypeClientAddressv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityStable,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeClientPortv1260 = &rule.AttributeRule{
@@ -933,7 +933,7 @@ var ruleTypeClientPortv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityStable,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeCloudAccountIdv1260 = &rule.AttributeRule{
@@ -943,7 +943,7 @@ var ruleTypeCloudAccountIdv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeCloudAvailabilityZonev1260 = &rule.AttributeRule{
@@ -953,7 +953,7 @@ var ruleTypeCloudAvailabilityZonev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeCloudRegionv1260 = &rule.AttributeRule{
@@ -963,7 +963,7 @@ var ruleTypeCloudRegionv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeCloudResourceIdv1260 = &rule.AttributeRule{
@@ -973,7 +973,7 @@ var ruleTypeCloudResourceIdv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeCloudeventsEventIdv1260 = &rule.AttributeRule{
@@ -983,7 +983,7 @@ var ruleTypeCloudeventsEventIdv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeCloudeventsEventSourcev1260 = &rule.AttributeRule{
@@ -993,7 +993,7 @@ var ruleTypeCloudeventsEventSourcev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeCloudeventsEventSpecVersionv1260 = &rule.AttributeRule{
@@ -1003,7 +1003,7 @@ var ruleTypeCloudeventsEventSpecVersionv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeCloudeventsEventSubjectv1260 = &rule.AttributeRule{
@@ -1013,7 +1013,7 @@ var ruleTypeCloudeventsEventSubjectv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeCloudeventsEventTypev1260 = &rule.AttributeRule{
@@ -1023,7 +1023,7 @@ var ruleTypeCloudeventsEventTypev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeCodeColumnv1260 = &rule.AttributeRule{
@@ -1033,7 +1033,7 @@ var ruleTypeCodeColumnv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeCodeFilepathv1260 = &rule.AttributeRule{
@@ -1043,7 +1043,7 @@ var ruleTypeCodeFilepathv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeCodeFunctionv1260 = &rule.AttributeRule{
@@ -1053,7 +1053,7 @@ var ruleTypeCodeFunctionv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeCodeLinenov1260 = &rule.AttributeRule{
@@ -1063,7 +1063,7 @@ var ruleTypeCodeLinenov1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeCodeNamespacev1260 = &rule.AttributeRule{
@@ -1073,7 +1073,7 @@ var ruleTypeCodeNamespacev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeCodeStacktracev1260 = &rule.AttributeRule{
@@ -1083,7 +1083,7 @@ var ruleTypeCodeStacktracev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeContainerCommandv1260 = &rule.AttributeRule{
@@ -1093,7 +1093,7 @@ var ruleTypeContainerCommandv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeContainerCommandArgsv1260 = &rule.AttributeRule{
@@ -1103,7 +1103,7 @@ var ruleTypeContainerCommandArgsv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeContainerCommandLinev1260 = &rule.AttributeRule{
@@ -1113,7 +1113,7 @@ var ruleTypeContainerCommandLinev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeContainerIdv1260 = &rule.AttributeRule{
@@ -1123,7 +1123,7 @@ var ruleTypeContainerIdv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeContainerImageIdv1260 = &rule.AttributeRule{
@@ -1133,7 +1133,7 @@ var ruleTypeContainerImageIdv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeContainerImageNamev1260 = &rule.AttributeRule{
@@ -1143,7 +1143,7 @@ var ruleTypeContainerImageNamev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeContainerImageRepoDigestsv1260 = &rule.AttributeRule{
@@ -1153,7 +1153,7 @@ var ruleTypeContainerImageRepoDigestsv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeContainerImageTagsv1260 = &rule.AttributeRule{
@@ -1163,7 +1163,7 @@ var ruleTypeContainerImageTagsv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeContainerNamev1260 = &rule.AttributeRule{
@@ -1173,7 +1173,7 @@ var ruleTypeContainerNamev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeContainerRuntimev1260 = &rule.AttributeRule{
@@ -1183,7 +1183,7 @@ var ruleTypeContainerRuntimev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeDbCassandraCoordinatorDcv1260 = &rule.AttributeRule{
@@ -1193,7 +1193,7 @@ var ruleTypeDbCassandraCoordinatorDcv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeDbCassandraCoordinatorIdv1260 = &rule.AttributeRule{
@@ -1203,7 +1203,7 @@ var ruleTypeDbCassandraCoordinatorIdv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeDbCassandraIdempotencev1260 = &rule.AttributeRule{
@@ -1213,7 +1213,7 @@ var ruleTypeDbCassandraIdempotencev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeDbCassandraPageSizev1260 = &rule.AttributeRule{
@@ -1223,7 +1223,7 @@ var ruleTypeDbCassandraPageSizev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeDbCassandraSpeculativeExecutionCountv1260 = &rule.AttributeRule{
@@ -1233,7 +1233,7 @@ var ruleTypeDbCassandraSpeculativeExecutionCountv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeDbCassandraTablev1260 = &rule.AttributeRule{
@@ -1243,7 +1243,7 @@ var ruleTypeDbCassandraTablev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeDbClientConnectionsPoolNamev1260 = &rule.AttributeRule{
@@ -1253,7 +1253,7 @@ var ruleTypeDbClientConnectionsPoolNamev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeDbCollectionNamev1260 = &rule.AttributeRule{
@@ -1263,7 +1263,7 @@ var ruleTypeDbCollectionNamev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeDbConnectionStringv1260 = &rule.AttributeRule{
@@ -1273,7 +1273,7 @@ var ruleTypeDbConnectionStringv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeDbCosmosdbClientIdv1260 = &rule.AttributeRule{
@@ -1283,7 +1283,7 @@ var ruleTypeDbCosmosdbClientIdv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeDbCosmosdbContainerv1260 = &rule.AttributeRule{
@@ -1293,7 +1293,7 @@ var ruleTypeDbCosmosdbContainerv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeDbCosmosdbRequestChargev1260 = &rule.AttributeRule{
@@ -1303,7 +1303,7 @@ var ruleTypeDbCosmosdbRequestChargev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeDbCosmosdbRequestContentLengthv1260 = &rule.AttributeRule{
@@ -1313,7 +1313,7 @@ var ruleTypeDbCosmosdbRequestContentLengthv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeDbCosmosdbStatusCodev1260 = &rule.AttributeRule{
@@ -1323,7 +1323,7 @@ var ruleTypeDbCosmosdbStatusCodev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeDbCosmosdbSubStatusCodev1260 = &rule.AttributeRule{
@@ -1333,7 +1333,7 @@ var ruleTypeDbCosmosdbSubStatusCodev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeDbElasticsearchClusterNamev1260 = &rule.AttributeRule{
@@ -1343,7 +1343,7 @@ var ruleTypeDbElasticsearchClusterNamev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeDbElasticsearchNodeNamev1260 = &rule.AttributeRule{
@@ -1353,7 +1353,7 @@ var ruleTypeDbElasticsearchNodeNamev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeDbInstanceIdv1260 = &rule.AttributeRule{
@@ -1363,7 +1363,7 @@ var ruleTypeDbInstanceIdv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeDbJdbcDriverClassnamev1260 = &rule.AttributeRule{
@@ -1373,7 +1373,7 @@ var ruleTypeDbJdbcDriverClassnamev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeDbMongodbCollectionv1260 = &rule.AttributeRule{
@@ -1383,7 +1383,7 @@ var ruleTypeDbMongodbCollectionv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeDbMssqlInstanceNamev1260 = &rule.AttributeRule{
@@ -1393,7 +1393,7 @@ var ruleTypeDbMssqlInstanceNamev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeDbNamev1260 = &rule.AttributeRule{
@@ -1403,7 +1403,7 @@ var ruleTypeDbNamev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeDbNamespacev1260 = &rule.AttributeRule{
@@ -1413,7 +1413,7 @@ var ruleTypeDbNamespacev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeDbOperationv1260 = &rule.AttributeRule{
@@ -1423,7 +1423,7 @@ var ruleTypeDbOperationv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeDbOperationNamev1260 = &rule.AttributeRule{
@@ -1433,7 +1433,7 @@ var ruleTypeDbOperationNamev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeDbQueryTextv1260 = &rule.AttributeRule{
@@ -1443,7 +1443,7 @@ var ruleTypeDbQueryTextv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeDbRedisDatabaseIndexv1260 = &rule.AttributeRule{
@@ -1453,7 +1453,7 @@ var ruleTypeDbRedisDatabaseIndexv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeDbSqlTablev1260 = &rule.AttributeRule{
@@ -1463,7 +1463,7 @@ var ruleTypeDbSqlTablev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeDbStatementv1260 = &rule.AttributeRule{
@@ -1473,7 +1473,7 @@ var ruleTypeDbStatementv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeDbUserv1260 = &rule.AttributeRule{
@@ -1483,7 +1483,7 @@ var ruleTypeDbUserv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeDeploymentEnvironmentv1260 = &rule.AttributeRule{
@@ -1493,7 +1493,7 @@ var ruleTypeDeploymentEnvironmentv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeDestinationAddressv1260 = &rule.AttributeRule{
@@ -1503,7 +1503,7 @@ var ruleTypeDestinationAddressv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeDestinationPortv1260 = &rule.AttributeRule{
@@ -1513,7 +1513,7 @@ var ruleTypeDestinationPortv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeDeviceIdv1260 = &rule.AttributeRule{
@@ -1523,7 +1523,7 @@ var ruleTypeDeviceIdv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeDeviceManufacturerv1260 = &rule.AttributeRule{
@@ -1533,7 +1533,7 @@ var ruleTypeDeviceManufacturerv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeDeviceModelIdentifierv1260 = &rule.AttributeRule{
@@ -1543,7 +1543,7 @@ var ruleTypeDeviceModelIdentifierv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeDeviceModelNamev1260 = &rule.AttributeRule{
@@ -1553,7 +1553,7 @@ var ruleTypeDeviceModelNamev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeDnsQuestionNamev1260 = &rule.AttributeRule{
@@ -1563,7 +1563,7 @@ var ruleTypeDnsQuestionNamev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeEnduserIdv1260 = &rule.AttributeRule{
@@ -1573,7 +1573,7 @@ var ruleTypeEnduserIdv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeEnduserRolev1260 = &rule.AttributeRule{
@@ -1583,7 +1583,7 @@ var ruleTypeEnduserRolev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeEnduserScopev1260 = &rule.AttributeRule{
@@ -1593,7 +1593,7 @@ var ruleTypeEnduserScopev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeEventNamev1260 = &rule.AttributeRule{
@@ -1603,7 +1603,7 @@ var ruleTypeEventNamev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeExceptionEscapedv1260 = &rule.AttributeRule{
@@ -1613,7 +1613,7 @@ var ruleTypeExceptionEscapedv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityStable,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeExceptionMessagev1260 = &rule.AttributeRule{
@@ -1623,7 +1623,7 @@ var ruleTypeExceptionMessagev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityStable,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeExceptionStacktracev1260 = &rule.AttributeRule{
@@ -1633,7 +1633,7 @@ var ruleTypeExceptionStacktracev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityStable,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeExceptionTypev1260 = &rule.AttributeRule{
@@ -1643,7 +1643,7 @@ var ruleTypeExceptionTypev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityStable,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeFaasColdstartv1260 = &rule.AttributeRule{
@@ -1653,7 +1653,7 @@ var ruleTypeFaasColdstartv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeFaasCronv1260 = &rule.AttributeRule{
@@ -1663,7 +1663,7 @@ var ruleTypeFaasCronv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeFaasDocumentCollectionv1260 = &rule.AttributeRule{
@@ -1673,7 +1673,7 @@ var ruleTypeFaasDocumentCollectionv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeFaasDocumentNamev1260 = &rule.AttributeRule{
@@ -1683,7 +1683,7 @@ var ruleTypeFaasDocumentNamev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeFaasDocumentTimev1260 = &rule.AttributeRule{
@@ -1693,7 +1693,7 @@ var ruleTypeFaasDocumentTimev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeFaasInstancev1260 = &rule.AttributeRule{
@@ -1703,7 +1703,7 @@ var ruleTypeFaasInstancev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeFaasInvocationIdv1260 = &rule.AttributeRule{
@@ -1713,7 +1713,7 @@ var ruleTypeFaasInvocationIdv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeFaasInvokedNamev1260 = &rule.AttributeRule{
@@ -1723,7 +1723,7 @@ var ruleTypeFaasInvokedNamev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeFaasInvokedRegionv1260 = &rule.AttributeRule{
@@ -1733,7 +1733,7 @@ var ruleTypeFaasInvokedRegionv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeFaasMaxMemoryv1260 = &rule.AttributeRule{
@@ -1743,7 +1743,7 @@ var ruleTypeFaasMaxMemoryv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeFaasNamev1260 = &rule.AttributeRule{
@@ -1753,7 +1753,7 @@ var ruleTypeFaasNamev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeFaasTimev1260 = &rule.AttributeRule{
@@ -1763,7 +1763,7 @@ var ruleTypeFaasTimev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeFaasVersionv1260 = &rule.AttributeRule{
@@ -1773,7 +1773,7 @@ var ruleTypeFaasVersionv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeFeatureFlagKeyv1260 = &rule.AttributeRule{
@@ -1783,7 +1783,7 @@ var ruleTypeFeatureFlagKeyv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeFeatureFlagProviderNamev1260 = &rule.AttributeRule{
@@ -1793,7 +1793,7 @@ var ruleTypeFeatureFlagProviderNamev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeFeatureFlagVariantv1260 = &rule.AttributeRule{
@@ -1803,7 +1803,7 @@ var ruleTypeFeatureFlagVariantv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeFileDirectoryv1260 = &rule.AttributeRule{
@@ -1813,7 +1813,7 @@ var ruleTypeFileDirectoryv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeFileExtensionv1260 = &rule.AttributeRule{
@@ -1823,7 +1823,7 @@ var ruleTypeFileExtensionv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeFileNamev1260 = &rule.AttributeRule{
@@ -1833,7 +1833,7 @@ var ruleTypeFileNamev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeFilePathv1260 = &rule.AttributeRule{
@@ -1843,7 +1843,7 @@ var ruleTypeFilePathv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeFileSizev1260 = &rule.AttributeRule{
@@ -1853,7 +1853,7 @@ var ruleTypeFileSizev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeGcpCloudRunJobExecutionv1260 = &rule.AttributeRule{
@@ -1863,7 +1863,7 @@ var ruleTypeGcpCloudRunJobExecutionv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeGcpCloudRunJobTaskIndexv1260 = &rule.AttributeRule{
@@ -1873,7 +1873,7 @@ var ruleTypeGcpCloudRunJobTaskIndexv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeGcpGceInstanceHostnamev1260 = &rule.AttributeRule{
@@ -1883,7 +1883,7 @@ var ruleTypeGcpGceInstanceHostnamev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeGcpGceInstanceNamev1260 = &rule.AttributeRule{
@@ -1893,7 +1893,7 @@ var ruleTypeGcpGceInstanceNamev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeGenAiCompletionv1260 = &rule.AttributeRule{
@@ -1903,7 +1903,7 @@ var ruleTypeGenAiCompletionv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeGenAiPromptv1260 = &rule.AttributeRule{
@@ -1913,7 +1913,7 @@ var ruleTypeGenAiPromptv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeGenAiRequestMaxTokensv1260 = &rule.AttributeRule{
@@ -1923,7 +1923,7 @@ var ruleTypeGenAiRequestMaxTokensv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeGenAiRequestModelv1260 = &rule.AttributeRule{
@@ -1933,7 +1933,7 @@ var ruleTypeGenAiRequestModelv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeGenAiRequestTemperaturev1260 = &rule.AttributeRule{
@@ -1943,7 +1943,7 @@ var ruleTypeGenAiRequestTemperaturev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeGenAiRequestTopPv1260 = &rule.AttributeRule{
@@ -1953,7 +1953,7 @@ var ruleTypeGenAiRequestTopPv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeGenAiResponseFinishReasonsv1260 = &rule.AttributeRule{
@@ -1963,7 +1963,7 @@ var ruleTypeGenAiResponseFinishReasonsv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeGenAiResponseIdv1260 = &rule.AttributeRule{
@@ -1973,7 +1973,7 @@ var ruleTypeGenAiResponseIdv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeGenAiResponseModelv1260 = &rule.AttributeRule{
@@ -1983,7 +1983,7 @@ var ruleTypeGenAiResponseModelv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeGenAiUsageCompletionTokensv1260 = &rule.AttributeRule{
@@ -1993,7 +1993,7 @@ var ruleTypeGenAiUsageCompletionTokensv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeGenAiUsagePromptTokensv1260 = &rule.AttributeRule{
@@ -2003,7 +2003,7 @@ var ruleTypeGenAiUsagePromptTokensv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeGraphqlDocumentv1260 = &rule.AttributeRule{
@@ -2013,7 +2013,7 @@ var ruleTypeGraphqlDocumentv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeGraphqlOperationNamev1260 = &rule.AttributeRule{
@@ -2023,7 +2023,7 @@ var ruleTypeGraphqlOperationNamev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeHerokuAppIdv1260 = &rule.AttributeRule{
@@ -2033,7 +2033,7 @@ var ruleTypeHerokuAppIdv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeHerokuReleaseCommitv1260 = &rule.AttributeRule{
@@ -2043,7 +2043,7 @@ var ruleTypeHerokuReleaseCommitv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeHerokuReleaseCreationTimestampv1260 = &rule.AttributeRule{
@@ -2053,7 +2053,7 @@ var ruleTypeHerokuReleaseCreationTimestampv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeHostCpuCacheL2Sizev1260 = &rule.AttributeRule{
@@ -2063,7 +2063,7 @@ var ruleTypeHostCpuCacheL2Sizev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeHostCpuFamilyv1260 = &rule.AttributeRule{
@@ -2073,7 +2073,7 @@ var ruleTypeHostCpuFamilyv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeHostCpuModelIdv1260 = &rule.AttributeRule{
@@ -2083,7 +2083,7 @@ var ruleTypeHostCpuModelIdv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeHostCpuModelNamev1260 = &rule.AttributeRule{
@@ -2093,7 +2093,7 @@ var ruleTypeHostCpuModelNamev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeHostCpuSteppingv1260 = &rule.AttributeRule{
@@ -2103,7 +2103,7 @@ var ruleTypeHostCpuSteppingv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeHostCpuVendorIdv1260 = &rule.AttributeRule{
@@ -2113,7 +2113,7 @@ var ruleTypeHostCpuVendorIdv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeHostIdv1260 = &rule.AttributeRule{
@@ -2123,7 +2123,7 @@ var ruleTypeHostIdv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeHostImageIdv1260 = &rule.AttributeRule{
@@ -2133,7 +2133,7 @@ var ruleTypeHostImageIdv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeHostImageNamev1260 = &rule.AttributeRule{
@@ -2143,7 +2143,7 @@ var ruleTypeHostImageNamev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeHostImageVersionv1260 = &rule.AttributeRule{
@@ -2153,7 +2153,7 @@ var ruleTypeHostImageVersionv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeHostIpv1260 = &rule.AttributeRule{
@@ -2163,7 +2163,7 @@ var ruleTypeHostIpv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeHostMacv1260 = &rule.AttributeRule{
@@ -2173,7 +2173,7 @@ var ruleTypeHostMacv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeHostNamev1260 = &rule.AttributeRule{
@@ -2183,7 +2183,7 @@ var ruleTypeHostNamev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeHostTypev1260 = &rule.AttributeRule{
@@ -2193,7 +2193,7 @@ var ruleTypeHostTypev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeHttpClientIpv1260 = &rule.AttributeRule{
@@ -2203,7 +2203,7 @@ var ruleTypeHttpClientIpv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeHttpHostv1260 = &rule.AttributeRule{
@@ -2213,7 +2213,7 @@ var ruleTypeHttpHostv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeHttpMethodv1260 = &rule.AttributeRule{
@@ -2223,7 +2223,7 @@ var ruleTypeHttpMethodv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeHttpRequestBodySizev1260 = &rule.AttributeRule{
@@ -2233,7 +2233,7 @@ var ruleTypeHttpRequestBodySizev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeHttpRequestMethodOriginalv1260 = &rule.AttributeRule{
@@ -2243,7 +2243,7 @@ var ruleTypeHttpRequestMethodOriginalv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityStable,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeHttpRequestResendCountv1260 = &rule.AttributeRule{
@@ -2253,7 +2253,7 @@ var ruleTypeHttpRequestResendCountv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityStable,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeHttpRequestSizev1260 = &rule.AttributeRule{
@@ -2263,7 +2263,7 @@ var ruleTypeHttpRequestSizev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeHttpRequestContentLengthv1260 = &rule.AttributeRule{
@@ -2273,7 +2273,7 @@ var ruleTypeHttpRequestContentLengthv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeHttpRequestContentLengthUncompressedv1260 = &rule.AttributeRule{
@@ -2283,7 +2283,7 @@ var ruleTypeHttpRequestContentLengthUncompressedv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeHttpResponseBodySizev1260 = &rule.AttributeRule{
@@ -2293,7 +2293,7 @@ var ruleTypeHttpResponseBodySizev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeHttpResponseSizev1260 = &rule.AttributeRule{
@@ -2303,7 +2303,7 @@ var ruleTypeHttpResponseSizev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeHttpResponseStatusCodev1260 = &rule.AttributeRule{
@@ -2313,7 +2313,7 @@ var ruleTypeHttpResponseStatusCodev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityStable,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeHttpResponseContentLengthv1260 = &rule.AttributeRule{
@@ -2323,7 +2323,7 @@ var ruleTypeHttpResponseContentLengthv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeHttpResponseContentLengthUncompressedv1260 = &rule.AttributeRule{
@@ -2333,7 +2333,7 @@ var ruleTypeHttpResponseContentLengthUncompressedv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeHttpRoutev1260 = &rule.AttributeRule{
@@ -2343,7 +2343,7 @@ var ruleTypeHttpRoutev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityStable,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeHttpSchemev1260 = &rule.AttributeRule{
@@ -2353,7 +2353,7 @@ var ruleTypeHttpSchemev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeHttpServerNamev1260 = &rule.AttributeRule{
@@ -2363,7 +2363,7 @@ var ruleTypeHttpServerNamev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeHttpStatusCodev1260 = &rule.AttributeRule{
@@ -2373,7 +2373,7 @@ var ruleTypeHttpStatusCodev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeHttpTargetv1260 = &rule.AttributeRule{
@@ -2383,7 +2383,7 @@ var ruleTypeHttpTargetv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeHttpUrlv1260 = &rule.AttributeRule{
@@ -2393,7 +2393,7 @@ var ruleTypeHttpUrlv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeHttpUserAgentv1260 = &rule.AttributeRule{
@@ -2403,7 +2403,7 @@ var ruleTypeHttpUserAgentv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeJvmBufferPoolNamev1260 = &rule.AttributeRule{
@@ -2413,7 +2413,7 @@ var ruleTypeJvmBufferPoolNamev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeJvmGcActionv1260 = &rule.AttributeRule{
@@ -2423,7 +2423,7 @@ var ruleTypeJvmGcActionv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityStable,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeJvmGcNamev1260 = &rule.AttributeRule{
@@ -2433,7 +2433,7 @@ var ruleTypeJvmGcNamev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityStable,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeJvmMemoryPoolNamev1260 = &rule.AttributeRule{
@@ -2443,7 +2443,7 @@ var ruleTypeJvmMemoryPoolNamev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityStable,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeJvmThreadDaemonv1260 = &rule.AttributeRule{
@@ -2453,7 +2453,7 @@ var ruleTypeJvmThreadDaemonv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityStable,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeK8SClusterNamev1260 = &rule.AttributeRule{
@@ -2463,7 +2463,7 @@ var ruleTypeK8SClusterNamev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeK8SClusterUidv1260 = &rule.AttributeRule{
@@ -2473,7 +2473,7 @@ var ruleTypeK8SClusterUidv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeK8SContainerNamev1260 = &rule.AttributeRule{
@@ -2483,7 +2483,7 @@ var ruleTypeK8SContainerNamev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeK8SContainerRestartCountv1260 = &rule.AttributeRule{
@@ -2493,7 +2493,7 @@ var ruleTypeK8SContainerRestartCountv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeK8SContainerStatusLastTerminatedReasonv1260 = &rule.AttributeRule{
@@ -2503,7 +2503,7 @@ var ruleTypeK8SContainerStatusLastTerminatedReasonv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeK8SCronjobNamev1260 = &rule.AttributeRule{
@@ -2513,7 +2513,7 @@ var ruleTypeK8SCronjobNamev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeK8SCronjobUidv1260 = &rule.AttributeRule{
@@ -2523,7 +2523,7 @@ var ruleTypeK8SCronjobUidv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeK8SDaemonsetNamev1260 = &rule.AttributeRule{
@@ -2533,7 +2533,7 @@ var ruleTypeK8SDaemonsetNamev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeK8SDaemonsetUidv1260 = &rule.AttributeRule{
@@ -2543,7 +2543,7 @@ var ruleTypeK8SDaemonsetUidv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeK8SDeploymentNamev1260 = &rule.AttributeRule{
@@ -2553,7 +2553,7 @@ var ruleTypeK8SDeploymentNamev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeK8SDeploymentUidv1260 = &rule.AttributeRule{
@@ -2563,7 +2563,7 @@ var ruleTypeK8SDeploymentUidv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeK8SJobNamev1260 = &rule.AttributeRule{
@@ -2573,7 +2573,7 @@ var ruleTypeK8SJobNamev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeK8SJobUidv1260 = &rule.AttributeRule{
@@ -2583,7 +2583,7 @@ var ruleTypeK8SJobUidv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeK8SNamespaceNamev1260 = &rule.AttributeRule{
@@ -2593,7 +2593,7 @@ var ruleTypeK8SNamespaceNamev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeK8SNodeNamev1260 = &rule.AttributeRule{
@@ -2603,7 +2603,7 @@ var ruleTypeK8SNodeNamev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeK8SNodeUidv1260 = &rule.AttributeRule{
@@ -2613,7 +2613,7 @@ var ruleTypeK8SNodeUidv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeK8SPodNamev1260 = &rule.AttributeRule{
@@ -2623,7 +2623,7 @@ var ruleTypeK8SPodNamev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeK8SPodUidv1260 = &rule.AttributeRule{
@@ -2633,7 +2633,7 @@ var ruleTypeK8SPodUidv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeK8SReplicasetNamev1260 = &rule.AttributeRule{
@@ -2643,7 +2643,7 @@ var ruleTypeK8SReplicasetNamev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeK8SReplicasetUidv1260 = &rule.AttributeRule{
@@ -2653,7 +2653,7 @@ var ruleTypeK8SReplicasetUidv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeK8SStatefulsetNamev1260 = &rule.AttributeRule{
@@ -2663,7 +2663,7 @@ var ruleTypeK8SStatefulsetNamev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeK8SStatefulsetUidv1260 = &rule.AttributeRule{
@@ -2673,7 +2673,7 @@ var ruleTypeK8SStatefulsetUidv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeLogFileNamev1260 = &rule.AttributeRule{
@@ -2683,7 +2683,7 @@ var ruleTypeLogFileNamev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeLogFileNameResolvedv1260 = &rule.AttributeRule{
@@ -2693,7 +2693,7 @@ var ruleTypeLogFileNameResolvedv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeLogFilePathv1260 = &rule.AttributeRule{
@@ -2703,7 +2703,7 @@ var ruleTypeLogFilePathv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeLogFilePathResolvedv1260 = &rule.AttributeRule{
@@ -2713,7 +2713,7 @@ var ruleTypeLogFilePathResolvedv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeLogRecordUidv1260 = &rule.AttributeRule{
@@ -2723,7 +2723,7 @@ var ruleTypeLogRecordUidv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeMessageCompressedSizev1260 = &rule.AttributeRule{
@@ -2733,7 +2733,7 @@ var ruleTypeMessageCompressedSizev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeMessageIdv1260 = &rule.AttributeRule{
@@ -2743,7 +2743,7 @@ var ruleTypeMessageIdv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeMessageUncompressedSizev1260 = &rule.AttributeRule{
@@ -2753,7 +2753,7 @@ var ruleTypeMessageUncompressedSizev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeMessagingBatchMessageCountv1260 = &rule.AttributeRule{
@@ -2763,7 +2763,7 @@ var ruleTypeMessagingBatchMessageCountv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeMessagingClientIdv1260 = &rule.AttributeRule{
@@ -2773,7 +2773,7 @@ var ruleTypeMessagingClientIdv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeMessagingClient_Idv1260 = &rule.AttributeRule{
@@ -2783,7 +2783,7 @@ var ruleTypeMessagingClient_Idv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeMessagingDestinationAnonymousv1260 = &rule.AttributeRule{
@@ -2793,7 +2793,7 @@ var ruleTypeMessagingDestinationAnonymousv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeMessagingDestinationNamev1260 = &rule.AttributeRule{
@@ -2803,7 +2803,7 @@ var ruleTypeMessagingDestinationNamev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeMessagingDestinationPartitionIdv1260 = &rule.AttributeRule{
@@ -2813,7 +2813,7 @@ var ruleTypeMessagingDestinationPartitionIdv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeMessagingDestinationTemplatev1260 = &rule.AttributeRule{
@@ -2823,7 +2823,7 @@ var ruleTypeMessagingDestinationTemplatev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeMessagingDestinationTemporaryv1260 = &rule.AttributeRule{
@@ -2833,7 +2833,7 @@ var ruleTypeMessagingDestinationTemporaryv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeMessagingDestinationPublishAnonymousv1260 = &rule.AttributeRule{
@@ -2843,7 +2843,7 @@ var ruleTypeMessagingDestinationPublishAnonymousv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeMessagingDestinationPublishNamev1260 = &rule.AttributeRule{
@@ -2853,7 +2853,7 @@ var ruleTypeMessagingDestinationPublishNamev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeMessagingEventhubsConsumerGroupv1260 = &rule.AttributeRule{
@@ -2863,7 +2863,7 @@ var ruleTypeMessagingEventhubsConsumerGroupv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeMessagingEventhubsMessageEnqueuedTimev1260 = &rule.AttributeRule{
@@ -2873,7 +2873,7 @@ var ruleTypeMessagingEventhubsMessageEnqueuedTimev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeMessagingGcpPubsubMessageAckDeadlinev1260 = &rule.AttributeRule{
@@ -2883,7 +2883,7 @@ var ruleTypeMessagingGcpPubsubMessageAckDeadlinev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeMessagingGcpPubsubMessageAckIdv1260 = &rule.AttributeRule{
@@ -2893,7 +2893,7 @@ var ruleTypeMessagingGcpPubsubMessageAckIdv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeMessagingGcpPubsubMessageDeliveryAttemptv1260 = &rule.AttributeRule{
@@ -2903,7 +2903,7 @@ var ruleTypeMessagingGcpPubsubMessageDeliveryAttemptv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeMessagingGcpPubsubMessageOrderingKeyv1260 = &rule.AttributeRule{
@@ -2913,7 +2913,7 @@ var ruleTypeMessagingGcpPubsubMessageOrderingKeyv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeMessagingKafkaConsumerGroupv1260 = &rule.AttributeRule{
@@ -2923,7 +2923,7 @@ var ruleTypeMessagingKafkaConsumerGroupv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeMessagingKafkaDestinationPartitionv1260 = &rule.AttributeRule{
@@ -2933,7 +2933,7 @@ var ruleTypeMessagingKafkaDestinationPartitionv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeMessagingKafkaMessageKeyv1260 = &rule.AttributeRule{
@@ -2943,7 +2943,7 @@ var ruleTypeMessagingKafkaMessageKeyv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeMessagingKafkaMessageOffsetv1260 = &rule.AttributeRule{
@@ -2953,7 +2953,7 @@ var ruleTypeMessagingKafkaMessageOffsetv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeMessagingKafkaMessageTombstonev1260 = &rule.AttributeRule{
@@ -2963,7 +2963,7 @@ var ruleTypeMessagingKafkaMessageTombstonev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeMessagingMessageBodySizev1260 = &rule.AttributeRule{
@@ -2973,7 +2973,7 @@ var ruleTypeMessagingMessageBodySizev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeMessagingMessageConversationIdv1260 = &rule.AttributeRule{
@@ -2983,7 +2983,7 @@ var ruleTypeMessagingMessageConversationIdv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeMessagingMessageEnvelopeSizev1260 = &rule.AttributeRule{
@@ -2993,7 +2993,7 @@ var ruleTypeMessagingMessageEnvelopeSizev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeMessagingMessageIdv1260 = &rule.AttributeRule{
@@ -3003,7 +3003,7 @@ var ruleTypeMessagingMessageIdv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeMessagingOperationv1260 = &rule.AttributeRule{
@@ -3013,7 +3013,7 @@ var ruleTypeMessagingOperationv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeMessagingOperationNamev1260 = &rule.AttributeRule{
@@ -3023,7 +3023,7 @@ var ruleTypeMessagingOperationNamev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeMessagingRabbitmqDestinationRoutingKeyv1260 = &rule.AttributeRule{
@@ -3033,7 +3033,7 @@ var ruleTypeMessagingRabbitmqDestinationRoutingKeyv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeMessagingRabbitmqMessageDeliveryTagv1260 = &rule.AttributeRule{
@@ -3043,7 +3043,7 @@ var ruleTypeMessagingRabbitmqMessageDeliveryTagv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeMessagingRocketmqClientGroupv1260 = &rule.AttributeRule{
@@ -3053,7 +3053,7 @@ var ruleTypeMessagingRocketmqClientGroupv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeMessagingRocketmqMessageDelayTimeLevelv1260 = &rule.AttributeRule{
@@ -3063,7 +3063,7 @@ var ruleTypeMessagingRocketmqMessageDelayTimeLevelv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeMessagingRocketmqMessageDeliveryTimestampv1260 = &rule.AttributeRule{
@@ -3073,7 +3073,7 @@ var ruleTypeMessagingRocketmqMessageDeliveryTimestampv1260 = &rule.AttributeRule
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeMessagingRocketmqMessageGroupv1260 = &rule.AttributeRule{
@@ -3083,7 +3083,7 @@ var ruleTypeMessagingRocketmqMessageGroupv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeMessagingRocketmqMessageKeysv1260 = &rule.AttributeRule{
@@ -3093,7 +3093,7 @@ var ruleTypeMessagingRocketmqMessageKeysv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeMessagingRocketmqMessageTagv1260 = &rule.AttributeRule{
@@ -3103,7 +3103,7 @@ var ruleTypeMessagingRocketmqMessageTagv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeMessagingRocketmqNamespacev1260 = &rule.AttributeRule{
@@ -3113,7 +3113,7 @@ var ruleTypeMessagingRocketmqNamespacev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeMessagingServicebusDestinationSubscriptionNamev1260 = &rule.AttributeRule{
@@ -3123,7 +3123,7 @@ var ruleTypeMessagingServicebusDestinationSubscriptionNamev1260 = &rule.Attribut
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeMessagingServicebusMessageDeliveryCountv1260 = &rule.AttributeRule{
@@ -3133,7 +3133,7 @@ var ruleTypeMessagingServicebusMessageDeliveryCountv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeMessagingServicebusMessageEnqueuedTimev1260 = &rule.AttributeRule{
@@ -3143,7 +3143,7 @@ var ruleTypeMessagingServicebusMessageEnqueuedTimev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeNetHostIpv1260 = &rule.AttributeRule{
@@ -3153,7 +3153,7 @@ var ruleTypeNetHostIpv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeNetHostNamev1260 = &rule.AttributeRule{
@@ -3163,7 +3163,7 @@ var ruleTypeNetHostNamev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeNetHostPortv1260 = &rule.AttributeRule{
@@ -3173,7 +3173,7 @@ var ruleTypeNetHostPortv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeNetPeerIpv1260 = &rule.AttributeRule{
@@ -3183,7 +3183,7 @@ var ruleTypeNetPeerIpv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeNetPeerNamev1260 = &rule.AttributeRule{
@@ -3193,7 +3193,7 @@ var ruleTypeNetPeerNamev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeNetPeerPortv1260 = &rule.AttributeRule{
@@ -3203,7 +3203,7 @@ var ruleTypeNetPeerPortv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeNetProtocolNamev1260 = &rule.AttributeRule{
@@ -3213,7 +3213,7 @@ var ruleTypeNetProtocolNamev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeNetProtocolVersionv1260 = &rule.AttributeRule{
@@ -3223,7 +3223,7 @@ var ruleTypeNetProtocolVersionv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeNetSockHostAddrv1260 = &rule.AttributeRule{
@@ -3233,7 +3233,7 @@ var ruleTypeNetSockHostAddrv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeNetSockHostPortv1260 = &rule.AttributeRule{
@@ -3243,7 +3243,7 @@ var ruleTypeNetSockHostPortv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeNetSockPeerAddrv1260 = &rule.AttributeRule{
@@ -3253,7 +3253,7 @@ var ruleTypeNetSockPeerAddrv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeNetSockPeerNamev1260 = &rule.AttributeRule{
@@ -3263,7 +3263,7 @@ var ruleTypeNetSockPeerNamev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeNetSockPeerPortv1260 = &rule.AttributeRule{
@@ -3273,7 +3273,7 @@ var ruleTypeNetSockPeerPortv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeNetworkCarrierIccv1260 = &rule.AttributeRule{
@@ -3283,7 +3283,7 @@ var ruleTypeNetworkCarrierIccv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeNetworkCarrierMccv1260 = &rule.AttributeRule{
@@ -3293,7 +3293,7 @@ var ruleTypeNetworkCarrierMccv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeNetworkCarrierMncv1260 = &rule.AttributeRule{
@@ -3303,7 +3303,7 @@ var ruleTypeNetworkCarrierMncv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeNetworkCarrierNamev1260 = &rule.AttributeRule{
@@ -3313,7 +3313,7 @@ var ruleTypeNetworkCarrierNamev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeNetworkLocalAddressv1260 = &rule.AttributeRule{
@@ -3323,7 +3323,7 @@ var ruleTypeNetworkLocalAddressv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityStable,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeNetworkLocalPortv1260 = &rule.AttributeRule{
@@ -3333,7 +3333,7 @@ var ruleTypeNetworkLocalPortv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityStable,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeNetworkPeerAddressv1260 = &rule.AttributeRule{
@@ -3343,7 +3343,7 @@ var ruleTypeNetworkPeerAddressv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityStable,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeNetworkPeerPortv1260 = &rule.AttributeRule{
@@ -3353,7 +3353,7 @@ var ruleTypeNetworkPeerPortv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityStable,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeNetworkProtocolNamev1260 = &rule.AttributeRule{
@@ -3363,7 +3363,7 @@ var ruleTypeNetworkProtocolNamev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityStable,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeNetworkProtocolVersionv1260 = &rule.AttributeRule{
@@ -3373,7 +3373,7 @@ var ruleTypeNetworkProtocolVersionv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityStable,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeOciManifestDigestv1260 = &rule.AttributeRule{
@@ -3383,7 +3383,7 @@ var ruleTypeOciManifestDigestv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeOsBuildIdv1260 = &rule.AttributeRule{
@@ -3393,7 +3393,7 @@ var ruleTypeOsBuildIdv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeOsDescriptionv1260 = &rule.AttributeRule{
@@ -3403,7 +3403,7 @@ var ruleTypeOsDescriptionv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeOsNamev1260 = &rule.AttributeRule{
@@ -3413,7 +3413,7 @@ var ruleTypeOsNamev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeOsVersionv1260 = &rule.AttributeRule{
@@ -3423,7 +3423,7 @@ var ruleTypeOsVersionv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeOtelLibraryNamev1260 = &rule.AttributeRule{
@@ -3433,7 +3433,7 @@ var ruleTypeOtelLibraryNamev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeOtelLibraryVersionv1260 = &rule.AttributeRule{
@@ -3443,7 +3443,7 @@ var ruleTypeOtelLibraryVersionv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeOtelScopeNamev1260 = &rule.AttributeRule{
@@ -3453,7 +3453,7 @@ var ruleTypeOtelScopeNamev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityStable,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeOtelScopeVersionv1260 = &rule.AttributeRule{
@@ -3463,7 +3463,7 @@ var ruleTypeOtelScopeVersionv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityStable,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeOtelStatusDescriptionv1260 = &rule.AttributeRule{
@@ -3473,7 +3473,7 @@ var ruleTypeOtelStatusDescriptionv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityStable,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypePeerServicev1260 = &rule.AttributeRule{
@@ -3483,7 +3483,7 @@ var ruleTypePeerServicev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypePoolNamev1260 = &rule.AttributeRule{
@@ -3493,7 +3493,7 @@ var ruleTypePoolNamev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeProcessCommandv1260 = &rule.AttributeRule{
@@ -3503,7 +3503,7 @@ var ruleTypeProcessCommandv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeProcessCommandArgsv1260 = &rule.AttributeRule{
@@ -3513,7 +3513,7 @@ var ruleTypeProcessCommandArgsv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeProcessCommandLinev1260 = &rule.AttributeRule{
@@ -3523,7 +3523,7 @@ var ruleTypeProcessCommandLinev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeProcessCreationTimev1260 = &rule.AttributeRule{
@@ -3533,7 +3533,7 @@ var ruleTypeProcessCreationTimev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeProcessExecutableNamev1260 = &rule.AttributeRule{
@@ -3543,7 +3543,7 @@ var ruleTypeProcessExecutableNamev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeProcessExecutablePathv1260 = &rule.AttributeRule{
@@ -3553,7 +3553,7 @@ var ruleTypeProcessExecutablePathv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeProcessExitCodev1260 = &rule.AttributeRule{
@@ -3563,7 +3563,7 @@ var ruleTypeProcessExitCodev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeProcessExitTimev1260 = &rule.AttributeRule{
@@ -3573,7 +3573,7 @@ var ruleTypeProcessExitTimev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeProcessGroupLeaderPidv1260 = &rule.AttributeRule{
@@ -3583,7 +3583,7 @@ var ruleTypeProcessGroupLeaderPidv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeProcessInteractivev1260 = &rule.AttributeRule{
@@ -3593,7 +3593,7 @@ var ruleTypeProcessInteractivev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeProcessOwnerv1260 = &rule.AttributeRule{
@@ -3603,7 +3603,7 @@ var ruleTypeProcessOwnerv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeProcessParentPidv1260 = &rule.AttributeRule{
@@ -3613,7 +3613,7 @@ var ruleTypeProcessParentPidv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeProcessPidv1260 = &rule.AttributeRule{
@@ -3623,7 +3623,7 @@ var ruleTypeProcessPidv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeProcessRealUserIdv1260 = &rule.AttributeRule{
@@ -3633,7 +3633,7 @@ var ruleTypeProcessRealUserIdv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeProcessRealUserNamev1260 = &rule.AttributeRule{
@@ -3643,7 +3643,7 @@ var ruleTypeProcessRealUserNamev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeProcessRuntimeDescriptionv1260 = &rule.AttributeRule{
@@ -3653,7 +3653,7 @@ var ruleTypeProcessRuntimeDescriptionv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeProcessRuntimeNamev1260 = &rule.AttributeRule{
@@ -3663,7 +3663,7 @@ var ruleTypeProcessRuntimeNamev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeProcessRuntimeVersionv1260 = &rule.AttributeRule{
@@ -3673,7 +3673,7 @@ var ruleTypeProcessRuntimeVersionv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeProcessSavedUserIdv1260 = &rule.AttributeRule{
@@ -3683,7 +3683,7 @@ var ruleTypeProcessSavedUserIdv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeProcessSavedUserNamev1260 = &rule.AttributeRule{
@@ -3693,7 +3693,7 @@ var ruleTypeProcessSavedUserNamev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeProcessSessionLeaderPidv1260 = &rule.AttributeRule{
@@ -3703,7 +3703,7 @@ var ruleTypeProcessSessionLeaderPidv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeProcessUserIdv1260 = &rule.AttributeRule{
@@ -3713,7 +3713,7 @@ var ruleTypeProcessUserIdv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeProcessUserNamev1260 = &rule.AttributeRule{
@@ -3723,7 +3723,7 @@ var ruleTypeProcessUserNamev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeProcessVpidv1260 = &rule.AttributeRule{
@@ -3733,7 +3733,7 @@ var ruleTypeProcessVpidv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeRpcJsonrpcErrorCodev1260 = &rule.AttributeRule{
@@ -3743,7 +3743,7 @@ var ruleTypeRpcJsonrpcErrorCodev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeRpcJsonrpcErrorMessagev1260 = &rule.AttributeRule{
@@ -3753,7 +3753,7 @@ var ruleTypeRpcJsonrpcErrorMessagev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeRpcJsonrpcRequestIdv1260 = &rule.AttributeRule{
@@ -3763,7 +3763,7 @@ var ruleTypeRpcJsonrpcRequestIdv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeRpcJsonrpcVersionv1260 = &rule.AttributeRule{
@@ -3773,7 +3773,7 @@ var ruleTypeRpcJsonrpcVersionv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeRpcMessageCompressedSizev1260 = &rule.AttributeRule{
@@ -3783,7 +3783,7 @@ var ruleTypeRpcMessageCompressedSizev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeRpcMessageIdv1260 = &rule.AttributeRule{
@@ -3793,7 +3793,7 @@ var ruleTypeRpcMessageIdv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeRpcMessageUncompressedSizev1260 = &rule.AttributeRule{
@@ -3803,7 +3803,7 @@ var ruleTypeRpcMessageUncompressedSizev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeRpcMethodv1260 = &rule.AttributeRule{
@@ -3813,7 +3813,7 @@ var ruleTypeRpcMethodv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeRpcServicev1260 = &rule.AttributeRule{
@@ -3823,7 +3823,7 @@ var ruleTypeRpcServicev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeServerAddressv1260 = &rule.AttributeRule{
@@ -3833,7 +3833,7 @@ var ruleTypeServerAddressv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityStable,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeServerPortv1260 = &rule.AttributeRule{
@@ -3843,7 +3843,7 @@ var ruleTypeServerPortv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityStable,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeServiceInstanceIdv1260 = &rule.AttributeRule{
@@ -3853,7 +3853,7 @@ var ruleTypeServiceInstanceIdv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeServiceNamev1260 = &rule.AttributeRule{
@@ -3863,7 +3863,7 @@ var ruleTypeServiceNamev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityStable,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeServiceNamespacev1260 = &rule.AttributeRule{
@@ -3873,7 +3873,7 @@ var ruleTypeServiceNamespacev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeServiceVersionv1260 = &rule.AttributeRule{
@@ -3883,7 +3883,7 @@ var ruleTypeServiceVersionv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityStable,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeSessionIdv1260 = &rule.AttributeRule{
@@ -3893,7 +3893,7 @@ var ruleTypeSessionIdv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeSessionPreviousIdv1260 = &rule.AttributeRule{
@@ -3903,7 +3903,7 @@ var ruleTypeSessionPreviousIdv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeSourceAddressv1260 = &rule.AttributeRule{
@@ -3913,7 +3913,7 @@ var ruleTypeSourceAddressv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeSourcePortv1260 = &rule.AttributeRule{
@@ -3923,7 +3923,7 @@ var ruleTypeSourcePortv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeSystemCpuLogicalNumberv1260 = &rule.AttributeRule{
@@ -3933,7 +3933,7 @@ var ruleTypeSystemCpuLogicalNumberv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeSystemDevicev1260 = &rule.AttributeRule{
@@ -3943,7 +3943,7 @@ var ruleTypeSystemDevicev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeSystemFilesystemModev1260 = &rule.AttributeRule{
@@ -3953,7 +3953,7 @@ var ruleTypeSystemFilesystemModev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeSystemFilesystemMountpointv1260 = &rule.AttributeRule{
@@ -3963,7 +3963,7 @@ var ruleTypeSystemFilesystemMountpointv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeTelemetryDistroNamev1260 = &rule.AttributeRule{
@@ -3973,7 +3973,7 @@ var ruleTypeTelemetryDistroNamev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeTelemetryDistroVersionv1260 = &rule.AttributeRule{
@@ -3983,7 +3983,7 @@ var ruleTypeTelemetryDistroVersionv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeTelemetrySdkNamev1260 = &rule.AttributeRule{
@@ -3993,7 +3993,7 @@ var ruleTypeTelemetrySdkNamev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityStable,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeTelemetrySdkVersionv1260 = &rule.AttributeRule{
@@ -4003,7 +4003,7 @@ var ruleTypeTelemetrySdkVersionv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityStable,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeThreadIdv1260 = &rule.AttributeRule{
@@ -4013,7 +4013,7 @@ var ruleTypeThreadIdv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeThreadNamev1260 = &rule.AttributeRule{
@@ -4023,7 +4023,7 @@ var ruleTypeThreadNamev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeTlsCipherv1260 = &rule.AttributeRule{
@@ -4033,7 +4033,7 @@ var ruleTypeTlsCipherv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeTlsClientCertificatev1260 = &rule.AttributeRule{
@@ -4043,7 +4043,7 @@ var ruleTypeTlsClientCertificatev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeTlsClientCertificateChainv1260 = &rule.AttributeRule{
@@ -4053,7 +4053,7 @@ var ruleTypeTlsClientCertificateChainv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeTlsClientHashMd5v1260 = &rule.AttributeRule{
@@ -4063,7 +4063,7 @@ var ruleTypeTlsClientHashMd5v1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeTlsClientHashSha1v1260 = &rule.AttributeRule{
@@ -4073,7 +4073,7 @@ var ruleTypeTlsClientHashSha1v1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeTlsClientHashSha256v1260 = &rule.AttributeRule{
@@ -4083,7 +4083,7 @@ var ruleTypeTlsClientHashSha256v1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeTlsClientIssuerv1260 = &rule.AttributeRule{
@@ -4093,7 +4093,7 @@ var ruleTypeTlsClientIssuerv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeTlsClientJa3v1260 = &rule.AttributeRule{
@@ -4103,7 +4103,7 @@ var ruleTypeTlsClientJa3v1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeTlsClientNotAfterv1260 = &rule.AttributeRule{
@@ -4113,7 +4113,7 @@ var ruleTypeTlsClientNotAfterv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeTlsClientNotBeforev1260 = &rule.AttributeRule{
@@ -4123,7 +4123,7 @@ var ruleTypeTlsClientNotBeforev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeTlsClientServerNamev1260 = &rule.AttributeRule{
@@ -4133,7 +4133,7 @@ var ruleTypeTlsClientServerNamev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeTlsClientSubjectv1260 = &rule.AttributeRule{
@@ -4143,7 +4143,7 @@ var ruleTypeTlsClientSubjectv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeTlsClientSupportedCiphersv1260 = &rule.AttributeRule{
@@ -4153,7 +4153,7 @@ var ruleTypeTlsClientSupportedCiphersv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeTlsCurvev1260 = &rule.AttributeRule{
@@ -4163,7 +4163,7 @@ var ruleTypeTlsCurvev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeTlsEstablishedv1260 = &rule.AttributeRule{
@@ -4173,7 +4173,7 @@ var ruleTypeTlsEstablishedv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeTlsNextProtocolv1260 = &rule.AttributeRule{
@@ -4183,7 +4183,7 @@ var ruleTypeTlsNextProtocolv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeTlsProtocolVersionv1260 = &rule.AttributeRule{
@@ -4193,7 +4193,7 @@ var ruleTypeTlsProtocolVersionv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeTlsResumedv1260 = &rule.AttributeRule{
@@ -4203,7 +4203,7 @@ var ruleTypeTlsResumedv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeTlsServerCertificatev1260 = &rule.AttributeRule{
@@ -4213,7 +4213,7 @@ var ruleTypeTlsServerCertificatev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeTlsServerCertificateChainv1260 = &rule.AttributeRule{
@@ -4223,7 +4223,7 @@ var ruleTypeTlsServerCertificateChainv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeTlsServerHashMd5v1260 = &rule.AttributeRule{
@@ -4233,7 +4233,7 @@ var ruleTypeTlsServerHashMd5v1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeTlsServerHashSha1v1260 = &rule.AttributeRule{
@@ -4243,7 +4243,7 @@ var ruleTypeTlsServerHashSha1v1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeTlsServerHashSha256v1260 = &rule.AttributeRule{
@@ -4253,7 +4253,7 @@ var ruleTypeTlsServerHashSha256v1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeTlsServerIssuerv1260 = &rule.AttributeRule{
@@ -4263,7 +4263,7 @@ var ruleTypeTlsServerIssuerv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeTlsServerJa3Sv1260 = &rule.AttributeRule{
@@ -4273,7 +4273,7 @@ var ruleTypeTlsServerJa3Sv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeTlsServerNotAfterv1260 = &rule.AttributeRule{
@@ -4283,7 +4283,7 @@ var ruleTypeTlsServerNotAfterv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeTlsServerNotBeforev1260 = &rule.AttributeRule{
@@ -4293,7 +4293,7 @@ var ruleTypeTlsServerNotBeforev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeTlsServerSubjectv1260 = &rule.AttributeRule{
@@ -4303,7 +4303,7 @@ var ruleTypeTlsServerSubjectv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeUrlDomainv1260 = &rule.AttributeRule{
@@ -4313,7 +4313,7 @@ var ruleTypeUrlDomainv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeUrlExtensionv1260 = &rule.AttributeRule{
@@ -4323,7 +4323,7 @@ var ruleTypeUrlExtensionv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeUrlFragmentv1260 = &rule.AttributeRule{
@@ -4333,7 +4333,7 @@ var ruleTypeUrlFragmentv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityStable,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeUrlFullv1260 = &rule.AttributeRule{
@@ -4343,7 +4343,7 @@ var ruleTypeUrlFullv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityStable,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeUrlOriginalv1260 = &rule.AttributeRule{
@@ -4353,7 +4353,7 @@ var ruleTypeUrlOriginalv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeUrlPathv1260 = &rule.AttributeRule{
@@ -4363,7 +4363,7 @@ var ruleTypeUrlPathv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityStable,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeUrlPortv1260 = &rule.AttributeRule{
@@ -4373,7 +4373,7 @@ var ruleTypeUrlPortv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeUrlQueryv1260 = &rule.AttributeRule{
@@ -4383,7 +4383,7 @@ var ruleTypeUrlQueryv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityStable,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeUrlRegisteredDomainv1260 = &rule.AttributeRule{
@@ -4393,7 +4393,7 @@ var ruleTypeUrlRegisteredDomainv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeUrlSchemev1260 = &rule.AttributeRule{
@@ -4403,7 +4403,7 @@ var ruleTypeUrlSchemev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityStable,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeUrlSubdomainv1260 = &rule.AttributeRule{
@@ -4413,7 +4413,7 @@ var ruleTypeUrlSubdomainv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeUrlTemplatev1260 = &rule.AttributeRule{
@@ -4423,7 +4423,7 @@ var ruleTypeUrlTemplatev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeUrlTopLevelDomainv1260 = &rule.AttributeRule{
@@ -4433,7 +4433,7 @@ var ruleTypeUrlTopLevelDomainv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeUserAgentNamev1260 = &rule.AttributeRule{
@@ -4443,7 +4443,7 @@ var ruleTypeUserAgentNamev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeUserAgentOriginalv1260 = &rule.AttributeRule{
@@ -4453,7 +4453,7 @@ var ruleTypeUserAgentOriginalv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityStable,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeUserAgentVersionv1260 = &rule.AttributeRule{
@@ -4463,7 +4463,7 @@ var ruleTypeUserAgentVersionv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeWebengineDescriptionv1260 = &rule.AttributeRule{
@@ -4473,7 +4473,7 @@ var ruleTypeWebengineDescriptionv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeWebengineNamev1260 = &rule.AttributeRule{
@@ -4483,7 +4483,7 @@ var ruleTypeWebengineNamev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleTypeWebengineVersionv1260 = &rule.AttributeRule{
@@ -4493,6 +4493,6 @@ var ruleTypeWebengineVersionv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 

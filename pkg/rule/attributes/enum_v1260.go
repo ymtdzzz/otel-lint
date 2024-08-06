@@ -29,7 +29,7 @@ var ruleEnumDbCosmosdbConnectionModev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleEnumDiskIoDirectionv1260 = &rule.AttributeRule{
@@ -39,7 +39,7 @@ var ruleEnumDiskIoDirectionv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleEnumFaasTriggerv1260 = &rule.AttributeRule{
@@ -49,7 +49,7 @@ var ruleEnumFaasTriggerv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleEnumGraphqlOperationTypev1260 = &rule.AttributeRule{
@@ -59,7 +59,7 @@ var ruleEnumGraphqlOperationTypev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleEnumJvmMemoryTypev1260 = &rule.AttributeRule{
@@ -69,7 +69,7 @@ var ruleEnumJvmMemoryTypev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityStable,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleEnumJvmThreadStatev1260 = &rule.AttributeRule{
@@ -79,7 +79,7 @@ var ruleEnumJvmThreadStatev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityStable,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleEnumMessagingRocketmqConsumptionModelv1260 = &rule.AttributeRule{
@@ -89,7 +89,7 @@ var ruleEnumMessagingRocketmqConsumptionModelv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleEnumMessagingRocketmqMessageTypev1260 = &rule.AttributeRule{
@@ -99,7 +99,7 @@ var ruleEnumMessagingRocketmqMessageTypev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleEnumNetworkIoDirectionv1260 = &rule.AttributeRule{
@@ -109,7 +109,7 @@ var ruleEnumNetworkIoDirectionv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleEnumSystemFilesystemStatev1260 = &rule.AttributeRule{
@@ -119,7 +119,7 @@ var ruleEnumSystemFilesystemStatev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleEnumSystemNetworkStatev1260 = &rule.AttributeRule{
@@ -129,7 +129,7 @@ var ruleEnumSystemNetworkStatev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleEnumSystemPagingDirectionv1260 = &rule.AttributeRule{
@@ -139,7 +139,7 @@ var ruleEnumSystemPagingDirectionv1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleEnumSystemPagingStatev1260 = &rule.AttributeRule{
@@ -149,7 +149,7 @@ var ruleEnumSystemPagingStatev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
 var ruleEnumSystemPagingTypev1260 = &rule.AttributeRule{
@@ -159,6 +159,6 @@ var ruleEnumSystemPagingTypev1260 = &rule.AttributeRule{
 	Severity:     rule.SeverityError,
 	Stability:    rule.StabilityExperimental,
 	Source:       "",
-  Version:      "v1.26.0",
+	Version:      "v1.26.0",
 }
 
