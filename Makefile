@@ -9,6 +9,7 @@ generate-rules-version:
 
 .PHONY: generate-rules-all-versions
 generate-rules-all-versions:
+	$(MAKE) generate-rules-version VERSION=v1.27.0
 	$(MAKE) generate-rules-version VERSION=v1.26.0
 	$(MAKE) generate-rules-version VERSION=v1.25.0
 	$(MAKE) generate-rules-version VERSION=v1.24.0
