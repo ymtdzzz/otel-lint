@@ -16,6 +16,8 @@ templates:
   - pattern: "attribute_type.j2"
     filter: '[.groups.[].attributes] | add | map(select(.type | type=="string")) | map(select((.type | startswith("string")) or (.type | startswith("int")) or (.type | startswith("double")) or (.type | startswith("boolean")))) | unique_by(.name)'
     application_mode: single
+  # NOTE: From semconv v1.27.0, allow_custom_values flag on enums is always true
+  #   see: https://github.com/open-telemetry/build-tools/issues/294#issuecomment-2112418181
   - pattern: "attribute_enum.j2"
     filter: '[.groups.[].attributes] | add | map(select(.type | type=="object")) | map(select(.type.allow_custom_values==false)) | unique_by(.name)'
     application_mode: single
